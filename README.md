@@ -1,4 +1,4 @@
-# Student-Alumni-Network-App
+# Calumni: Student-Alumni-Network-App
 
 
 [![Code Climate](https://codeclimate.com/github/rails/rails/badges/gpa.svg)](https://codeclimate.com/github/rails/rails)
