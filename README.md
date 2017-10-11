@@ -1,11 +1,10 @@
 # Calumni: Student-Alumni-Network-App
 
 
-[![Code Climate](https://codeclimate.com/github/rails/rails/badges/gpa.svg)](https://codeclimate.com/github/rails/rails)
+[![Maintainability](https://api.codeclimate.com/v1/badges/c948f03bee21ebf22e1b/maintainability)](https://codeclimate.com/github/clarkfyr/Calumni/maintainability)
 
-[![Test Coverage](https://codeclimate.com/github/rails/rails/badges/coverage.svg)](https://codeclimate.com/github/rails/rails/coverage)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/c948f03bee21ebf22e1b/test_coverage)](https://codeclimate.com/github/clarkfyr/Calumni/test_coverage)
 
-[![Issue Count](https://codeclimate.com/github/rails/rails/badges/issue_count.svg)](https://codeclimate.com/github/rails/rails)
 
 [![Build Status](https://travis-ci.org/clarkfyr/Calumni.svg?branch=master)](https://travis-ci.org/clarkfyr/Calumni)
 
