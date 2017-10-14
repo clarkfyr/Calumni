@@ -30,6 +30,7 @@ When /I (un)?check the following help: (.*)/ do |uncheck, help_list|
   pending # Write code here that turns the phrase above into concrete actions
 end
 
+
 When /^(?:|I )press "([^"]*)"$/ do |button|
   pending # Write code here that turns the phrase above into concrete actions
 end
