@@ -1,6 +1,17 @@
 Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+  get  '/'    => 'calumnis#home'
+  post 'signup' => 'calumnis#signup',:as => 'signup'
+  # post  'login'   => 'calumnis#login',  :as => 'login'
+  post  'login'   => 'calumnis#createandlogin',  :as => 'createandlogin'
+  get  'login'   => 'calumnis#login',  :as => 'login'
+  post  'create_mentor'   => 'calumnis#create_mentor',  :as => 'create_mentor'
+  post  'create_mentee'   => 'calumnis#create_mentee',  :as => 'create_mentee'
+  post  'profile'   => 'calumnis#profile',  :as => 'profile'
+
+  root 'calumnis#home'
+# resources :calumni
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

@@ -1,0 +1,18 @@
+%h2 Create New Mentor Page
+
+= form_tag createandlogin_path do
+
+  = label :people, :username, 'Username'
+  = text_field :people, 'username'
+
+  = label :people, :password, 'Password'
+  = text_field :people, 'password'
+  = label :people, :email, 'Email'
+  = text_field :people, 'email'
+  = label :people, :description, 'Description'
+  = text_field :people, 'description'
+
+
+
+  = submit_tag 'Submit Profile'
+  

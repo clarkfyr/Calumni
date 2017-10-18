@@ -1,0 +1,17 @@
+%h1 login page
+
+#{@pwcorrect}
+
+
+= form_tag profile_path do
+
+  = label :people, :username, 'Username'
+  = text_field :people, 'username'
+
+  = label :people, :password, 'Password'
+  = text_field :people, 'password'
+
+
+  = submit_tag 'Login'
+  
+  
