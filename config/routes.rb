@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   # post  'login'   => 'calumnis#login',  :as => 'login'
   post  'login'   => 'calumnis#createandlogin',  :as => 'createandlogin'
   get  'login'   => 'calumnis#login',  :as => 'login'
-  post  'create_mentor'   => 'calumnis#create_mentor',  :as => 'create_mentor'
-  post  'create_mentee'   => 'calumnis#create_mentee',  :as => 'create_mentee'
+  get  'create_mentor'   => 'calumnis#create_mentor',  :as => 'create_mentor'
+  get  'create_mentee'   => 'calumnis#create_mentee',  :as => 'create_mentee'
   post  'profile'   => 'calumnis#profile',  :as => 'profile'
 
   root 'calumnis#home'

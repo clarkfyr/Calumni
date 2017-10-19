@@ -17,7 +17,7 @@ class CalumnisController < ApplicationController
 #   end
 
   def people_params
-    params.require(:people).permit(:username, :password,:email,:description)
+    params.require(:people).permit(:username, :password, :email, :description, :company, :start_date, :resume, :profile, :university, :major, :graduation, :help)
   end  
 
   public
@@ -58,7 +58,7 @@ class CalumnisController < ApplicationController
     if @pwcorrect
       @people=1
     else
-      @pwcorrect="username or password wrong"
+      @pwcorrect="Wrong Username or Password"
       render :login
     end
     

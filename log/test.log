@@ -21,3 +21,2847 @@
   [1m[35m (0.1ms)[0m  commit transaction
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
   [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (13.8ms)[0m  [1mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "password" varchar, "email" varchar, "description" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (9.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (10.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (14.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171018070514')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/movies" for 127.0.0.1 at 2017-10-19 02:35:27 +0000
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/movies" for 127.0.0.1 at 2017-10-19 02:35:27 +0000
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/movies" for 127.0.0.1 at 2017-10-19 02:35:27 +0000
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:37:25 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 296ms (Views: 286.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:37:25 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:37:25 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:42:12 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 179ms (Views: 169.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:42:12 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:42:12 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:43:09 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 206ms (Views: 196.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:43:09 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:43:09 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:45:46 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 175ms (Views: 166.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:45:47 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 02:45:47 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 02:45:47 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (5.9ms)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:45:47 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:46:33 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 187ms (Views: 178.5ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 02:46:33 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:46:33 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 02:46:33 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 02:46:33 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:46:33 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:49:42 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 180ms (Views: 171.2ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 02:49:42 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:49:42 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 02:49:42 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 02:49:42 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:49:42 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:50:27 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (8.3ms)
+Completed 200 OK in 185ms (Views: 175.3ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 02:50:27 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:50:27 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 02:50:27 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 02:50:27 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:50:27 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:51:06 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (9.0ms)
+Completed 200 OK in 232ms (Views: 222.5ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 02:51:06 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:51:06 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 02:51:06 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 02:51:06 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 02:51:06 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mPeople Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1[0m  [["username", ""], ["password", ""]]
+  Rendered calumnis/login.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 42ms (Views: 4.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:51:06 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:51:57 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 181ms (Views: 172.2ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 02:51:57 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+Started POST "/create_mentor" for 127.0.0.1 at 2017-10-19 02:51:57 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:51:57 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 02:51:57 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 02:51:57 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 02:51:57 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mPeople Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1[0m  [["username", ""], ["password", ""]]
+  Rendered calumnis/login.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 17ms (Views: 2.9ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:51:57 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:55:01 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 194ms (Views: 183.5ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 02:55:01 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+Started POST "/create_mentor" for 127.0.0.1 at 2017-10-19 02:55:01 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 38ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:55:01 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 02:55:01 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 02:55:01 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 02:55:01 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mPeople Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1[0m  [["username", ""], ["password", ""]]
+  Rendered calumnis/login.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 18ms (Views: 3.0ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:55:01 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:56:20 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 251ms (Views: 241.3ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 02:56:20 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+Started POST "/create_mentor" for 127.0.0.1 at 2017-10-19 02:56:20 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (5.9ms)
+Completed 200 OK in 42ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:56:20 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 02:56:20 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 02:56:21 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 02:56:21 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mPeople Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1[0m  [["username", ""], ["password", ""]]
+  Rendered calumnis/login.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 18ms (Views: 3.0ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:56:21 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:59:18 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 189ms (Views: 180.5ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 02:59:18 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+Started POST "/create_mentor" for 127.0.0.1 at 2017-10-19 02:59:18 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 02:59:18 +0000
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:59:18 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 02:59:18 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 02:59:18 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 02:59:18 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mPeople Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1[0m  [["username", ""], ["password", ""]]
+  Rendered calumnis/login.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 15ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 02:59:18 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:03:41 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 187ms (Views: 177.4ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 03:03:41 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 127.0.0.1 at 2017-10-19 03:03:41 +0000
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 03:03:41 +0000
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:03:41 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 03:03:41 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 03:03:41 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 03:03:41 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mPeople Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1[0m  [["username", ""], ["password", ""]]
+  Rendered calumnis/login.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 21ms (Views: 4.8ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:03:41 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:04:52 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 209ms (Views: 200.1ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 03:04:52 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 127.0.0.1 at 2017-10-19 03:04:52 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 03:04:52 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Rendered calumnis/create_mentor.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:04:52 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 03:04:52 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 03:04:52 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 5ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 03:04:52 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mPeople Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1[0m  [["username", ""], ["password", ""]]
+  Rendered calumnis/login.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 16ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:04:52 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:05:43 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (8.4ms)
+Completed 200 OK in 213ms (Views: 203.6ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 03:05:43 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 127.0.0.1 at 2017-10-19 03:05:43 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (5.9ms)
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 03:05:43 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Rendered calumnis/create_mentor.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 03:05:43 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"", "password"=>"[FILTERED]", "email"=>"", "description"=>""}, "commit"=>"Submit Profile"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", ""], ["password", ""], ["email", ""], ["description", ""], ["created_at", "2017-10-19 03:05:43.937840"], ["updated_at", "2017-10-19 03:05:43.937840"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/login
+Completed 302 Found in 20ms (ActiveRecord: 1.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 03:05:43 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:05:43 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 03:05:43 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 03:05:43 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 03:05:43 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", ""], ["password", ""]]
+  Rendered calumnis/login.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 11ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:05:44 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:08:26 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 206ms (Views: 196.7ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 03:08:26 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 127.0.0.1 at 2017-10-19 03:08:26 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (5.9ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 03:08:26 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Rendered calumnis/create_mentor.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 03:08:26 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"", "password"=>"[FILTERED]", "email"=>"", "description"=>""}, "commit"=>"Submit Profile"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", ""], ["password", ""], ["email", ""], ["description", ""], ["created_at", "2017-10-19 03:08:26.878799"], ["updated_at", "2017-10-19 03:08:26.878799"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/login
+Completed 302 Found in 16ms (ActiveRecord: 1.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 03:08:26 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:18:30 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (10.2ms)
+Completed 200 OK in 213ms (Views: 204.1ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 03:18:31 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 127.0.0.1 at 2017-10-19 03:18:31 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 03:18:31 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Rendered calumnis/create_mentor.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 03:18:31 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"", "password"=>"[FILTERED]", "email"=>"", "description"=>""}, "commit"=>"Submit Profile"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", ""], ["password", ""], ["email", ""], ["description", ""], ["created_at", "2017-10-19 03:18:31.285420"], ["updated_at", "2017-10-19 03:18:31.285420"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/login
+Completed 302 Found in 17ms (ActiveRecord: 0.9ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 03:18:31 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:20:23 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 212ms (Views: 201.2ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 03:20:23 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 127.0.0.1 at 2017-10-19 03:20:23 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (43.2ms)
+Completed 200 OK in 47ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 03:20:23 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Rendered calumnis/create_mentor.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 03:20:23 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"", "password"=>"[FILTERED]", "email"=>"", "description"=>""}, "commit"=>"Submit Profile"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", ""], ["password", ""], ["email", ""], ["description", ""], ["created_at", "2017-10-19 03:20:23.547000"], ["updated_at", "2017-10-19 03:20:23.547000"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/login
+Completed 302 Found in 24ms (ActiveRecord: 1.3ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 03:20:23 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:20:50 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (7.3ms)
+Completed 200 OK in 190ms (Views: 181.4ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 03:20:50 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 127.0.0.1 at 2017-10-19 03:20:50 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (36.2ms)
+Completed 200 OK in 39ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 03:20:50 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Rendered calumnis/create_mentor.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 03:20:50 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"", "password"=>"[FILTERED]", "email"=>"", "description"=>""}, "commit"=>"Submit Profile"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", ""], ["password", ""], ["email", ""], ["description", ""], ["created_at", "2017-10-19 03:20:50.599407"], ["updated_at", "2017-10-19 03:20:50.599407"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/login
+Completed 302 Found in 19ms (ActiveRecord: 1.1ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 03:20:50 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 03:20:50.621280"], ["updated_at", "2017-10-19 03:20:50.621280"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:20:50 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 03:20:50 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 03:20:50 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 03:20:50 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mPeople Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1[0m  [["username", ""], ["password", ""]]
+  Rendered calumnis/login.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 17ms (Views: 3.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (10.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 03:20:50.731966"], ["updated_at", "2017-10-19 03:20:50.731966"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:20:50 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:25:32 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 193ms (Views: 184.4ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 03:25:32 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 127.0.0.1 at 2017-10-19 03:25:32 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 03:25:32 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Rendered calumnis/create_mentor.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 03:25:32 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"", "password"=>"[FILTERED]", "email"=>"", "description"=>""}, "commit"=>"Submit Profile"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", ""], ["password", ""], ["email", ""], ["description", ""], ["created_at", "2017-10-19 03:25:32.688141"], ["updated_at", "2017-10-19 03:25:32.688141"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/login
+Completed 302 Found in 16ms (ActiveRecord: 0.9ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 03:25:32 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 03:25:32.707474"], ["updated_at", "2017-10-19 03:25:32.707474"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:25:32 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 03:25:32 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 03:25:32 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 03:25:32 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mPeople Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1[0m  [["username", ""], ["password", ""]]
+  Rendered calumnis/login.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 11ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 03:25:32.751769"], ["updated_at", "2017-10-19 03:25:32.751769"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:25:32 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:26:23 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 183ms (Views: 174.5ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 03:26:24 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 127.0.0.1 at 2017-10-19 03:26:24 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (35.3ms)
+Completed 200 OK in 38ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 03:26:24 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Rendered calumnis/create_mentor.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 03:26:24 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"", "password"=>"[FILTERED]", "email"=>"", "description"=>""}, "commit"=>"Submit Profile"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", ""], ["password", ""], ["email", ""], ["description", ""], ["created_at", "2017-10-19 03:26:24.224125"], ["updated_at", "2017-10-19 03:26:24.224125"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/login
+Completed 302 Found in 17ms (ActiveRecord: 0.9ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 03:26:24 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 03:26:24.245338"], ["updated_at", "2017-10-19 03:26:24.245338"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:26:24 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 03:26:24 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 03:26:24 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 03:26:24 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mPeople Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1[0m  [["username", ""], ["password", ""]]
+  Rendered calumnis/login.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 12ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 03:26:24.295408"], ["updated_at", "2017-10-19 03:26:24.295408"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:26:24 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 03:26:24 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 03:26:24 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 03:26:24 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mPeople Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1[0m  [["username", ""], ["password", ""]]
+  Rendered calumnis/login.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:39:09 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (9.8ms)
+Completed 200 OK in 197ms (Views: 187.6ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 03:39:10 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 127.0.0.1 at 2017-10-19 03:39:10 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (41.9ms)
+Completed 200 OK in 45ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 03:39:10 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Rendered calumnis/create_mentor.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 03:39:10.246802"], ["updated_at", "2017-10-19 03:39:10.246802"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:39:10 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 03:39:10 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 03:39:10 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 03:39:10 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "12345678"]]
+  Rendered calumnis/profile.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 17ms (Views: 5.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 03:39:10.318156"], ["updated_at", "2017-10-19 03:39:10.318156"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:39:10 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 03:39:10 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 03:39:10 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 03:39:10 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "yulaoban"]]
+  Rendered calumnis/login.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:40:15 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (9.9ms)
+Completed 200 OK in 217ms (Views: 207.7ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 03:40:15 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 127.0.0.1 at 2017-10-19 03:40:15 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (8.1ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 03:40:15 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Rendered calumnis/create_mentor.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 03:40:15.776841"], ["updated_at", "2017-10-19 03:40:15.776841"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:40:15 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 03:40:15 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 03:40:15 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 03:40:15 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "12345678"]]
+  Rendered calumnis/profile.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 14ms (Views: 4.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 03:40:15.836093"], ["updated_at", "2017-10-19 03:40:15.836093"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:40:15 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 03:40:15 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 03:40:15 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 03:40:15 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "yulaoban"]]
+  Rendered calumnis/login.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:42:55 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (8.7ms)
+Completed 200 OK in 215ms (Views: 205.5ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 03:42:55 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 127.0.0.1 at 2017-10-19 03:42:55 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (47.6ms)
+Completed 200 OK in 52ms (Views: 51.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 03:42:56 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Rendered calumnis/create_mentor.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 03:42:56.060221"], ["updated_at", "2017-10-19 03:42:56.060221"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:42:56 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 03:42:56 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 03:42:56 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 03:42:56 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "12345678"]]
+  Rendered calumnis/profile.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 16ms (Views: 5.6ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 03:42:56.127885"], ["updated_at", "2017-10-19 03:42:56.127885"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:42:56 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 03:42:56 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 03:42:56 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 03:42:56 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "yulaoban"]]
+  Rendered calumnis/login.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:43:48 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (7.6ms)
+Completed 200 OK in 175ms (Views: 166.4ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 03:43:48 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 127.0.0.1 at 2017-10-19 03:43:48 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (34.1ms)
+Completed 200 OK in 37ms (Views: 36.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 03:43:48 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Rendered calumnis/create_mentor.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 03:43:48.675363"], ["updated_at", "2017-10-19 03:43:48.675363"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:43:48 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 03:43:48 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 03:43:48 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 03:43:48 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "12345678"]]
+  Rendered calumnis/profile.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 14ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 03:43:48.733974"], ["updated_at", "2017-10-19 03:43:48.733974"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:43:48 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 03:43:48 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 03:43:48 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 03:43:48 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "yulaoban"]]
+  Rendered calumnis/login.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:58:16 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (8.7ms)
+Completed 200 OK in 293ms (Views: 278.2ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 03:58:16 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 127.0.0.1 at 2017-10-19 03:58:16 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (53.6ms)
+Completed 200 OK in 57ms (Views: 56.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 03:58:17 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Rendered calumnis/create_mentor.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 03:58:17.048911"], ["updated_at", "2017-10-19 03:58:17.048911"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:58:17 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 03:58:17 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 03:58:17 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 03:58:17 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "12345678"]]
+  Rendered calumnis/profile.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 15ms (Views: 5.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 03:58:17.114945"], ["updated_at", "2017-10-19 03:58:17.114945"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:58:17 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 03:58:17 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 03:58:17 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 03:58:17 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "yulaoban"]]
+  Rendered calumnis/login.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:58:49 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 214ms (Views: 199.9ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 03:58:49 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 127.0.0.1 at 2017-10-19 03:58:50 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (9.5ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 03:58:50 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Rendered calumnis/create_mentor.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 03:58:50.071317"], ["updated_at", "2017-10-19 03:58:50.071317"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:58:50 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 03:58:50 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 03:58:50 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 03:58:50 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "12345678"]]
+  Rendered calumnis/profile.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 13ms (Views: 4.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 03:58:50.123232"], ["updated_at", "2017-10-19 03:58:50.123232"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:58:50 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 03:58:50 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 03:58:50 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 03:58:50 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "yulaoban"]]
+  Rendered calumnis/login.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:59:58 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (11.5ms)
+Completed 200 OK in 203ms (Views: 193.5ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 03:59:58 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 127.0.0.1 at 2017-10-19 03:59:59 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (44.6ms)
+Completed 200 OK in 48ms (Views: 47.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 03:59:59 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Rendered calumnis/create_mentor.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 03:59:59.114501"], ["updated_at", "2017-10-19 03:59:59.114501"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:59:59 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 03:59:59 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 03:59:59 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 03:59:59 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "12345678"]]
+  Rendered calumnis/profile.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 15ms (Views: 5.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 03:59:59.177948"], ["updated_at", "2017-10-19 03:59:59.177948"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 03:59:59 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 03:59:59 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 03:59:59 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 03:59:59 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "yulaoban"]]
+  Rendered calumnis/login.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:00:37 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (13.5ms)
+Completed 200 OK in 273ms (Views: 263.2ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 04:00:38 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 127.0.0.1 at 2017-10-19 04:00:38 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 04:00:38 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Rendered calumnis/create_mentor.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 04:00:38.249030"], ["updated_at", "2017-10-19 04:00:38.249030"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:00:38 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:00:38 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 04:00:38 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 04:00:38 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "12345678"]]
+  Rendered calumnis/profile.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 14ms (Views: 4.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 04:00:38.304227"], ["updated_at", "2017-10-19 04:00:38.304227"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:00:38 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:00:38 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 04:00:38 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 04:00:38 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "yulaoban"]]
+  Rendered calumnis/login.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:03:23 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 181ms (Views: 172.4ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 04:03:23 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 127.0.0.1 at 2017-10-19 04:03:23 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (36.8ms)
+Completed 200 OK in 40ms (Views: 39.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 04:03:23 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Rendered calumnis/create_mentor.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 04:03:23.878126"], ["updated_at", "2017-10-19 04:03:23.878126"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:03:23 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:03:23 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 04:03:23 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 04:03:23 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "12345678"]]
+  Rendered calumnis/profile.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 15ms (Views: 5.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 04:03:23.941815"], ["updated_at", "2017-10-19 04:03:23.941815"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:03:23 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:03:23 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 04:03:23 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 04:03:23 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "yulaoban"]]
+  Rendered calumnis/login.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:03:48 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (7.3ms)
+Completed 200 OK in 192ms (Views: 182.7ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 04:03:48 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 127.0.0.1 at 2017-10-19 04:03:48 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (35.3ms)
+Completed 200 OK in 38ms (Views: 37.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 04:03:48 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Rendered calumnis/create_mentor.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 04:03:48.626509"], ["updated_at", "2017-10-19 04:03:48.626509"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:03:48 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:03:48 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 04:03:48 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 04:03:48 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "12345678"]]
+  Rendered calumnis/profile.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 14ms (Views: 5.1ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 04:03:48.684734"], ["updated_at", "2017-10-19 04:03:48.684734"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:03:48 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:03:48 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 04:03:48 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (11.0ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 04:03:48 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "yulaoban"]]
+  Rendered calumnis/login.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:07:09 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (7.6ms)
+Completed 200 OK in 178ms (Views: 168.3ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 04:07:09 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 127.0.0.1 at 2017-10-19 04:07:09 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (35.9ms)
+Completed 200 OK in 39ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 04:07:09 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Rendered calumnis/create_mentor.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 04:07:09.676487"], ["updated_at", "2017-10-19 04:07:09.676487"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:07:09 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:07:09 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 04:07:09 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 04:07:09 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "12345678"]]
+  Rendered calumnis/profile.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 16ms (Views: 5.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 04:07:09.739516"], ["updated_at", "2017-10-19 04:07:09.739516"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:07:09 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:07:09 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 04:07:09 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (11.6ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 04:07:09 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "yulaoban"]]
+  Rendered calumnis/login.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:08:56 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (8.3ms)
+Completed 200 OK in 188ms (Views: 179.1ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 04:08:56 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 127.0.0.1 at 2017-10-19 04:08:56 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 04:08:56 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Rendered calumnis/create_mentor.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 04:08:56.642998"], ["updated_at", "2017-10-19 04:08:56.642998"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:08:56 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:08:56 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 04:08:56 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 04:08:56 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "12345678"]]
+  Rendered calumnis/profile.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 15ms (Views: 5.3ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 04:08:56.710906"], ["updated_at", "2017-10-19 04:08:56.710906"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:08:56 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:08:56 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 04:08:56 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 04:08:56 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "yulaoban"]]
+  Rendered calumnis/login.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:09:16 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (12.8ms)
+Completed 200 OK in 244ms (Views: 231.8ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 04:09:16 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 127.0.0.1 at 2017-10-19 04:09:16 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 04:09:16 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Rendered calumnis/create_mentor.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:09:16 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]", "email"=>"test@berkeley.edu", "description"=>"Hello World", "company"=>"Google", "start_date"=>"2017-01-01", "resume"=>"", "profile"=>"", "university"=>"UC, Berkeley", "major"=>"Computer Science", "graduation"=>"2016"}, "commit"=>"Submit Profile"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 04:09:16.600996"], ["updated_at", "2017-10-19 04:09:16.600996"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:09:16 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:09:16 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 04:09:16 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 04:09:16 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "12345678"]]
+  Rendered calumnis/profile.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 14ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 04:09:16.660454"], ["updated_at", "2017-10-19 04:09:16.660454"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:09:16 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:09:16 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 04:09:16 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 04:09:16 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "yulaoban"]]
+  Rendered calumnis/login.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:11:45 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 198ms (Views: 186.9ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 04:11:46 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 127.0.0.1 at 2017-10-19 04:11:46 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 40ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 04:11:46 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Rendered calumnis/create_mentor.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:11:46 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]", "email"=>"test@berkeley.edu", "description"=>"Hello World", "company"=>"Google", "start_date"=>"2017-01-01", "resume"=>"", "profile"=>"", "university"=>"UC, Berkeley", "major"=>"Computer Science", "graduation"=>"2016"}, "commit"=>"Submit Profile"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 04:11:46.334749"], ["updated_at", "2017-10-19 04:11:46.334749"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:11:46 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:11:46 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 04:11:46 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 04:11:46 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "12345678"]]
+  Rendered calumnis/profile.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 16ms (Views: 5.6ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 04:11:46.401713"], ["updated_at", "2017-10-19 04:11:46.401713"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:11:46 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:11:46 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 04:11:46 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 04:11:46 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "yulaoban"]]
+  Rendered calumnis/login.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:12:41 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 178ms (Views: 169.1ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 04:12:41 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 127.0.0.1 at 2017-10-19 04:12:41 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 39ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 04:12:41 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Rendered calumnis/create_mentor.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:12:41 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]", "email"=>"test@berkeley.edu", "description"=>"Hello World", "company"=>"Google", "start_date"=>"2017-01-01", "resume"=>"", "profile"=>"", "university"=>"UC, Berkeley", "major"=>"Computer Science", "graduation"=>"2016"}, "commit"=>"Submit Profile"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 04:12:41.845597"], ["updated_at", "2017-10-19 04:12:41.845597"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:12:41 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:12:41 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 04:12:41 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 04:12:41 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "12345678"]]
+  Rendered calumnis/profile.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 16ms (Views: 5.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 04:12:41.912716"], ["updated_at", "2017-10-19 04:12:41.912716"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:12:41 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:12:41 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 04:12:41 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 04:12:41 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "yulaoban"]]
+  Rendered calumnis/login.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:15:16 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 193ms (Views: 184.4ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 04:15:17 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 127.0.0.1 at 2017-10-19 04:15:17 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (8.4ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 04:15:17 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Rendered calumnis/create_mentor.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:15:17 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]", "email"=>"test@berkeley.edu", "description"=>"Hello World", "company"=>"Google", "start_date"=>"2017-01-01", "resume"=>"", "profile"=>"", "university"=>"UC, Berkeley", "major"=>"Computer Science", "graduation"=>"2016"}, "commit"=>"Submit Profile"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 04:15:17.188668"], ["updated_at", "2017-10-19 04:15:17.188668"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:15:17 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:15:17 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 04:15:17 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 04:15:17 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "12345678"]]
+  Rendered calumnis/profile.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 18ms (Views: 6.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 04:15:17.279523"], ["updated_at", "2017-10-19 04:15:17.279523"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:15:17 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:15:17 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 04:15:17 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 04:15:17 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "yulaoban"]]
+  Rendered calumnis/login.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:19:26 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (8.1ms)
+Completed 200 OK in 213ms (Views: 204.2ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 04:19:26 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 127.0.0.1 at 2017-10-19 04:19:26 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (8.3ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 04:19:26 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Rendered calumnis/create_mentor.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:19:26 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]", "email"=>"test@berkeley.edu", "description"=>"Hello World", "company"=>"Google", "start_date"=>"2017-01-01", "resume"=>"", "profile"=>"", "university"=>"UC, Berkeley", "major"=>"Computer Science", "graduation"=>"2016"}, "commit"=>"Submit Profile"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 04:19:26.916001"], ["updated_at", "2017-10-19 04:19:26.916001"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:19:26 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:19:26 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 04:19:26 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 04:19:26 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "12345678"]]
+  Rendered calumnis/profile.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 14ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 04:19:26.976602"], ["updated_at", "2017-10-19 04:19:26.976602"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:19:26 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:19:26 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 04:19:26 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 04:19:27 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "yulaoban"]]
+  Rendered calumnis/login.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:22:05 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 203ms (Views: 193.8ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 04:22:06 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 127.0.0.1 at 2017-10-19 04:22:06 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 04:22:06 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Rendered calumnis/create_mentor.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:22:06 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]", "email"=>"test@berkeley.edu", "description"=>"Hello World", "company"=>"Google", "start_date"=>"2017-01-01", "resume"=>"", "profile"=>"", "university"=>"UC, Berkeley", "major"=>"Computer Science", "graduation"=>"2016"}, "commit"=>"Submit Profile"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 04:22:06.119910"], ["updated_at", "2017-10-19 04:22:06.119910"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:22:06 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:22:06 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 04:22:06 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 04:22:06 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "12345678"]]
+  Rendered calumnis/profile.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 14ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 04:22:06.176863"], ["updated_at", "2017-10-19 04:22:06.176863"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:22:06 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:22:06 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 04:22:06 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 04:22:06 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mPeople Load (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1  [["username", "username"], ["password", "yulaoban"]]
+  Rendered calumnis/login.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (11.9ms)[0m  [1mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "password" varchar, "email" varchar, "description" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "company" varchar, "start_date" varchar) [0m
+  [1m[35m (8.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (7.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (8.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171019043713')
+  [1m[36m (9.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171018070514')[0m
+  [1m[35m (6.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171019043451')
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddResumeToPeople (20171019043746)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "people" ADD "resume" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20171019043746"]]
+  [1m[36m (8.5ms)[0m  [1mcommit transaction[0m
+Migrating to AddProfileToPeople (20171019043836)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "people" ADD "profile" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20171019043836"]]
+  [1m[36m (7.0ms)[0m  [1mcommit transaction[0m
+Migrating to AddUniversityToPeople (20171019043854)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "people" ADD "university" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20171019043854"]]
+  [1m[36m (10.9ms)[0m  [1mcommit transaction[0m
+Migrating to AddMajorToPeople (20171019043910)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "people" ADD "major" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20171019043910"]]
+  [1m[36m (7.4ms)[0m  [1mcommit transaction[0m
+Migrating to AddGraduationToPeople (20171019043928)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "people" ADD "graduation" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20171019043928"]]
+  [1m[36m (9.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:46:02 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (13.2ms)
+Completed 200 OK in 235ms (Views: 225.7ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 04:46:02 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 127.0.0.1 at 2017-10-19 04:46:02 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 04:46:02 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Rendered calumnis/create_mentor.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:46:02 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]", "email"=>"test@berkeley.edu", "description"=>"Hello World", "company"=>"Google", "start_date"=>"2017-01-01", "resume"=>"", "profile"=>"", "university"=>"UC, Berkeley", "major"=>"Computer Science", "graduation"=>"2016"}, "commit"=>"Submit Profile"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "company", "start_date", "resume", "profile", "university", "major", "graduation", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "test@berkeley.edu"], ["description", "Hello World"], ["company", "Google"], ["start_date", "2017-01-01"], ["resume", ""], ["profile", ""], ["university", "UC, Berkeley"], ["major", "Computer Science"], ["graduation", "2016"], ["created_at", "2017-10-19 04:46:02.993225"], ["updated_at", "2017-10-19 04:46:02.993225"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/login
+Completed 302 Found in 27ms (ActiveRecord: 1.2ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 04:46:03 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 04:46:03.013458"], ["updated_at", "2017-10-19 04:46:03.013458"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:46:03 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:46:03 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 04:46:03 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 04:46:03 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mPeople Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1[0m  [["username", "username"], ["password", "12345678"]]
+  Rendered calumnis/profile.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 16ms (Views: 5.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 04:46:03.065821"], ["updated_at", "2017-10-19 04:46:03.065821"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:46:03 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:46:03 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 04:46:03 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 04:46:03 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mPeople Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1[0m  [["username", "username"], ["password", "yulaoban"]]
+  Rendered calumnis/login.html.haml within layouts/application (36.1ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:46:41 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (7.3ms)
+Completed 200 OK in 189ms (Views: 180.8ms | ActiveRecord: 0.0ms)
+Started POST "/signup" for 127.0.0.1 at 2017-10-19 04:46:41 +0000
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 127.0.0.1 at 2017-10-19 04:46:42 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/create_mentor" for 127.0.0.1 at 2017-10-19 04:46:42 +0000
+Processing by CalumnisController#create_mentor as HTML
+  Rendered calumnis/create_mentor.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:46:42 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]", "email"=>"test@berkeley.edu", "description"=>"Hello World", "company"=>"Google", "start_date"=>"2017-01-01", "resume"=>"", "profile"=>"", "university"=>"UC, Berkeley", "major"=>"Computer Science", "graduation"=>"2016"}, "commit"=>"Submit Profile"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("username", "password", "email", "description", "company", "start_date", "resume", "profile", "university", "major", "graduation", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["username", "username"], ["password", "12345678"], ["email", "test@berkeley.edu"], ["description", "Hello World"], ["company", "Google"], ["start_date", "2017-01-01"], ["resume", ""], ["profile", ""], ["university", "UC, Berkeley"], ["major", "Computer Science"], ["graduation", "2016"], ["created_at", "2017-10-19 04:46:42.076514"], ["updated_at", "2017-10-19 04:46:42.076514"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/login
+Completed 302 Found in 20ms (ActiveRecord: 0.9ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 04:46:42 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 04:46:42.095483"], ["updated_at", "2017-10-19 04:46:42.095483"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:46:42 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:46:42 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 04:46:42 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 04:46:42 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mPeople Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1[0m  [["username", "username"], ["password", "12345678"]]
+  Rendered calumnis/profile.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 13ms (Views: 4.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("username", "password", "email", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "username"], ["password", "12345678"], ["email", "username@berkele.edu"], ["description", "None"], ["created_at", "2017-10-19 04:46:42.143674"], ["updated_at", "2017-10-19 04:46:42.143674"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2017-10-19 04:46:42 +0000
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2017-10-19 04:46:42 +0000
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Login"}
+Redirected to http://www.example.com/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-10-19 04:46:42 +0000
+Processing by CalumnisController#login as HTML
+  Rendered calumnis/login.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+Started POST "/profile" for 127.0.0.1 at 2017-10-19 04:46:42 +0000
+Processing by CalumnisController#profile as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"username"=>"username", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mPeople Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = ? AND "people"."password" = ? LIMIT 1[0m  [["username", "username"], ["password", "yulaoban"]]
+  Rendered calumnis/login.html.haml within layouts/application (31.7ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
