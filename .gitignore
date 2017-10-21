@@ -1,6 +1,6 @@
 tmp/*
 log/development.log
-
+plain 
 # Ignore Byebug command history file.
 .byebug_history
 
