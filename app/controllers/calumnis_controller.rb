@@ -17,7 +17,7 @@ class CalumnisController < ApplicationController
 #   end
 
   def people_params
-    params.require(:people).permit(:username, :password, :email, :description, :company, :start_date, :resume, :profile, :university, :major, :graduation, :help)
+    params.require(:people).permit(:username, :email, :description, :company, :start_date, :resume, :profile, :university, :major, :graduation, :help)
   end  
 
   public
@@ -33,39 +33,44 @@ class CalumnisController < ApplicationController
   def signup
   end
   def createandlogin
-    p params[:people]
-    if params[:people]==nil 
-      redirect_to login_path
-    else
-      @calumni = People.create!(people_params)
-      redirect_to login_path
-    end
+    p "in createandlogin",params[:people],people_params,cookies[:email]
+    params[:people][:email]=cookies[:email]
+    people_params[:email]=cookies[:email]
+    p people_params,"again"
+    @calumni = People.create!(people_params)
+    redirect_to profile_path
   end
   def login
 
   end
 
-  
+
+
 
   def profile
     # check username and password first 
-    p params[:people][:username]
-    p params[:username]
-    p params[:people][:password]
-    @pwcorrect=People.find_by(username: params[:people][:username], password: params[:people][:password])
+    # p params
+
+    # save 
+
+    p cookies[:email]
+    @people= People.select{|p| p.email==cookies[:email]}
+    # p "in profile ",People.find_by(email: cookies[:email])
+
+    # @pwcorrect=People.find_by(username: params[:people][:username], password: params[:people][:password])
   
-    p @pwcorrect
-    if @pwcorrect
-      @people=1
-    else
-      @pwcorrect="Wrong Username or Password"
-      render :login
-    end
-    
+    # p @pwcorrect
+    # if @pwcorrect
+    #   @people=1
+    # else
+    #   @pwcorrect="Wrong Username or Password"
+    #   render :login
+    # end
   end
   
   def create_mentor
     # byebug
+
     # redirect_to login_path
   end
   def create_mentee

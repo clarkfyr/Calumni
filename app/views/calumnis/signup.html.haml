@@ -1,9 +1,8 @@
 %h1 Decision Role Page
 %h2 Role
 
-= form_tag create_mentor_path, :method => :get do
-  = submit_tag 'Mentor'
-= form_tag create_mentee_path, :method => :get do
-  = submit_tag 'Mentee'
+
+= link_to 'Mentor',create_mentor_path
+= link_to 'Mentee',create_mentee_path
 
 

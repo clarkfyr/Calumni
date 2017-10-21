@@ -1,14 +1,12 @@
-%h2 Create New Mentor Page
+%h2 Please complete your profile
 
 = form_tag createandlogin_path do
+
+  = cookies[:email].inspect
 
   = label :people, :username, 'Username'
   = text_field :people, 'username'
 
-  = label :people, :password, 'Password'
-  = text_field :people, 'password'
-  = label :people, :email, 'Email'
-  = text_field :people, 'email'
   = label :people, :description, 'Description'
   = text_field :people, 'description'
   = label :people, :company, 'Company'
@@ -26,4 +24,3 @@
   = label :people, :graduation, 'Graduation Year'
   = text_field :people, 'graduation'
   = submit_tag 'Submit Profile'
-  

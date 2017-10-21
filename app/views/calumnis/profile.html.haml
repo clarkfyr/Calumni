@@ -1,10 +1,10 @@
 %h1 Details Page
-%h2 Hi, #{@pwcorrect.username}
+%h2 Hi, #{@people.first.username}
 
 %table
   %tbody
-    %td= @pwcorrect.username
-    %td= @pwcorrect.email
-    %td= @pwcorrect.description
+    %td= @people.first.email
+    %td= @people.first.company
+    %td= @people.first.description
 
 

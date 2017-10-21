@@ -1,0 +1,6 @@
+tmp/*
+log/development.log
+
+# Ignore Byebug command history file.
+.byebug_history
+
