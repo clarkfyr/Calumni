@@ -15953,3 +15953,321 @@ Processing by CalumnisController#profile as HTML
   [1m[35mPeople Load (0.4ms)[0m  SELECT "people".* FROM "people"
   Rendered calumnis/profile.html.haml within layouts/application (0.2ms)
 Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 136.25.183.123 at 2017-10-22 20:31:58 +0000
+Cannot render console from 136.25.183.123! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (8.8ms)
+Completed 200 OK in 429ms (Views: 419.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 136.25.183.123 at 2017-10-22 20:31:59 +0000
+Cannot render console from 136.25.183.123! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 136.25.183.123 at 2017-10-22 20:31:59 +0000
+Cannot render console from 136.25.183.123! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/signup" for 136.25.183.123 at 2017-10-22 20:32:01 +0000
+Cannot render console from 136.25.183.123! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#signup as HTML
+  Rendered calumnis/signup.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create_mentor" for 136.25.183.123 at 2017-10-22 20:32:01 +0000
+Cannot render console from 136.25.183.123! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#create_mentor as HTML
+Redirected to https://c9test-makeapp.c9users.io/auth/google_oauth2
+Filter chain halted as :signed_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 136.25.183.123 at 2017-10-22 20:32:02 +0000
+Cannot render console from 136.25.183.123! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/create_mentor" for 136.25.183.123 at 2017-10-22 20:32:02 +0000
+Cannot render console from 136.25.183.123! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#create_mentor as HTML
+Redirected to https://c9test-makeapp.c9users.io/auth/google_oauth2
+Filter chain halted as :signed_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 136.25.183.123 at 2017-10-22 20:32:02 +0000
+Cannot render console from 136.25.183.123! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/auth/google_oauth2/callback?state=4f3d0cfb36813977254b67e73eb37c35009a0480f2f53211&code=4%2FEsScD4tOcQzapV_CsNbT4mSVmITMK3CUrqOsNX2HwaM" for 136.25.183.123 at 2017-10-22 20:32:16 +0000
+Cannot render console from 136.25.183.123! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthController#google_callback as HTML
+  Parameters: {"state"=>"4f3d0cfb36813977254b67e73eb37c35009a0480f2f53211", "code"=>"4/EsScD4tOcQzapV_CsNbT4mSVmITMK3CUrqOsNX2HwaM"}
+Redirected to https://c9test-makeapp.c9users.io/create_mentor
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/create_mentor" for 136.25.183.123 at 2017-10-22 20:32:16 +0000
+Cannot render console from 136.25.183.123! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#create_mentor as HTML
+  [1m[35mPeople Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered calumnis/create_mentor.html.haml within layouts/application (10.0ms)
+Completed 200 OK in 135ms (Views: 111.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/newProfile" for 136.25.183.123 at 2017-10-22 20:32:22 +0000
+Cannot render console from 136.25.183.123! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IP/tihJ6AtatiXweaPRNFV86tZT2U/seYbwmeehL2PMFh/0Djm3md4En872XnQio42dzDAI+2z29hQbKWOHRvw==", "people"=>{"username"=>"dash ", "description"=>"said ", "company"=>"fast ", "start_date"=>"", "resume"=>"", "profile"=>"", "university"=>"", "major"=>"", "graduation"=>""}, "commit"=>"Submit Profile"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("username", "email", "description", "company", "start_date", "resume", "profile", "university", "major", "graduation", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["username", "dash "], ["email", "yonghao.liu@berkeley.edu"], ["description", "said "], ["company", "fast "], ["start_date", ""], ["resume", ""], ["profile", ""], ["university", ""], ["major", ""], ["graduation", ""], ["created_at", "2017-10-22 20:32:22.398111"], ["updated_at", "2017-10-22 20:32:22.398111"]]
+  [1m[36m (9.8ms)[0m  [1mcommit transaction[0m
+Redirected to https://c9test-makeapp.c9users.io/profile
+Completed 302 Found in 22ms (ActiveRecord: 10.4ms)
+
+
+Started GET "/profile" for 136.25.183.123 at 2017-10-22 20:32:22 +0000
+Cannot render console from 136.25.183.123! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#profile as HTML
+  [1m[35mPeople Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  Rendered calumnis/profile.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 136.25.183.123 at 2017-10-22 20:32:27 +0000
+Cannot render console from 136.25.183.123! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 136.152.142.39 at 2017-10-22 20:32:40 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 136.152.142.39 at 2017-10-22 20:32:44 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#signup as HTML
+  Rendered calumnis/signup.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create_mentor" for 136.152.142.39 at 2017-10-22 20:32:45 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#create_mentor as HTML
+Redirected to https://c9test-makeapp.c9users.io/auth/google_oauth2
+Filter chain halted as :signed_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 136.152.142.39 at 2017-10-22 20:32:45 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/create_mentor" for 136.152.142.39 at 2017-10-22 20:32:45 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#create_mentor as HTML
+Redirected to https://c9test-makeapp.c9users.io/auth/google_oauth2
+Filter chain halted as :signed_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 136.152.142.39 at 2017-10-22 20:32:45 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/auth/google_oauth2/callback?state=5bec55dd17566657fe36d8615f6656e5696e9f7782fea902&code=4/yQyGXeutbC4b5e3pgmir8eKWsiLS1-0I6nBz61e-lfU" for 136.152.142.39 at 2017-10-22 20:32:47 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthController#google_callback as HTML
+  Parameters: {"state"=>"5bec55dd17566657fe36d8615f6656e5696e9f7782fea902", "code"=>"4/yQyGXeutbC4b5e3pgmir8eKWsiLS1-0I6nBz61e-lfU"}
+Redirected to https://c9test-makeapp.c9users.io/create_mentor
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/create_mentor" for 136.152.142.39 at 2017-10-22 20:32:47 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#create_mentor as HTML
+  [1m[36mPeople Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered calumnis/create_mentor.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/newProfile" for 136.152.142.39 at 2017-10-22 20:32:52 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LE5NKcxB44taq5Y4mIin4S7xZMY8cFLiGER/ZuhaEFKNw/aJqyw3FuHW0exx2VArxKvRREDvZQWj+Pyye2biUQ==", "people"=>{"username"=>"123", "description"=>"123", "company"=>"1", "start_date"=>"", "resume"=>"", "profile"=>"", "university"=>"", "major"=>"", "graduation"=>""}, "commit"=>"Submit Profile"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("username", "email", "description", "company", "start_date", "resume", "profile", "university", "major", "graduation", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["username", "123"], ["email", "clarkfyr@berkeley.edu"], ["description", "123"], ["company", "1"], ["start_date", ""], ["resume", ""], ["profile", ""], ["university", ""], ["major", ""], ["graduation", ""], ["created_at", "2017-10-22 20:32:52.853709"], ["updated_at", "2017-10-22 20:32:52.853709"]]
+  [1m[35m (12.2ms)[0m  commit transaction
+Redirected to https://c9test-makeapp.c9users.io/profile
+Completed 302 Found in 18ms (ActiveRecord: 12.6ms)
+
+
+Started GET "/profile" for 136.152.142.39 at 2017-10-22 20:32:53 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#profile as HTML
+  [1m[36mPeople Load (0.4ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered calumnis/profile.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/signup" for 136.152.142.39 at 2017-10-22 20:33:05 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#signup as HTML
+  Rendered calumnis/signup.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 26ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 136.152.142.39 at 2017-10-22 20:33:05 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 40ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create_mentor" for 136.152.142.39 at 2017-10-22 20:33:07 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#create_mentor as HTML
+Redirected to https://c9test-makeapp.c9users.io/auth/google_oauth2
+Filter chain halted as :signed_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 136.152.142.39 at 2017-10-22 20:33:07 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/create_mentor" for 136.152.142.39 at 2017-10-22 20:33:07 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#create_mentor as HTML
+Redirected to https://c9test-makeapp.c9users.io/auth/google_oauth2
+Filter chain halted as :signed_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 136.152.142.39 at 2017-10-22 20:33:07 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/auth/google_oauth2/callback?state=1ce93a26e92a97393f293069f9ff6eb4255b3cc6f2144bcb&code=4/TKHKg9haASCnUW_FP5Wdzb8OPFNtMK8IOLUWtw6H2Yw" for 136.152.142.39 at 2017-10-22 20:33:08 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthController#google_callback as HTML
+  Parameters: {"state"=>"1ce93a26e92a97393f293069f9ff6eb4255b3cc6f2144bcb", "code"=>"4/TKHKg9haASCnUW_FP5Wdzb8OPFNtMK8IOLUWtw6H2Yw"}
+Redirected to https://c9test-makeapp.c9users.io/create_mentor
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/create_mentor" for 136.152.142.39 at 2017-10-22 20:33:08 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#create_mentor as HTML
+  [1m[35mPeople Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered calumnis/create_mentor.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 136.152.142.39 at 2017-10-22 20:33:08 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 136.152.142.39 at 2017-10-22 20:33:08 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 136.152.142.39 at 2017-10-22 20:33:08 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 136.152.142.39 at 2017-10-22 20:33:08 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 136.152.142.39 at 2017-10-22 20:33:08 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 136.152.142.39 at 2017-10-22 20:33:17 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 136.152.142.39 at 2017-10-22 20:33:17 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 136.152.142.39 at 2017-10-22 20:33:17 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 136.152.142.39 at 2017-10-22 20:33:17 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 136.152.142.39 at 2017-10-22 20:33:17 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 136.152.142.39 at 2017-10-22 20:33:17 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/signup" for 136.152.142.39 at 2017-10-22 20:33:19 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#signup as HTML
+  Rendered calumnis/signup.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create_mentor" for 136.152.142.39 at 2017-10-22 20:33:19 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#create_mentor as HTML
+Redirected to https://c9test-makeapp.c9users.io/auth/google_oauth2
+Filter chain halted as :signed_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 136.152.142.39 at 2017-10-22 20:33:19 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/create_mentor" for 136.152.142.39 at 2017-10-22 20:33:19 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#create_mentor as HTML
+Redirected to https://c9test-makeapp.c9users.io/auth/google_oauth2
+Filter chain halted as :signed_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 136.152.142.39 at 2017-10-22 20:33:19 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/auth/google_oauth2/callback?state=5fc0dd65b9c6fe9eef15c8da94ba0a55ddd61a3e8e26bbf9&code=4%2F2XMTdnQX41wRU4pDIP1Lk6zBZhcWTxDbGvLcbhzatpo" for 136.152.142.39 at 2017-10-22 20:33:29 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthController#google_callback as HTML
+  Parameters: {"state"=>"5fc0dd65b9c6fe9eef15c8da94ba0a55ddd61a3e8e26bbf9", "code"=>"4/2XMTdnQX41wRU4pDIP1Lk6zBZhcWTxDbGvLcbhzatpo"}
+Redirected to https://c9test-makeapp.c9users.io/create_mentor
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/create_mentor" for 136.152.142.39 at 2017-10-22 20:33:30 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#create_mentor as HTML
+  [1m[36mPeople Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+Redirected to https://c9test-makeapp.c9users.io/profile
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/profile" for 136.152.142.39 at 2017-10-22 20:33:30 +0000
+Cannot render console from 136.152.142.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#profile as HTML
+  [1m[35mPeople Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered calumnis/profile.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.3ms)
