@@ -9097,3 +9097,27 @@ Cannot render console from 98.248.251.246! Allowed networks: 127.0.0.1, ::1, 127
 Processing by CalumnisController#login as HTML
   Rendered calumnis/login.html.haml within layouts/application (3.5ms)
 Completed 200 OK in 114ms (Views: 113.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 136.152.142.165 at 2017-10-22 22:24:31 +0000
+Cannot render console from 136.152.142.165! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (18.2ms)
+Completed 200 OK in 329ms (Views: 313.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signup" for 136.152.142.165 at 2017-10-22 22:24:34 +0000
+Cannot render console from 136.152.142.165! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#signup as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VQXc+/5Dlc3tKV/0J5YZuhEYsjYVd/Kfte5hNmqhr9iM7blh4OQQsDSMe/Rvz1QNDSpgUoNwqITWdZnD6+I2Yg==", "commit"=>"Sign Up"}
+  Rendered calumnis/signup.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 65ms (Views: 64.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create_mentor?utf8=%E2%9C%93&commit=Mentor" for 136.152.142.165 at 2017-10-22 22:24:37 +0000
+Cannot render console from 136.152.142.165! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#create_mentor as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Mentor"}
+  Rendered calumnis/create_mentor.html.haml within layouts/application (19.7ms)
+Completed 200 OK in 42ms (Views: 41.6ms | ActiveRecord: 0.0ms)
