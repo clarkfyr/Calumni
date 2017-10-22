@@ -71,7 +71,13 @@ class CalumnisController < ApplicationController
   def create_mentor
     # byebug
 
-    # redirect_to login_path
+    # check user exists or not
+    p @people
+    ok= People.select{|p| p.email==cookies[:email]} 
+    # return an array, if [] or has value
+    if ok[0]!=nil
+      redirect_to profile_path
+    end
   end
   def create_mentee
   end

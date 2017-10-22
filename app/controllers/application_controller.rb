@@ -4,8 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   
   include AuthHelper
+  # before_action :oldOrnew, only: [:signup]
   before_action :signed_in, :except => [:google_callback,:home,:signup]
-  before_action :oldOrnew, only: [:signup]
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   # protect_from_forgery with: :exception
@@ -25,8 +25,8 @@ class ApplicationController < ActionController::Base
   
   def oldOrnew
     ok=People.find_by(email: cookies[:email])
-    p ok
-    if ok
+    p ok,"this is in oldOrnew"
+    if ok!=nil
       # old user, should have profile
       redirect_to profile_path
     end
