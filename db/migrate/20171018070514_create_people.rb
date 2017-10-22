@@ -1,6 +1,6 @@
 class CreatePeople < ActiveRecord::Migration
   def change
-    drop_table :profile
+    # drop_table :profile
     create_table :people do |t|
       t.string :username
       t.string :password
