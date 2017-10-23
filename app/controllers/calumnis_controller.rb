@@ -48,6 +48,7 @@ class CalumnisController < ApplicationController
 
 
   def profile
+
     # check username and password first 
     # p params
 
