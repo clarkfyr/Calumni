@@ -16333,3 +16333,401 @@ Gem::LoadError (Specified 'sqlite3' for database adapter, but the gem is not loa
   Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.3ms)
+
+
+Started GET "/" for 192.31.105.138 at 2017-10-23 00:12:49 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (13.1ms)
+Completed 200 OK in 351ms (Views: 338.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 192.31.105.138 at 2017-10-23 00:12:50 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/signup" for 192.31.105.138 at 2017-10-23 00:12:51 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#signup as HTML
+  Rendered calumnis/signup.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create_mentor" for 192.31.105.138 at 2017-10-23 00:12:52 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#create_mentor as HTML
+  [1m[35mPeople Load (0.3ms)[0m  SELECT "people".* FROM "people"
+Redirected to https://c9test-makeapp.c9users.io/profile
+Completed 302 Found in 32ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/profile" for 192.31.105.138 at 2017-10-23 00:12:52 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#profile as HTML
+  [1m[36mPeople Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered calumnis/profile.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/signup" for 192.31.105.138 at 2017-10-23 00:12:56 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#signup as HTML
+  Rendered calumnis/signup.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 192.31.105.138 at 2017-10-23 00:12:56 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 192.31.105.138 at 2017-10-23 00:12:56 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 192.31.105.138 at 2017-10-23 00:12:56 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 192.31.105.138 at 2017-10-23 00:12:56 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 192.31.105.138 at 2017-10-23 00:12:56 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/create_mentor" for 192.31.105.138 at 2017-10-23 00:12:58 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#create_mentor as HTML
+  [1m[35mPeople Load (0.5ms)[0m  SELECT "people".* FROM "people"
+Redirected to https://c9test-makeapp.c9users.io/profile
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/profile" for 192.31.105.138 at 2017-10-23 00:12:58 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#profile as HTML
+  [1m[36mPeople Load (0.4ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered calumnis/profile.html.haml within layouts/application (80.8ms)
+Completed 200 OK in 103ms (Views: 100.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/profile" for 192.31.105.138 at 2017-10-23 00:13:10 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#profile as HTML
+Redirected to https://c9test-makeapp.c9users.io/auth/google_oauth2
+Filter chain halted as :signed_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 192.31.105.138 at 2017-10-23 00:13:10 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/auth/google_oauth2/callback?state=07cb32f5b607cb6e91fda01a14ba0914fa2f5b3e5f487f26&code=4/76pT4VedJuZl9jvSBss7cXbQpFnPTvfFkyQjb8R3k-k" for 192.31.105.138 at 2017-10-23 00:13:10 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthController#google_callback as HTML
+  Parameters: {"state"=>"07cb32f5b607cb6e91fda01a14ba0914fa2f5b3e5f487f26", "code"=>"4/76pT4VedJuZl9jvSBss7cXbQpFnPTvfFkyQjb8R3k-k"}
+Redirected to https://c9test-makeapp.c9users.io/profile
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for 192.31.105.138 at 2017-10-23 00:13:11 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#profile as HTML
+  [1m[35mPeople Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  Rendered calumnis/profile.html.haml within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    1: %h1 Details Page
+    2: %h2 Hi, #{@people.first.username}
+    3: 
+    4: %table
+    5:   %tbody
+  app/views/calumnis/profile.html.haml:2:in `_app_views_calumnis_profile_html_haml___3149268379091124232_69823056089420'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.7ms)
+
+
+Started GET "/" for 192.31.105.138 at 2017-10-23 00:13:14 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 192.31.105.138 at 2017-10-23 00:13:16 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#signup as HTML
+  Rendered calumnis/signup.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create_mentor" for 192.31.105.138 at 2017-10-23 00:13:16 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#create_mentor as HTML
+  [1m[36mPeople Load (0.4ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered calumnis/create_mentor.html.haml within layouts/application (10.8ms)
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/profile" for 192.31.105.138 at 2017-10-23 00:13:20 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [POST] "/profile"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (45.7ms)
+
+
+Started GET "/" for 192.31.105.138 at 2017-10-23 00:14:44 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 192.31.105.138 at 2017-10-23 00:14:45 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#signup as HTML
+  Rendered calumnis/signup.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create_mentor" for 192.31.105.138 at 2017-10-23 00:14:45 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#create_mentor as HTML
+  [1m[35mPeople Load (0.5ms)[0m  SELECT "people".* FROM "people"
+  Rendered calumnis/create_mentor.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 32ms (Views: 17.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/profile" for 192.31.105.138 at 2017-10-23 00:14:48 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [POST] "/profile"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.6ms)
+
+
+Started GET "/" for 192.31.105.138 at 2017-10-23 00:15:24 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 192.31.105.138 at 2017-10-23 00:15:25 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#signup as HTML
+  Rendered calumnis/signup.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create_mentor" for 192.31.105.138 at 2017-10-23 00:15:26 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#create_mentor as HTML
+  [1m[36mPeople Load (0.4ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered calumnis/create_mentor.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/newProfile" for 192.31.105.138 at 2017-10-23 00:15:29 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1+V6sJieXh3QvIFcVnw+tBPA6eltLN+gLBOp0MWLOWowM7h22wLa/XAYfZvR8vC6HSkPSYjYzi+8c6lTXmBdjQ==", "people"=>{"username"=>"saf", "description"=>"", "company"=>"", "start_date"=>"", "resume"=>"", "profile"=>"", "university"=>"asf", "major"=>"", "graduation"=>""}, "commit"=>"Submit Profile"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "people" ("username", "email", "description", "company", "start_date", "resume", "profile", "university", "major", "graduation", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["username", "saf"], ["email", "makeapp007@gmail.com"], ["description", ""], ["company", ""], ["start_date", ""], ["resume", ""], ["profile", ""], ["university", "asf"], ["major", ""], ["graduation", ""], ["created_at", "2017-10-23 00:15:29.321381"], ["updated_at", "2017-10-23 00:15:29.321381"]]
+  [1m[35m (8.7ms)[0m  commit transaction
+Redirected to https://c9test-makeapp.c9users.io/profile
+Completed 302 Found in 25ms (ActiveRecord: 9.4ms)
+
+
+Started GET "/profile" for 192.31.105.138 at 2017-10-23 00:15:29 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#profile as HTML
+  [1m[36mPeople Load (0.4ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered calumnis/profile.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 192.31.105.138 at 2017-10-23 00:16:14 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 192.31.105.138 at 2017-10-23 00:16:15 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#signup as HTML
+  Rendered calumnis/signup.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create_mentor" for 192.31.105.138 at 2017-10-23 00:16:16 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#create_mentor as HTML
+  [1m[35mPeople Load (0.4ms)[0m  SELECT "people".* FROM "people"
+Redirected to https://c9test-makeapp.c9users.io/profile
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/profile" for 192.31.105.138 at 2017-10-23 00:16:16 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#profile as HTML
+  [1m[36mPeople Load (0.4ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered calumnis/profile.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 105ms (Views: 102.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 192.31.105.138 at 2017-10-23 00:16:25 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#home as HTML
+  Rendered calumnis/home.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 192.31.105.138 at 2017-10-23 00:16:25 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 192.31.105.138 at 2017-10-23 00:16:25 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 192.31.105.138 at 2017-10-23 00:16:25 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/signup" for 192.31.105.138 at 2017-10-23 00:16:27 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#signup as HTML
+  Rendered calumnis/signup.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create_mentor" for 192.31.105.138 at 2017-10-23 00:16:27 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#create_mentor as HTML
+Redirected to https://c9test-makeapp.c9users.io/auth/google_oauth2
+Filter chain halted as :signed_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 192.31.105.138 at 2017-10-23 00:16:28 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/create_mentor" for 192.31.105.138 at 2017-10-23 00:16:28 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#create_mentor as HTML
+Redirected to https://c9test-makeapp.c9users.io/auth/google_oauth2
+Filter chain halted as :signed_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 192.31.105.138 at 2017-10-23 00:16:28 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/auth/google_oauth2/callback?state=7c8abbd194a56fa1c2dd8236bfd5307423199fd0219fe38c&code=4%2FHtUHnXFyOb6UPusde6nEt5ai2xVI98t-twX7O-Sv47k" for 192.31.105.138 at 2017-10-23 00:16:56 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthController#google_callback as HTML
+  Parameters: {"state"=>"7c8abbd194a56fa1c2dd8236bfd5307423199fd0219fe38c", "code"=>"4/HtUHnXFyOb6UPusde6nEt5ai2xVI98t-twX7O-Sv47k"}
+Redirected to https://c9test-makeapp.c9users.io/create_mentor
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/create_mentor" for 192.31.105.138 at 2017-10-23 00:16:56 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#create_mentor as HTML
+  [1m[35mPeople Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  Rendered calumnis/create_mentor.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/newProfile" for 192.31.105.138 at 2017-10-23 00:17:03 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#createandlogin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gMuGtQ1e6vOnzVPD7p1H2Sw0W+XvSlV0zn7yh/444znm0mrp3PBNbxBWL/PUqoLbuVn4nr8eCNet8x0+Gcam5w==", "people"=>{"username"=>"safd", "description"=>"asfd", "company"=>"", "start_date"=>"", "resume"=>"", "profile"=>"", "university"=>"", "major"=>"", "graduation"=>""}, "commit"=>"Submit Profile"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("username", "email", "description", "company", "start_date", "resume", "profile", "university", "major", "graduation", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["username", "safd"], ["email", "tomcreate007@gmail.com"], ["description", "asfd"], ["company", ""], ["start_date", ""], ["resume", ""], ["profile", ""], ["university", ""], ["major", ""], ["graduation", ""], ["created_at", "2017-10-23 00:17:03.207683"], ["updated_at", "2017-10-23 00:17:03.207683"]]
+  [1m[36m (11.2ms)[0m  [1mcommit transaction[0m
+Redirected to https://c9test-makeapp.c9users.io/profile
+Completed 302 Found in 18ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/profile" for 192.31.105.138 at 2017-10-23 00:17:03 +0000
+Cannot render console from 192.31.105.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CalumnisController#profile as HTML
+  [1m[35mPeople Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  Rendered calumnis/profile.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.4ms)
