@@ -17,7 +17,7 @@ class CalumnisController < ApplicationController
 #   end
 
   def people_params
-    params.require(:people).permit(:username, :email, :description, :company, :start_date, :resume, :profile, :university, :major, :graduation, :help)
+    params.require(:people).permit(:username, :email, :description, :company, :start_date, :resume, :university, :major, :graduation, :help)
   end  
 
   public
