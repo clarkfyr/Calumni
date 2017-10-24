@@ -1,0 +1,4 @@
+= form_for @people, url: receiveimg_path,html: { multipart: true} do |form|
+   = form.label :people, :avatar
+   = form.file_field :avatar
+   = form.submit 'Submit Avatar'

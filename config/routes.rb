@@ -8,14 +8,18 @@ Rails.application.routes.draw do
   get  'login'   => 'calumnis#login',  :as => 'login'
 
   get  'create_mentor'   => 'calumnis#create_mentor',  :as => 'create_mentor'
+  
+
+
   get  'create_mentee'   => 'calumnis#create_mentee',  :as => 'create_mentee'
   get  'profile'   => 'calumnis#profile',  :as => 'profile'
+  get  'upload' => 'calumnis#upload', :as =>'upload'
 
   root 'calumnis#home'
   get "/auth/google_oauth2/callback", to: "auth#google_callback"
   get "/auth/logout" => "auth#logout", :as => 'logout'
 
-
+  patch'upload' => 'calumnis#receiveimg', :as =>'receiveimg'
 
 # resources :calumni
 
