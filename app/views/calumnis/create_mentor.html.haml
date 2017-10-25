@@ -1,6 +1,6 @@
 %h2 Please complete your profile
 
-= form_for createandlogin_path do
+= form_tag createandlogin_path do
 
   = cookies[:email].inspect
 
@@ -20,7 +20,4 @@
   = text_field :people, 'major'
   = label :people, :graduation, 'Graduation Year'
   = text_field :people, 'graduation'
-
-  = label :people, :avatar, 'Your avatar'
-  = file_field :people, :avatar
   = submit_tag 'Submit Profile'
