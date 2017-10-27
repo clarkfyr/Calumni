@@ -19,7 +19,9 @@ module NavigationHelpers
     #
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
-
+    when /^the Profile page for "(.*)@berkele.edu"$/i
+      #signup_path()
+  
     when /^the Decision Role page$/i
       signup_path()
     
