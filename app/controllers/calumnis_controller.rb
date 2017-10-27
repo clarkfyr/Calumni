@@ -18,7 +18,7 @@ class CalumnisController < ApplicationController
 #   end
 
   def people_params
-    params.require(:people).permit(:username, :email, :description, :company, :start_date, :resume, :university, :major, :graduation, :help)
+    params.require(:people).permit(:username, :email, :description, :company, :start_date, :resume, :university, :major, :graduation, :help, :avatar)
   end  
 
   public
@@ -47,7 +47,16 @@ class CalumnisController < ApplicationController
 
 
   def edit_profile
+  end
 
+  def upload
+    @people= People.select{|p| p.email==cookies[:email]}
+  end
+  def receiveimg
+        @people= People.select{|p| p.email==cookies[:email]}
+        @people.first.update_attributes(people_params)
+        @people.first.save
+        redirect_to profile_path
   end
 
   def profile
