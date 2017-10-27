@@ -6,9 +6,9 @@ Feature: create an account
 
 Scenario: Go to create new mentor page
   Given I am on the home page
-  When I press "Sign Up"
+  When I follow "Signin"
   Then I should be on the Decision Role page
-  When I press "Mentor"
+  When I follow "Mentor"
   Then I should be on the Create New Mentor page
 
 Scenario: Fill out new mentor information

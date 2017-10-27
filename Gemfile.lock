@@ -149,6 +149,8 @@ GEM
     omniauth-oauth2 (1.4.0)
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
+<<<<<<< HEAD
+=======
     paperclip (5.0.0)
       activemodel (>= 4.2.0)
       activesupport (>= 4.2.0)
@@ -156,6 +158,7 @@ GEM
       mime-types
       mimemagic (~> 0.3.0)
     pg (0.21.0)
+>>>>>>> 617fbf7ea8181d2c14088dfe90f1145ba1873557
     public_suffix (3.0.0)
     rack (1.6.8)
     rack-test (0.6.3)
@@ -273,8 +276,11 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   omniauth-google-oauth2
+<<<<<<< HEAD
+=======
   paperclip (~> 5.0.0)
   pg
+>>>>>>> 617fbf7ea8181d2c14088dfe90f1145ba1873557
   rails (= 4.2.5)
   rails_12factor
   rspec-rails

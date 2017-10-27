@@ -5,7 +5,9 @@ class ApplicationController < ActionController::Base
   
   include AuthHelper
   # before_action :oldOrnew, only: [:signup]
-  before_action :signed_in, :except => [:google_callback,:home,:signup]
+  # before_action :signed_in, :except => [:google_callback,:home,:signup]
+  before_action :signed_in, only: [:create_mentor]
+
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   # protect_from_forgery with: :exception
@@ -15,6 +17,10 @@ class ApplicationController < ActionController::Base
     p myEmail==""
     if (not myEmail) || myEmail==""
       session[:auth_redirect] = request.path
+      p request.path,"is "
+      # session[:return_to] ||= request.referer
+      # request.env["HTTP_REFERER"]=request.path
+      # byebug  
       p "start to redirect"
       # byebug
       redirect_to '/auth/google_oauth2'

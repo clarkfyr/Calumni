@@ -3,6 +3,7 @@ class CalumnisController < ApplicationController
 #   before_action :get_game_from_session
 #   after_action  :store_game_in_session
   
+  include CalumnisHelper
   private
   
 #   def get_game_from_session
@@ -44,6 +45,11 @@ class CalumnisController < ApplicationController
   def login
 
   end
+
+
+  def edit_profile
+  end
+
   def upload
     @people= People.select{|p| p.email==cookies[:email]}
   end
@@ -53,8 +59,6 @@ class CalumnisController < ApplicationController
         @people.first.save
         redirect_to profile_path
   end
-  
-  
 
   def profile
 
@@ -79,16 +83,31 @@ class CalumnisController < ApplicationController
   end
   
   def create_mentor
-    # byebug
+    # use oauth login first
+      # use before action
 
     # check user exists or not
     @people=People.new()
     p @people
-    ok= People.select{|p| p.email==cookies[:email]} 
-    # return an array, if [] or has value
-    if ok[0]!=nil
-      redirect_to profile_path
+    ok= People.select{|p| p.email==cookies[:email]}
+    # if user exists
+    p "this is ok",ok
+    # byebug
+    if ok.first!=nil
+      cookies[:username]=ok.first.name
+    else
+      cookies[:username]=cookies[:email]  
     end
+
+    # redirect to previous page
+    # redirect_to home_path
+    # byebug
+    # redirect_to request.path
+
+    # return an array, if [] or has value
+    # if ok[0]!=nil
+    #   redirect_to profile_path
+    # end
   end
   def create_mentee
   end
