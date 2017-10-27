@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  get  '/'    => 'calumnis#home'
+  get  '/'    => 'calumnis#home', :as =>'home'
   get 'signup' => 'calumnis#signup',:as => 'signup'
   # post  'login'   => 'calumnis#login',  :as => 'login'
   post  'newProfile'   => 'calumnis#createandlogin',  :as => 'createandlogin'
@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get  'create_mentor'   => 'calumnis#create_mentor',  :as => 'create_mentor'
   get  'create_mentee'   => 'calumnis#create_mentee',  :as => 'create_mentee'
   get  'profile'   => 'calumnis#profile',  :as => 'profile'
+  get  'edit_profile'   => 'calumnis#edit_profile',  :as => 'edit_profile'
 
   root 'calumnis#home'
   get "/auth/google_oauth2/callback", to: "auth#google_callback"
