@@ -17,7 +17,7 @@ class CalumnisController < ApplicationController
 #   end
 
   def people_params
-    params.require(:people).permit(:username, :email, :description, :company, :start_date, :resume, :university, :major, :graduation, :help, :avatar)
+    params.require(:people).permit(:username, :email, :description, :company, :start_date, :resume, :university, :major, :graduation, :help, :occupation,:avatar)
   end  
 
   public
@@ -37,6 +37,7 @@ class CalumnisController < ApplicationController
     params[:people][:email]=cookies[:email]
     people_params[:email]=cookies[:email]
     p people_params,"again"
+
     @calumni = People.create!(people_params)
     redirect_to profile_path
   end
@@ -52,7 +53,8 @@ class CalumnisController < ApplicationController
         @people.first.save
         redirect_to profile_path
   end
-
+  
+  
 
   def profile
 
@@ -80,6 +82,7 @@ class CalumnisController < ApplicationController
     # byebug
 
     # check user exists or not
+    @people=People.new()
     p @people
     ok= People.select{|p| p.email==cookies[:email]} 
     # return an array, if [] or has value

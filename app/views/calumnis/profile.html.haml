@@ -6,8 +6,10 @@
     %td= @people.first.email
     %td= @people.first.company
     %td= @people.first.description
+    %td= @people.first.occupation
 = image_tag @people.first.avatar.url(:medium)
 
 = link_to 'Upload avatar', upload_path
+
 / = form_for profile_path, html: { multipart: true} do |form|
 /   = form.file_field :avatar
