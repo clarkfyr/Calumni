@@ -16,6 +16,7 @@ Scenario:
   Then I should be on the Details Page for "mentor_user@berkeley.edu"
   When I press "Message"
   And I fill in "Msg" with "Dear mentor, Could you please help me with my resume?"
-  And I check the following help: "Resume"
+#  And I check the following help: "Resume"
+  And I check "Resume" in checkbox "Helper with"
   And I press "Send"
   Then I should see "Successfully send message."
