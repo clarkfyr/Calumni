@@ -73,10 +73,14 @@ Given /^I am successfully signin with "(.*)"$/ do |email_addr|
   pending # Write code here that turns the phrase above into concrete actions
 end
 
-When /^I check "(.*)" in checkbox "(.*)"$/ do |string, string2|
-  pending # Write code here that turns the phrase above into concrete actions
+When /^I check "(.*)" in checkbox "(.*)"$/ do |check_list, checkbox|
+  # pending # Write code here that turns the phrase above into concrete actions
+  check_list.split(', ').each do |item|
+    check("#{checkbox}_#{item}")
+  end
 end
 
 Then /^I check the respond to request: "(.*)"$/ do |request_type|
-  pending # Write code here that turns the phrase above into concrete actions
+  # pending # Write code here that turns the phrase above into concrete actions
+  check("respond_#{request_type}")
 end
