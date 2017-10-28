@@ -29,6 +29,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'paperclip', '~> 5.0.0'
 
+# add semantic gem for ui
+gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass', branch: 'v1.0beta'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
