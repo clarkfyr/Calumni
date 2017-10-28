@@ -4,12 +4,12 @@ Feature: login
   so that I can view my profile
   I want to login with my username and password
 
-Background: users in database
-  
-  Given the following movies exist:
-    |username |password |email                 | description |
-    |username |12345678 |username@berkele.edu  | None |
-    
+#Background: users in database
+#
+#  Given the following movies exist:
+#    |username |password |email                 | description |
+#    |username |12345678 |username@berkele.edu  | None |
+#
 
 Scenario: Successfully login with correct login info
   Given I am on the home page

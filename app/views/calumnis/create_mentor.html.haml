@@ -1,10 +1,10 @@
 %h2 Please complete your profile
 
-= form_for @people, url: createandlogin_path,html: { multipart: true} do |form|
-  
+= form_for @people, url: createandlogin_path, html: { multipart: true} do |form|
+
    = form.label :people, :username
    = form.text_field :username
-  
+
    = form.label :people, :description
    = form.text_field :description
 

@@ -10,27 +10,8 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
-ActiveRecord::Schema.define(version: 20171028060724) do
 
-  create_table "people", force: :cascade do |t|
-    t.string   "username"
-    t.string   "password"
-    t.string   "email"
-    t.string   "description"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
-    t.string   "company"
-    t.string   "start_date"
-    t.string   "resume"
-    t.string   "university"
-    t.string   "major"
-    t.string   "graduation"
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
-    t.string   "position"
-  end
+ActiveRecord::Schema.define(version: 20171028060724) do
 
   create_table "conversations", force: :cascade do |t|
     t.integer  "sender_id"
@@ -51,5 +32,25 @@ ActiveRecord::Schema.define(version: 20171028060724) do
   add_index "messages", ["conversation_id"], name: "index_messages_on_conversation_id"
   add_index "messages", ["user_id"], name: "index_messages_on_user_id"
 
+  create_table "people", force: :cascade do |t|
+    t.string   "username"
+    t.string   "password"
+    t.string   "email"
+    t.string   "description"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "company"
+    t.string   "start_date"
+    t.string   "resume"
+    t.string   "university"
+    t.string   "major"
+    t.string   "graduation"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.string   "occupation"
+    t.string   "position"
+  end
 
 end

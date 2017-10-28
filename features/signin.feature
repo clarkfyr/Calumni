@@ -60,7 +60,8 @@ Scenario: Edit Description
   And I upload "Photo" with "Test_user_profile.jpg"
   And I fill in "Major" with "Computer Science"
   And I fill in "Graduation Year" with "2016"
-  And I check the following help: Resume, Interview
+#  And I check the following help: Resume, Interview
+  And I check "Resume+Interview" in checkbox "Help"
   And I press "Update Profile"
   Then I should be on the Profile page for "test@berkele.edu"
   And I should see "Test_user"
