@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   get  'create_mentee'   => 'calumnis#create_mentee',  :as => 'create_mentee'
   get  'profile'   => 'calumnis#profile',  :as => 'profile'
+  patch 'profile' => 'calumnis#update_profile', :as =>"update_profile"
   get  'edit_profile'   => 'calumnis#edit_profile',  :as => 'edit_profile'
   get  'upload' => 'calumnis#upload', :as =>'upload'
 

@@ -102,3 +102,7 @@ Given /^the following users exist/ do |peoples_table|
     People.create people
   end
 end
+
+When /^I select "(.+)" in "(.+)"$/ do |position,option|
+  select(position, :from => option)
+end

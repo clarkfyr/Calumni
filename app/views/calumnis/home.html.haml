@@ -6,7 +6,7 @@
 -#if signin, display name. else, display signin
 - if cookies[:email]
 	= link_to 'Profile', profile_path
-	= link_to 'logout', logout_path
+	= link_to 'Logout', logout_path
 - else
 	= link_to 'Signin', signup_path
 %h1 should use a navigation bar

@@ -1,17 +1,20 @@
 %h1 Details Page
 %h2 Hi, #{@people.first.email}
 
-= link_to 'Edit Profile', edit_profile_path
+= link_to 'Edit', edit_profile_path
 
-
-
-%table
-  %tbody
-    %td= @people.first.email
-    %td= @people.first.company
-    %td= @people.first.description
 = image_tag @people.first.avatar.url(:medium)
 
 = link_to 'Upload avatar', upload_path
 / = form_for profile_path, html: { multipart: true} do |form|
 /   = form.file_field :avatar
+
+%table
+  %tbody
+    %td= @people.first.email
+    %td= @people.first.username
+    %td= @people.first.company
+    %td= @people.first.position
+    %td= @people.first.start_date
+    %td= @people.first.description
+    

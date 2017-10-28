@@ -18,7 +18,7 @@ class CalumnisController < ApplicationController
 #   end
 
   def people_params
-    params.require(:people).permit(:username, :email, :description, :company, :start_date, :resume, :university, :major, :graduation, :help, :avatar)
+    params.require(:people).permit(:username, :email, :description, :company, :start_date, :resume, :university, :major, :graduation, :help, :position,:avatar)
   end  
 
   public
@@ -47,6 +47,8 @@ class CalumnisController < ApplicationController
 
 
   def edit_profile
+    p cookies[:email]
+    @people= People.select{|p| p.email==cookies[:email]}
   end
 
   def upload
@@ -114,6 +116,14 @@ class CalumnisController < ApplicationController
   end
   def create_mentee
   end
+  
+  def update_profile
+    @people= People.select{|p| p.email==cookies[:email]}
+    @people.first.update_attributes(people_params)
+    redirect_to profile_path
+  
+  end
+  
   
   # def create
   #   @movie = Movie.create!(movie_params)

@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-28T05:28:10+00:00">2017-10-28T05:28:10+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-28T06:54:49+00:00">2017-10-28T06:54:49+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">34.78%</span></span>
+    (<span class="covered_percent"><span class="red">39.8%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="red">
-         0.42
+       <span class="green">
+         1.09
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>8</b> files in total.
-    <b>92</b> relevant lines. 
-    <span class="green"><b>32</b> lines covered</span> and
-    <span class="red"><b>60</b> lines missed </span>
+    <b>98</b> relevant lines. 
+    <span class="green"><b>39</b> lines covered</span> and
+    <span class="red"><b>59</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -72,12 +72,12 @@
       
       <tr>
         <td class="strong"><a href="#dda49fabbfe8a28ac8869ebb3b87a9a64b6cb38d" class="src_link" title="app/controllers/calumnis_controller.rb">app/controllers/calumnis_controller.rb</a></td>
-        <td class="red strong">45.0 %</td>
-        <td>151</td>
-        <td>40</td>
-        <td>18</td>
-        <td>22</td>
-        <td>0.6</td>
+        <td class="red strong">54.35 %</td>
+        <td>161</td>
+        <td>46</td>
+        <td>25</td>
+        <td>21</td>
+        <td>2.0</td>
       </tr>
       
       <tr>
@@ -139,20 +139,20 @@
           <div class="file_list_container" id="Controllers">
   <h2>
     <span class="group_name">Controllers</span>
-    (<span class="covered_percent"><span class="red">30.77%</span></span>
+    (<span class="covered_percent"><span class="red">36.9%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="red">
-         0.39
+       <span class="green">
+         1.18
        </span>
     </span> hits/line)
   </h2>
   <a name="Controllers"></a>
   <div>
     <b>3</b> files in total.
-    <b>78</b> relevant lines. 
-    <span class="green"><b>24</b> lines covered</span> and
-    <span class="red"><b>54</b> lines missed </span>
+    <b>84</b> relevant lines. 
+    <span class="green"><b>31</b> lines covered</span> and
+    <span class="red"><b>53</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -190,12 +190,12 @@
       
       <tr>
         <td class="strong"><a href="#dda49fabbfe8a28ac8869ebb3b87a9a64b6cb38d" class="src_link" title="app/controllers/calumnis_controller.rb">app/controllers/calumnis_controller.rb</a></td>
-        <td class="red strong">45.0 %</td>
-        <td>151</td>
-        <td>40</td>
-        <td>18</td>
-        <td>22</td>
-        <td>0.6</td>
+        <td class="red strong">54.35 %</td>
+        <td>161</td>
+        <td>46</td>
+        <td>25</td>
+        <td>21</td>
+        <td>2.0</td>
       </tr>
       
     </tbody>
@@ -969,11 +969,11 @@
         <div class="source_table" id="dda49fabbfe8a28ac8869ebb3b87a9a64b6cb38d">
   <div class="header">
     <h3>app/controllers/calumnis_controller.rb</h3>
-    <h4><span class="red">45.0 %</span> covered</h4>
+    <h4><span class="red">54.35 %</span> covered</h4>
     <div>
-      <b>40</b> relevant lines. 
-      <span class="green"><b>18</b> lines covered</span> and
-      <span class="red"><b>22</b> lines missed.</span>
+      <b>46</b> relevant lines. 
+      <span class="green"><b>25</b> lines covered</span> and
+      <span class="red"><b>21</b> lines missed.</span>
     </div>
   </div>
   
@@ -1100,10 +1100,10 @@
           <code class="ruby">  def people_params</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="21">
+        <li class="covered" data-hits="5" data-linenumber="21">
+          <span class="hits">5</span>
           
-          
-          <code class="ruby">    params.require(:people).permit(:username, :email, :description, :company, :start_date, :resume, :university, :major, :graduation, :help, :avatar)</code>
+          <code class="ruby">    params.require(:people).permit(:username, :email, :description, :company, :start_date, :resume, :university, :major, :graduation, :help, :position,:avatar)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="22">
@@ -1274,82 +1274,82 @@
           <code class="ruby">  def edit_profile</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="50">
+        <li class="covered" data-hits="5" data-linenumber="50">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    p cookies[:email]</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="51">
+          <span class="hits">10</span>
+          
+          <code class="ruby">    @people= People.select{|p| p.email==cookies[:email]}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="51">
+        <li class="never" data-hits="" data-linenumber="53">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="52">
+        <li class="covered" data-hits="1" data-linenumber="54">
           <span class="hits">1</span>
           
           <code class="ruby">  def upload</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="53">
+        <li class="missed" data-hits="0" data-linenumber="55">
           
           
           <code class="ruby">    @people= People.select{|p| p.email==cookies[:email]}</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="54">
+        <li class="never" data-hits="" data-linenumber="56">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="55">
+        <li class="covered" data-hits="1" data-linenumber="57">
           <span class="hits">1</span>
           
           <code class="ruby">  def receiveimg</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="56">
+        <li class="missed" data-hits="0" data-linenumber="58">
           
           
           <code class="ruby">        @people= People.select{|p| p.email==cookies[:email]}</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="57">
+        <li class="missed" data-hits="0" data-linenumber="59">
           
           
           <code class="ruby">        @people.first.update_attributes(people_params)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="58">
+        <li class="missed" data-hits="0" data-linenumber="60">
           
           
           <code class="ruby">        @people.first.save</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="59">
+        <li class="missed" data-hits="0" data-linenumber="61">
           
           
           <code class="ruby">        redirect_to profile_path</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="60">
+        <li class="never" data-hits="" data-linenumber="62">
           
           
           <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="61">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="62">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def profile</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="63">
@@ -1358,28 +1358,28 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="64">
+        <li class="covered" data-hits="1" data-linenumber="64">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    # check username and password first </code>
+          <code class="ruby">  def profile</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="65">
           
           
-          <code class="ruby">    # p params</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="66">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    # check username and password first </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="67">
           
           
-          <code class="ruby">    # save </code>
+          <code class="ruby">    # p params</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="68">
@@ -1388,286 +1388,286 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="69">
-          <span class="hits">3</span>
+        <li class="never" data-hits="" data-linenumber="69">
+          
+          
+          <code class="ruby">    # save </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="70">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="11" data-linenumber="71">
+          <span class="hits">11</span>
           
           <code class="ruby">    p cookies[:email]</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="70">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="22" data-linenumber="72">
+          <span class="hits">22</span>
           
           <code class="ruby">    @people= People.select{|p| p.email==cookies[:email]}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="71">
-          
-          
-          <code class="ruby">    # p &quot;in profile &quot;,People.find_by(email: cookies[:email])</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="72">
-          
-          
-          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="73">
           
           
-          <code class="ruby">    # @pwcorrect=People.find_by(username: params[:people][:username], password: params[:people][:password])</code>
+          <code class="ruby">    # p &quot;in profile &quot;,People.find_by(email: cookies[:email])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="74">
           
           
-          <code class="ruby">  </code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="75">
           
           
-          <code class="ruby">    # p @pwcorrect</code>
+          <code class="ruby">    # @pwcorrect=People.find_by(username: params[:people][:username], password: params[:people][:password])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="76">
           
           
-          <code class="ruby">    # if @pwcorrect</code>
+          <code class="ruby">  </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="77">
           
           
-          <code class="ruby">    #   @people=1</code>
+          <code class="ruby">    # p @pwcorrect</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="78">
           
           
-          <code class="ruby">    # else</code>
+          <code class="ruby">    # if @pwcorrect</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="79">
           
           
-          <code class="ruby">    #   @pwcorrect=&quot;Wrong Username or Password&quot;</code>
+          <code class="ruby">    #   @people=1</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="80">
           
           
-          <code class="ruby">    #   render :login</code>
+          <code class="ruby">    # else</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="81">
           
           
-          <code class="ruby">    # end</code>
+          <code class="ruby">    #   @pwcorrect=&quot;Wrong Username or Password&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="82">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    #   render :login</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="83">
           
           
-          <code class="ruby">  </code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="84">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def create_mentor</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="85">
-          
-          
-          <code class="ruby">    # use oauth login first</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="86">
-          
-          
-          <code class="ruby">      # use before action</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="87">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="88">
-          
-          
-          <code class="ruby">    # check user exists or not</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="89">
-          
-          
-          <code class="ruby">    p @people</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="90">
-          
-          
-          <code class="ruby">    ok= People.select{|p| p.email==cookies[:email]}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="91">
-          
-          
-          <code class="ruby">    # if user exists</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="92">
-          
-          
-          <code class="ruby">    p &quot;this is ok&quot;,ok</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="93">
-          
-          
-          <code class="ruby">    # byebug</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="94">
-          
-          
-          <code class="ruby">    if ok.first!=nil # old user</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="95">
-          
-          
-          <code class="ruby">      cookies[:username]=ok.first.username</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="96">
-          
-          
-          <code class="ruby">    else #new user</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="97">
-          
-          
-          <code class="ruby">      cookies[:username]=cookies[:email]</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="98">
-          
-          
-          <code class="ruby">      # add email</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="99">
-          
-          
-          <code class="ruby">      people_params[:email]=cookies[:email]</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="100">
-          
-          
-          <code class="ruby">      People.create!(people_params)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="101">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="102">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="103">
-          
-          
-          <code class="ruby">    redirect_to home_path</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="104">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="105">
-          
-          
-          <code class="ruby">    # redirect to previous page</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="106">
-          
-          
-          <code class="ruby">    # redirect_to home_path</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="107">
-          
-          
-          <code class="ruby">    # byebug</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="108">
-          
-          
-          <code class="ruby">    # redirect_to request.path</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="109">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="110">
-          
-          
-          <code class="ruby">    # return an array, if [] or has value</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="111">
-          
-          
-          <code class="ruby">    # if ok[0]!=nil</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="112">
-          
-          
-          <code class="ruby">    #   redirect_to profile_path</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="113">
-          
-          
           <code class="ruby">    # end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="114">
+        <li class="never" data-hits="" data-linenumber="84">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="115">
+        <li class="never" data-hits="" data-linenumber="85">
+          
+          
+          <code class="ruby">  </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="86">
           <span class="hits">1</span>
           
-          <code class="ruby">  def create_mentee</code>
+          <code class="ruby">  def create_mentor</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="87">
+          
+          
+          <code class="ruby">    # use oauth login first</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="88">
+          
+          
+          <code class="ruby">      # use before action</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="89">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="90">
+          
+          
+          <code class="ruby">    # check user exists or not</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="91">
+          
+          
+          <code class="ruby">    p @people</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="92">
+          
+          
+          <code class="ruby">    ok= People.select{|p| p.email==cookies[:email]}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="93">
+          
+          
+          <code class="ruby">    # if user exists</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="94">
+          
+          
+          <code class="ruby">    p &quot;this is ok&quot;,ok</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="95">
+          
+          
+          <code class="ruby">    # byebug</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="96">
+          
+          
+          <code class="ruby">    if ok.first!=nil # old user</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="97">
+          
+          
+          <code class="ruby">      cookies[:username]=ok.first.username</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="98">
+          
+          
+          <code class="ruby">    else #new user</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="99">
+          
+          
+          <code class="ruby">      cookies[:username]=cookies[:email]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="100">
+          
+          
+          <code class="ruby">      # add email</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="101">
+          
+          
+          <code class="ruby">      tmp_params = ActionController::Parameters.new(email:cookies[:email])</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="102">
+          
+          
+          <code class="ruby">      People.create!(tmp_params)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="103">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="104">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="105">
+          
+          
+          <code class="ruby">    redirect_to home_path</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="106">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="107">
+          
+          
+          <code class="ruby">    # redirect to previous page</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="108">
+          
+          
+          <code class="ruby">    # redirect_to home_path</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="109">
+          
+          
+          <code class="ruby">    # byebug</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="110">
+          
+          
+          <code class="ruby">    # redirect_to request.path</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="111">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="112">
+          
+          
+          <code class="ruby">    # return an array, if [] or has value</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="113">
+          
+          
+          <code class="ruby">    # if ok[0]!=nil</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="114">
+          
+          
+          <code class="ruby">    #   redirect_to profile_path</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="115">
+          
+          
+          <code class="ruby">    # end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="116">
@@ -1676,211 +1676,271 @@
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="117">
+        <li class="covered" data-hits="1" data-linenumber="117">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  </code>
+          <code class="ruby">  def create_mentee</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="118">
           
           
-          <code class="ruby">  # def create</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="119">
           
           
-          <code class="ruby">  #   @movie = Movie.create!(movie_params)</code>
+          <code class="ruby">  </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="120">
+        <li class="covered" data-hits="1" data-linenumber="120">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  #   flash[:notice] = &quot;#{@movie.title} was successfully created.&quot;</code>
+          <code class="ruby">  def update_profile</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="121">
+        <li class="covered" data-hits="10" data-linenumber="121">
+          <span class="hits">10</span>
           
-          
-          <code class="ruby">  #   redirect_to movies_path</code>
+          <code class="ruby">    @people= People.select{|p| p.email==cookies[:email]}</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="122">
+        <li class="covered" data-hits="5" data-linenumber="122">
+          <span class="hits">5</span>
           
-          
-          <code class="ruby">  # end</code>
+          <code class="ruby">    @people.first.update_attributes(people_params)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="123">
+        <li class="covered" data-hits="5" data-linenumber="123">
+          <span class="hits">5</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    redirect_to profile_path</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="124">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="125">
           
           
-          <code class="ruby">#   def show</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="126">
           
           
-          <code class="ruby">#     status = @game.check_win_or_lose</code>
+          <code class="ruby">  </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="127">
           
           
-          <code class="ruby">#     redirect_to win_game_path if status == :win</code>
+          <code class="ruby">  </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="128">
           
           
-          <code class="ruby">#     redirect_to lose_game_path if status == :lose</code>
+          <code class="ruby">  # def create</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="129">
           
           
-          <code class="ruby">#   end</code>
+          <code class="ruby">  #   @movie = Movie.create!(movie_params)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="130">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  #   flash[:notice] = &quot;#{@movie.title} was successfully created.&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="131">
           
           
-          <code class="ruby">#   def guess</code>
+          <code class="ruby">  #   redirect_to movies_path</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="132">
           
           
-          <code class="ruby">#     letter = params[:guess]</code>
+          <code class="ruby">  # end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="133">
           
           
-          <code class="ruby">#     begin</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="134">
           
           
-          <code class="ruby">#       if ! @game.guess(letter[0])</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="135">
           
           
-          <code class="ruby">#         flash[:message] = &quot;You have already used that letter.&quot; </code>
+          <code class="ruby">#   def show</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="136">
           
           
-          <code class="ruby">#       end</code>
+          <code class="ruby">#     status = @game.check_win_or_lose</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="137">
           
           
-          <code class="ruby">#     rescue ArgumentError</code>
+          <code class="ruby">#     redirect_to win_game_path if status == :win</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="138">
           
           
-          <code class="ruby">#       flash[:message] = &quot;Invalid guess.&quot;</code>
+          <code class="ruby">#     redirect_to lose_game_path if status == :lose</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="139">
           
           
-          <code class="ruby">#     end</code>
+          <code class="ruby">#   end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="140">
           
           
-          <code class="ruby">#     redirect_to game_path</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="141">
           
           
-          <code class="ruby">#   end</code>
+          <code class="ruby">#   def guess</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="142">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">#     letter = params[:guess]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="143">
           
           
-          <code class="ruby">#   def win</code>
+          <code class="ruby">#     begin</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="144">
           
           
-          <code class="ruby">#     redirect_to game_path unless @game.check_win_or_lose == :win</code>
+          <code class="ruby">#       if ! @game.guess(letter[0])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="145">
           
           
-          <code class="ruby">#   end</code>
+          <code class="ruby">#         flash[:message] = &quot;You have already used that letter.&quot; </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="146">
           
           
-          <code class="ruby">  </code>
+          <code class="ruby">#       end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="147">
           
           
-          <code class="ruby">#   def lose</code>
+          <code class="ruby">#     rescue ArgumentError</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="148">
           
           
-          <code class="ruby">#     redirect_to game_path unless @game.check_win_or_lose == :lose</code>
+          <code class="ruby">#       flash[:message] = &quot;Invalid guess.&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="149">
           
           
-          <code class="ruby">#   end</code>
+          <code class="ruby">#     end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="150">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">#     redirect_to game_path</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="151">
+          
+          
+          <code class="ruby">#   end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="152">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="153">
+          
+          
+          <code class="ruby">#   def win</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="154">
+          
+          
+          <code class="ruby">#     redirect_to game_path unless @game.check_win_or_lose == :win</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="155">
+          
+          
+          <code class="ruby">#   end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="156">
+          
+          
+          <code class="ruby">  </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="157">
+          
+          
+          <code class="ruby">#   def lose</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="158">
+          
+          
+          <code class="ruby">#     redirect_to game_path unless @game.check_win_or_lose == :lose</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="159">
+          
+          
+          <code class="ruby">#   end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="160">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="161">
           
           
           <code class="ruby">end</code>
