@@ -10,6 +10,17 @@ Background: users in database
     |username |password |email                 | description |
     |Test_user |12345678 |test@berkele.edu  | None |
 
+Scenario: Successfully enter homepage
+  Given I am on the home page
+  Then I should see "Signin"
+  Then I should see "Signup"
+  Then I should see "search_box"
+  Then I should see "search"
+  Then I should see "company_box"
+  Then I should see "position_box"
+  Then I should see "company_show"
+  Then I should see "mentor_show"
+
 Scenario: Successfully signin with CalID
   Given I am on the home page
   Then I should see "Signin"
