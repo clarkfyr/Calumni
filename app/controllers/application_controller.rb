@@ -20,9 +20,6 @@ class ApplicationController < ActionController::Base
       p request.path,"is "
       # session[:return_to] ||= request.referer
       # request.env["HTTP_REFERER"]=request.path
-      # byebug
-      p "start to redirect"
-      # byebug
       redirect_to '/auth/google_oauth2'
     end
   end

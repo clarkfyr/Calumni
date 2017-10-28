@@ -2,10 +2,10 @@ class CalumnisController < ApplicationController
 
 #   before_action :get_game_from_session
 #   after_action  :store_game_in_session
-  
+
   include CalumnisHelper
   private
-  
+
 #   def get_game_from_session
 #     @game = HangpersonGame.new('')
 #     if !session[:game].blank?
@@ -18,8 +18,8 @@ class CalumnisController < ApplicationController
 #   end
 
   def people_params
-    params.require(:people).permit(:username, :email, :description, :company, :start_date, :resume, :university, :major, :graduation, :help, :occupation,:avatar)
-  end  
+    params.require(:people).permit(:username, :email, :description, :company, :start_date, :resume, :university, :major, :graduation, :help, :position,:avatar)
+  end
 
   public
   # def new
@@ -27,9 +27,9 @@ class CalumnisController < ApplicationController
   def new
     @calumni=People.new()
   end
-  
+
   def home
-      
+
   end
   def signup
   end
@@ -38,7 +38,6 @@ class CalumnisController < ApplicationController
     params[:people][:email]=cookies[:email]
     people_params[:email]=cookies[:email]
     p people_params,"again"
-
     @calumni = People.create!(people_params)
     redirect_to profile_path
   end
@@ -48,6 +47,8 @@ class CalumnisController < ApplicationController
 
 
   def edit_profile
+    p cookies[:email]
+    @people= People.select{|p| p.email==cookies[:email]}
   end
 
   def upload
@@ -62,17 +63,17 @@ class CalumnisController < ApplicationController
 
   def profile
 
-    # check username and password first 
+    # check username and password first
     # p params
 
-    # save 
+    # save
 
     p cookies[:email]
     @people= People.select{|p| p.email==cookies[:email]}
     # p "in profile ",People.find_by(email: cookies[:email])
 
     # @pwcorrect=People.find_by(username: params[:people][:username], password: params[:people][:password])
-  
+
     # p @pwcorrect
     # if @pwcorrect
     #   @people=1
@@ -81,23 +82,27 @@ class CalumnisController < ApplicationController
     #   render :login
     # end
   end
-  
+
   def create_mentor
     # use oauth login first
       # use before action
 
     # check user exists or not
-    @people=People.new()
     p @people
     ok= People.select{|p| p.email==cookies[:email]}
     # if user exists
     p "this is ok",ok
     # byebug
-    if ok.first!=nil
+    if ok.first!=nil # old user
       cookies[:username]=ok.first.username
-    else
-      cookies[:username]=cookies[:email]  
+    else #new user
+      cookies[:username]=cookies[:email]
+      # add email
+      tmp_params = ActionController::Parameters.new(email:cookies[:email])
+      People.create!(tmp_params)
+
     end
+    redirect_to home_path
 
     # redirect to previous page
     # redirect_to home_path
@@ -111,7 +116,15 @@ class CalumnisController < ApplicationController
   end
   def create_mentee
   end
-  
+
+  def update_profile
+    @people= People.select{|p| p.email==cookies[:email]}
+    @people.first.update_attributes(people_params)
+    redirect_to profile_path
+
+  end
+
+
   # def create
   #   @movie = Movie.create!(movie_params)
   #   flash[:notice] = "#{@movie.title} was successfully created."
@@ -129,7 +142,7 @@ class CalumnisController < ApplicationController
 #     letter = params[:guess]
 #     begin
 #       if ! @game.guess(letter[0])
-#         flash[:message] = "You have already used that letter." 
+#         flash[:message] = "You have already used that letter."
 #       end
 #     rescue ArgumentError
 #       flash[:message] = "Invalid guess."
@@ -140,7 +153,7 @@ class CalumnisController < ApplicationController
 #   def win
 #     redirect_to game_path unless @game.check_win_or_lose == :win
 #   end
-  
+
 #   def lose
 #     redirect_to game_path unless @game.check_win_or_lose == :lose
 #   end
