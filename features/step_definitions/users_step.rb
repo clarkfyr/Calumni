@@ -11,12 +11,13 @@ Given /^(?:|I )am on (.*)$/ do |page_name|
 end
 
 #!!!
-Given /^(?:|I )am successfully signin with \"(.+)\"$/ do |email|
+Given /^(?:|I )am successfully signin with "(.+)"$/ do |email|
   #sign in with specific user email
-  
-  # cookies[:email]=email
-  # visit path_to("the home page")
-  visit home_path(:email=>email)
+  headers = {}
+  Rack::Utils.set_cookie_header!(headers, :email, email)
+  cookie_string = headers['Set-Cookie']
+  Capybara.current_session.driver.browser.set_cookie(cookie_string)
+  visit home_path()
 end
 
 When /^(?:|I )follow Mentor$/ do 
@@ -38,7 +39,7 @@ end
 
 
 When /^(?:|I )press "(.*)"$/ do |button|
-  #click_button(button)
+  click_button(button)
 end
 
 Then /^(?:|I )should be on (.+)$/ do |page_name|

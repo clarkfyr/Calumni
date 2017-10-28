@@ -96,8 +96,8 @@ class CalumnisController < ApplicationController
     else #new user
       cookies[:username]=cookies[:email]
       # add email
-      people_params[:email]=cookies[:email]
-      People.create!(people_params)
+      tmp_params = ActionController::Parameters.new(email:cookies[:email])
+      People.create!(tmp_params)
 
     end
     redirect_to home_path

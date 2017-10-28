@@ -1,3 +1,4 @@
+@ignore
 Feature: signin
   As a calumni
   so that I can signup as alumni with gmail account
@@ -35,7 +36,7 @@ Scenario: Successfully signin with CalID
 
 Scenario: Edit profile
   Given I am successfully signin with "test@berkeley.edu"
-  When I follow "Signin"
+  When I follow "Profile"
   Then I should be on the Profile page for "test@berkeley.edu"
   Then I should see "Edit Profile"
 
