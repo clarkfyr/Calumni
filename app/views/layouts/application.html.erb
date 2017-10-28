@@ -19,10 +19,10 @@
         </h2>
         <div class="ui purple inverted menu">
           <i class="home icon"></i><%= link_to "Home", root_path, class: "item" %>
-            <% if current_user %>
+            <% if cookies[:email] %>
               <%= link_to "Mailbox", conversations_path, class: "item" %>
               <div class="right menu">
-                <%= link_to 'Sign Out', signout_path, class: "item" %>
+                <%= link_to 'Sign Out', logout_path, class: "item" %>
               </div>
             <% else %>
               <div class="right menu">
@@ -37,7 +37,7 @@
     </div>
   </div>
 
-  
+
 
 </body>
 </html>

@@ -94,7 +94,7 @@ class CalumnisController < ApplicationController
     p "this is ok",ok
     # byebug
     if ok.first!=nil
-      cookies[:username]=ok.first.name
+      cookies[:username]=ok.first.username
     else
       cookies[:username]=cookies[:email]  
     end
