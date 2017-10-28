@@ -6,23 +6,27 @@ Feature: signin
 
 Background: users in database
   
-  Given the following movies exist:
-    |username |password |email                 | description |
-    |Test_user |12345678 |test@berkele.edu  | None |
+  Given the following users exist:
+    |username  |email    | description |
+    |Test_user |test@berkeley.edu  | None |
 
 Scenario: Successfully signin with CalID
   Given I am on the home page
   Then I should see "Signin"
   When I follow "Signin"
-  And fill in "Email" with "test@berkeley.edu"
-  And fill in "Password" with "123456"
-  Then I should be on the home page
+  When I follow Mentor
+  Then I should see "Google"
+
+
+#  And fill in "Email or phone" with "test@berkeley.edu"
+#  And fill in "Password" with "123456"
+#  Then I should be on the home page
 
 Scenario: Edit profile
-  Given I am successfully signin with "test@berkele.edu"
-  When I follow "Profile"
-  Then I should be on the Profile page for "test@berkele.edu"
-  Then I should see "Edit"
+  Given I am successfully signin with "test@berkeley.edu"
+  When I follow "Signin"
+  Then I should be on the Profile page for "test@berkeley.edu"
+  Then I should see "Edit Profile"
 
 Scenario: Edit Username
   Given I am on the Profile page for "test@berkele.edu"

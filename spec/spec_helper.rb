@@ -15,6 +15,14 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'simplecov'
 SimpleCov.start 'rails'
+require 'webmock/rspec'
+WebMock.disable_net_connect!(allow_localhost: true)
+
+RSpec.configure do |config|
+  config.before(:each) do
+    stub_request(:any, /api.github.com/).to_rack(FakeGitHub)
+  end
+end
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate

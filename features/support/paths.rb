@@ -12,18 +12,22 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
 
-    when /^the (Calumni )?home\s?page$/ then '/'
+    when /^the (Calumni )?home\s?page$/ then home_path(":email")
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
-    when /^the Profile page for "(.*)@berkele.edu"$/i
+    when /^the Profile page for "(.*)@berkeley.edu"$/i
       #signup_path()
+      profile_path()
   
     when /^the Decision Role page$/i
       signup_path()
+
+    when /^google_callback$/i
+      google_callback_path()
     
     when /^the Details Page for "(.*)"$/i
       profile_path()
