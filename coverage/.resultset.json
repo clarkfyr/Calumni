@@ -1,20 +1,4 @@
 {
-  "RSpec": {
-    "coverage": {
-      "/home/ubuntu/workspace/proj/Calumni/app/controllers/application_controller.rb": [
-        0,
-        null,
-        null,
-        0,
-        0
-      ],
-      "/home/ubuntu/workspace/proj/Calumni/app/helpers/application_helper.rb": [
-        0,
-        0
-      ]
-    },
-    "timestamp": 1508279390
-  },
   "Cucumber Features": {
     "coverage": {
       "/home/ubuntu/workspace/Calumni/app/controllers/calumnis_controller.rb": [
@@ -24,6 +8,7 @@
         null,
         null,
         1,
+        1,
         null,
         null,
         null,
@@ -63,6 +48,11 @@
         1,
         null,
         null,
+        null,
+        null,
+        1,
+        null,
+        null,
         1,
         0,
         null,
@@ -73,7 +63,6 @@
         0,
         null,
         null,
-        null,
         1,
         null,
         null,
@@ -100,11 +89,31 @@
         null,
         null,
         null,
+        null,
         0,
         0,
         null,
         0,
+        null,
         0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         1,
@@ -153,16 +162,22 @@
         null,
         1,
         null,
+        null,
         1,
         null,
         null,
         null,
         null,
+        null,
         1,
         1,
         1,
         1,
         1,
+        1,
+        null,
+        null,
+        null,
         1,
         null,
         1,
@@ -177,7 +192,6 @@
         0,
         null,
         0,
-        null,
         null,
         null,
         null,
@@ -206,6 +220,17 @@
         3,
         null,
         null,
+        null,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/Calumni/app/helpers/calumnis_helper.rb": [
+        1,
+        1,
+        0,
+        0,
+        null,
+        0,
         null,
         null,
         null
@@ -249,6 +274,6 @@
         null
       ]
     },
-    "timestamp": 1509162597
+    "timestamp": 1509162807
   }
 }

@@ -1,6 +1,18 @@
 %h1 home page
+/ display username, need fix. and use dropdown menu
+%h2 Hi, #{cookies[:email]}
+
+-# / %h2 Hi, #{@people.first.username} /	
+-#if signin, display name. else, display signin
+- if cookies[:email]
+	= link_to 'Profile', profile_path
+	= link_to 'logout', logout_path
+- else
+	= link_to 'Signin', signup_path
+%h1 should use a navigation bar
 %h2 Student Alumni Network
+%h2 display the search bar
+%h2 display the company icon
+%h2 display the mentor icon
 
 
-= link_to 'Signin', signup_path
-= link_to 'Profile', profile_path

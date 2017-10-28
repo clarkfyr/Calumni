@@ -1,5 +1,9 @@
 %h1 Details Page
-%h2 Hi, #{@people.first.username}
+%h2 Hi, #{@people.first.email}
+
+= link_to 'Edit Profile', edit_profile_path
+
+
 
 %table
   %tbody

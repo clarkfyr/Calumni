@@ -11,17 +11,30 @@ Given /^(?:|I )am on (.*)$/ do |page_name|
 end
 
 #!!!
-Given /^(?:|I )am successfully signin with \"(.+)@berkele.edu\"$/ do |email|
+Given /^(?:|I )am successfully signin with \"(.+)\"$/ do |email|
   #sign in with specific user email
   
-  #visit path_to("the home page")
+  # cookies[:email]=email
+  # visit path_to("the home page")
+  visit home_path(:email=>email)
 end
 
+When /^(?:|I )follow Mentor$/ do 
+  # turns the phrase above into concrete actions
+
+  # visit path_to("google_callback")
+  # click_link('Mentor')
+  # page.driver.get('/auth/google_oauth2/callback')
+
+end
+
+  
 When /^(?:|I )follow "(.*)"$/ do |link|
   # turns the phrase above into concrete actions
   
-  #click_link(link)
+  click_link(link)
 end
+
 
 
 When /^(?:|I )press "(.*)"$/ do |button|
@@ -83,7 +96,7 @@ When /I (un)?check the following (filter_name): (.*)/ do |uncheck, filter_name, 
   false
 end
 
-Given /^the following movies exist/ do |peoples_table|
+Given /^the following users exist/ do |peoples_table|
   peoples_table.hashes.each do |people|
     People.create people
   end
