@@ -22,6 +22,10 @@ Rails.application.routes.draw do
 
   patch'upload' => 'calumnis#receiveimg', :as =>'receiveimg'
 
+  resources :conversations do
+    resources :messages
+  end
+
 # resources :calumni
 
   # You can have the root of your site routed with "root"

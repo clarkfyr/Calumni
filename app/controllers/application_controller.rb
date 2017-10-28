@@ -38,6 +38,12 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def current_user
+    People.find_by(id: cookies[:people_id])
+  end
+
+
+  helper_method :signed_in, :current_user
 
   # private
   # def after_sign_out_path_for(resource_or_scope)
