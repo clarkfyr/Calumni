@@ -102,7 +102,6 @@ class CalumnisController < ApplicationController
       @calumni.update_attributes(email:cookies[:email])
       # tmp_params = ActionController::Parameters.new(email:cookies[:email])
       # People.create!(tmp_params)
-
     end
     redirect_to home_path
 

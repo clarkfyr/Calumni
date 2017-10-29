@@ -50,6 +50,7 @@ private
 
 def message_params
     params.require(:message).permit(:body, :people_id)
+    # params.permit(:body, :people_id)
 end
 
 

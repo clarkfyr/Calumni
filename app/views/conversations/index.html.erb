@@ -4,8 +4,8 @@
   <div class="ui list">
     <div class="item">
       <% @conversations.each do |conversation| %>
-        <% if conversation.sender_id == current_user || conversation.recipient_id == current_user %>
-          <% if conversation.sender_id == current_user %>
+        <% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>
+          <% if conversation.sender_id == current_user.id %>
             <% recipient = People.find(conversation.recipient_id) %>
           <% else %>
             <% recipient = People.find(conversation.sender_id) %>

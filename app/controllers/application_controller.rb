@@ -36,7 +36,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user
-    People.find_by_email(cookies[:email])
+    People.find_by(email: cookies[:email])
   end
 
 
