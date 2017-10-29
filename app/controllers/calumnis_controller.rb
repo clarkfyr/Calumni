@@ -121,7 +121,9 @@ class CalumnisController < ApplicationController
     @people= People.select{|p| p.email==cookies[:email]}
     @people.first.update_attributes(people_params)
     redirect_to profile_path
+  end
   
+  def search
   end
   
   

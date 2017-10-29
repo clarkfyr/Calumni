@@ -1,6 +1,12 @@
 {
   "Cucumber Features": {
     "coverage": {
+      "/home/ubuntu/workspace/Calumni/app/models/people.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
       "/home/ubuntu/workspace/Calumni/app/controllers/calumnis_controller.rb": [
         1,
         null,
@@ -127,6 +133,8 @@
         0,
         null,
         null,
+        1,
+        null,
         null,
         null,
         null,
@@ -245,12 +253,6 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/Calumni/app/models/people.rb": [
-        0,
-        0,
-        0,
-        0
-      ],
       "/home/ubuntu/workspace/Calumni/app/models/person.rb": [
         0,
         0
@@ -284,6 +286,6 @@
         null
       ]
     },
-    "timestamp": 1509245895
+    "timestamp": 1509247066
   }
 }
