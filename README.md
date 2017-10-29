@@ -9,7 +9,7 @@
 [![Build Status](https://travis-ci.org/clarkfyr/Calumni.svg?branch=master)](https://travis-ci.org/clarkfyr/Calumni)
 
 - Link to deployed app on Heroku:
-https://calumni-demo.herokuapp.com/
+https://calumni.herokuapp.com/
 
 - Link to Pivotal Tracker project:
 https://www.pivotaltracker.com/n/projects/2118464
