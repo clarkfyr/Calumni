@@ -47,9 +47,14 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (6.0.4)
+    autoprefixer-rails (7.1.6)
+      execjs
     backports (3.10.3)
     binding_of_caller (0.7.3)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     bootstrap_form (2.7.0)
     builder (3.2.3)
     byebug (9.1.0)
@@ -280,6 +285,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass (~> 3.3.6)
   bootstrap_form
   byebug
   coffee-rails (~> 4.1.0)
@@ -295,7 +301,7 @@ DEPENDENCIES
   rails (= 4.2.5)
   rails_12factor
   rspec-rails
-  sass-rails (~> 5.0)
+  sass-rails (>= 3.2)
   sdoc (~> 0.4.0)
   semantic-ui-sass!
   simplecov

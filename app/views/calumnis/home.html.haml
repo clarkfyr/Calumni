@@ -1,16 +1,71 @@
-%h1 home page
 / display username, need fix. and use dropdown menu
-%h2 Hi, #{cookies[:email]}
 
--# / %h2 Hi, #{@people.first.username} /	
--#if signin, display name. else, display signin
-- if cookies[:email]
-	= link_to 'Profile', profile_path
-	= link_to 'Logout', logout_path
-- else
-	= link_to 'Signin', signup_path
-%h1 should use a navigation bar
-%h2 Student Alumni Network
-%h2 display the search bar
-%h2 display the company icon
-%h2 display the mentor icon
+
+%div{:class=>"container-fluid", :id=>"Company"}
+	%div{:class=>"row"}
+		%div{:class=>"container"}
+			= form_tag search_path, method: :get do
+				= label_tag :search, "" 
+				= text_field_tag :search, params[:search], placeholder: "Name, Companies"
+				= submit_tag "Search"
+			
+%div{:class=>"container-fluid", :id=>"Company"}
+	%div{:class=>"row"}
+		%div{:class=>"container"}
+			%div{:class=>"row"}
+				%div{:class=>"col-md-12"}
+					%h3{:class=>"text-center"}
+						%strong Companies
+				%div{:class=>"col-md-12"}
+					%div{:class=>"row"}
+						%div{:class=>"col-md-3 col-sm-4 details"}
+							%h3{:class=>"text-center program"}Google
+							%hr
+							%ul
+								%a{:href=>"#"}
+									%li Collections
+						%div{:class=>"col-md-3 col-sm-4 details"}
+							%h3{:class=>"text-center program"}GOogle
+							%hr
+							%ul
+								%a{:href=>"#"}
+									%li Collections
+						%div{:class=>"col-md-3 col-sm-4 details"}
+							%h3{:class=>"text-center program"}GOogle
+							%hr
+							%ul
+								%a{:href=>"#"}
+									%li Collections
+						%div{:class=>"col-md-3 col-sm-4 details"}
+							%h3{:class=>"text-center program"}GOogle
+							%hr
+							%ul
+								%a{:href=>"#"}
+									%li Collections
+
+
+
+%div{:class=>"container-fluid", :id=>"Mentor"}
+	%div{:class=>"row"}
+		%div{:class=>"container"}
+			%div{:class=>"row"}
+				%div{:class=>"col-md-12"}
+					%h3{:class=>"text-center"}
+						%strong Mentors
+				%div{:class=>"col-md-12"}
+					%div{:class=>"row"}
+						%div{:class=>"col-md-4 col-sm-4 details"}
+							%h3{:class=>"text-center program"}Carina
+							%hr
+							%ul
+								%a{:href=>"#"}
+									%li Collections
+						%div{:class=>"col-md-4 col-sm-4 text-center details"}
+							%h3{:class=>"travel"} Clark
+							%hr
+							%p this is a test
+						%div{:class=>"col-md-4 col-sm-4 text-center details"}
+							%h3{:class=>"travel"} Clark
+							%hr
+							%p this is a test
+

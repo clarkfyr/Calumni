@@ -6,36 +6,16 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
 
-  <div class="ui grid">
-    <div class="row">
-      <div class="fourteen wide centered column">
-        <h2 class="ui header">
-          <i class="mail icon"></i>
-          <div class="content">
-            Calumni
-          </div>
-        </h2>
-        <div class="ui purple inverted menu">
-          <i class="home icon"></i><%= link_to "Home", root_path, class: "item" %>
-            <% if cookies[:email] %>
-              <%= link_to "Mailbox", conversations_path, class: "item" %>
-              <div class="right menu">
-                <%= link_to 'Sign Out', logout_path, class: "item" %>
-              </div>
-            <% else %>
-              <div class="right menu">
-                <%= link_to 'Sign Up', signup_path, class: "item" %>
-                <%= link_to "Login", login_path, class: "item" %>
-              </div>
-            <% end %>
-        </div>
+<div class="container-fluid">
+<%= render "common/navbar" %>
+  <%= yield %>
+</div>
+<%= render "common/footer" %>
 
-        <%= yield %>
-      </div>
-    </div>
-  </div>
+
 
 
 

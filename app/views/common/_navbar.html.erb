@@ -1,0 +1,28 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to "Calumni", home_path, id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Home",   home_path %></li>
+        <li><%= link_to "Help",   '#' %></li>
+
+        <% if not cookies[:email] %>
+          <li><%= link_to "Log in", signup_path %></li>
+        <% else %>
+          <!-- display dropdown -->
+           <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= cookies[:lastname]%> <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Profile",profile_path %></li>
+              <li><%= link_to "Message",conversations_path %></li>
+              <li role="separator" class="divider"></li>
+                <li><%= link_to "Logout",logout_path %></li>
+            </ul>
+           </li>
+        <% end%>
+
+      </ul>
+    </nav>
+  </div>
+</header>
+

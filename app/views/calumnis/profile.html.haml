@@ -1,5 +1,3 @@
-.ui.segment
-
 %h1 Details Page
 %h2 Hi, #{@people.first.email}
 
@@ -8,6 +6,7 @@
 = image_tag @people.first.avatar.url(:medium)
 
 = link_to 'Upload avatar', upload_path
+
 / = form_for profile_path, html: { multipart: true} do |form|
 /   = form.file_field :avatar
 %table

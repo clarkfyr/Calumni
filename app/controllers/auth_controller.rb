@@ -5,6 +5,9 @@ class AuthController < ApplicationController
         authentication_info = request.env["omniauth.auth"]
         p authentication_info
         cookies[:email] = authentication_info['info']['email']
+        
+        cookies[:lastname]=authentication_info['info']['last_name']
+        cookies[:name]=authentication_info['info']['last_name']
         p cookies[:email]
         p session[:user_id]
         p session[:auth_redirect] #requested path
