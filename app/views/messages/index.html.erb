@@ -3,7 +3,7 @@
 <% end %>
 
 <div class="ui segment">
-  <% @messages.each do |message| %>new.html.erb
+  <% @messages.each do |message| %>
     <% if message.body %>
       <% people = People.find(message.people_id) %>
       <div class="item">
