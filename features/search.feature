@@ -48,7 +48,7 @@ Scenario: Unsuccessfully search with an alumni name #Sad Path
   Then I should be on the search page for "Not Find"
   And I should see "There is no search item called Test_user10"
   
-Scenario: Successfully follow alumni I am interested in
+Scenario: Successfully follow company I am interested in
   Given I am on the home page
   Then I should see "Test_user1"
   When I follow "Test_user1"
