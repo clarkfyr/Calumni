@@ -1,4 +1,3 @@
-@ignore
 Feature: search
   As a visitor
   so that I can search for alumni of UC Berkeley by name and company
