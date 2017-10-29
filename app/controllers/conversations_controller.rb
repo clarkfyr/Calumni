@@ -9,6 +9,10 @@ def index
 end
 
 def create
+	p "sender_id"
+	p params[:sender_id]
+	p "recipient_id"
+	p params[:recipient_id]
 	if Conversation.between(params[:sender_id],params[:recipient_id]).present?
 		@conversation = Conversation.between(params[:sender_id], params[:recipient_id]).first
 	else

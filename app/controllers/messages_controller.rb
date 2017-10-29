@@ -6,6 +6,13 @@ end
 
 def index
     @messages = @conversation.messages
+    p "Hello thank you"
+    p "print last"
+    p @messages.last
+    p "print msg"
+    p @messages
+    p current_user
+    p "thank you very much"
 
     if @messages.length > 10
         @over_ten = true
@@ -43,6 +50,7 @@ private
 
 def message_params
     params.require(:message).permit(:body, :people_id)
+    # params.permit(:body, :people_id)
 end
 
 

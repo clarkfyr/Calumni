@@ -20,7 +20,6 @@ module NavigationHelpers
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
     when /^the Profile page$/i
-      #signup_path()
       profile_path()
   
     when /^the Decision Role page$/i
@@ -28,18 +27,13 @@ module NavigationHelpers
 
     when /^google_callback$/i
       google_callback_path()
-    
-    when /^the Details Page for "(.*)"$/i
-      profile_path()
-      
+
     when /^the Create New Mentor page$/i
       create_mentor_path()
       
-    when /^the NewMovie page$/i
-      new_movie_path()
-      
-    when /^the details page for "(.*)"$/i
-      movie_path(Movie.find_by_title($1))
+    when /^the search page for "(.+)"$/i
+      search_path()
+    
     
     else
       begin

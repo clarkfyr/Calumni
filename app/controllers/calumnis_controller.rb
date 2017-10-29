@@ -67,7 +67,6 @@ class CalumnisController < ApplicationController
     # p params
 
     # save
-
     p cookies[:email]
     @people= People.select{|p| p.email==cookies[:email]}
     # p "in profile ",People.find_by(email: cookies[:email])
@@ -102,7 +101,6 @@ class CalumnisController < ApplicationController
       @calumni.update_attributes(email:cookies[:email])
       # tmp_params = ActionController::Parameters.new(email:cookies[:email])
       # People.create!(tmp_params)
-
     end
     redirect_to home_path
 
@@ -123,7 +121,9 @@ class CalumnisController < ApplicationController
     @people= People.select{|p| p.email==cookies[:email]}
     @people.first.update_attributes(people_params)
     redirect_to profile_path
-
+  end
+  
+  def search
   end
 
 
