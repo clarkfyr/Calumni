@@ -67,7 +67,6 @@ class CalumnisController < ApplicationController
     # p params
 
     # save
-
     p cookies[:email]
     @people= People.select{|p| p.email==cookies[:email]}
     # p "in profile ",People.find_by(email: cookies[:email])

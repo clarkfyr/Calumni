@@ -20,7 +20,6 @@ module NavigationHelpers
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
     when /^the Profile page$/i
-      #signup_path()
       profile_path()
   
     when /^the Decision Role page$/i

@@ -12,9 +12,6 @@ end
 
 #!!!
 Given /^(?:|I )am successfully signin with "(.+)"$/ do |email|
-  true
-  # return true
-
   # #sign in with specific user email
    headers = {}
    Rack::Utils.set_cookie_header!(headers, :email, email)
@@ -24,9 +21,7 @@ Given /^(?:|I )am successfully signin with "(.+)"$/ do |email|
 end
 
 When /^(?:|I )follow Mentor$/ do
-  true
   # turns the phrase above into concrete actions
-
    visit path_to("google_callback")
    click_link('Mentor')
    page.driver.get('/auth/google_oauth2/callback')
@@ -78,26 +73,6 @@ Then /^(?:|I )should see "(.*)"$/ do |text|
   else
      assert page.has_content?(text)
   end
-end
-
-# Then /^(?:|I )should not see "([^"]*)"$/ do |text|
-#   if page.respond_to? :should
-#     page.should have_no_content(text)
-#   else
-#     assert page.has_no_content?(text)
-#   end
-# end
-
-Then /^(?:|I )should not see \/([^\/]*)\/$/ do |regexp|
-  true
-
-  # regexp = Regexp.new(regexp)
-  #
-  # if page.respond_to? :should
-  #   page.should have_no_xpath('//*', :text => regexp)
-  # else
-  #   assert page.has_no_xpath?('//*', :text => regexp)
-  # end
 end
 
 When /I (un)?check the following (filter_name): (.*)/ do |uncheck, filter_name, help_list|

@@ -71,9 +71,8 @@
         null,
         null,
         null,
-        null,
-        0,
-        0,
+        6,
+        6,
         null,
         null,
         null,
@@ -253,13 +252,13 @@
         null
       ],
       "/home/ubuntu/workspace/Calumni/app/models/people.rb": [
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
         null,
-        0,
+        1,
         null,
-        0
+        null
       ],
       "/home/ubuntu/workspace/Calumni/app/models/conversation.rb": [
         0,
@@ -407,6 +406,6 @@
         null
       ]
     },
-    "timestamp": 1509251645
+    "timestamp": 1509253757
   }
 }
