@@ -22,29 +22,45 @@ Scenario: Successfully search with a company name
   Given I am on the home page
   When I fill in "Search_Box" with "Google"
   And I press "Search"
-  Then I should be on the company page for "Google"
-#  And I should not see "Facebook"
+  Then I should be on the search page for "Google"
+  And I should see "Test_user1"
+  And I should not see "Test_user2"
 
 Scenario: Unsuccessfully search with a company name #Sad Path
   Given I am on the home page
-  When I fill in "Search_Box" with "Calumni"
+  When I fill in "Search_Box" with "Alibaba"
   And I press "Search"
-  Then I should be on the company page for "Not Find"
-  And I should see "There is no company called Calumni"
-
-Scenario: Successfully filter with companies' name
+  Then I should be on the search page for "Not Find"
+  And I should see "There is no search result called Calumni"
+  
+Scenario: Successfully search with an alumni name
   Given I am on the home page
-  Then I should see "Company Filter"
-  When I check "Google+Facebook" in checkbox "Company Filter"
-#  When I check the following Company Filter: Google, Facebook
+  When I fill in "Search_Box" with "Test_user1"
   And I press "Search"
-  Then I should be on the company page for "Google+Facebook"
+  Then I should be on the search page for "Test_user1"
+  And I should see "Google"
+  And I should not see "Facebook"
 
-Scenario: Successfully filter with type of help
+Scenario: Unsuccessfully search with an alumni name #Sad Path
   Given I am on the home page
-  Then I should see "Help Filter"
-#  When I check the following Help Filter: Resume, Inteview
-  And I check "Resume+Inteview" in checkbox "Help Filter"
-
+  When I fill in "Search_Box" with "Test_user10"
   And I press "Search"
-  Then I should be on the help page for "Resume+Inteview"
+  Then I should be on the search page for "Not Find"
+  And I should see "There is no search item called Test_user10"
+  
+Scenario: Successfully follow alumni I am interested in
+  Given I am on the home page
+  Then I should see "Test_user1"
+  When I follow "Test_user1"
+  Then I should be on the search page for "Test_user1"
+  And I should see "Test_user1"
+  And I should see "Google"
+  And I should not see "Facebook"
+  
+Scenario: Successfully follow alumni I am interested in
+  Given I am on the home page
+  Then I should see "Google"
+  When I follow "Google"
+  Then I should be on the search page for "Google"
+  And I should see "Test_user1"
+  And I should not see "Test_user2"

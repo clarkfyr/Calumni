@@ -35,11 +35,9 @@ module NavigationHelpers
     when /^the Create New Mentor page$/i
       create_mentor_path()
       
-    when /^the NewMovie page$/i
-      new_movie_path()
-      
-    when /^the details page for "(.*)"$/i
-      movie_path(Movie.find_by_title($1))
+    when /^the search page for "(.+)"$/i
+      search_path()
+    
     
     else
       begin
