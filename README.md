@@ -20,6 +20,5 @@ https://www.pivotaltracker.com/n/projects/2118464
     - referrals; resume feedback; mock interview; advice on career; company tours...  
 
 
-
 - Link to Initial Customer Meeting:
 https://www.youtube.com/watch?v=vLoHODcZZHo
