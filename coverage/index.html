@@ -14,18 +14,18 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-29T05:09:17+00:00">2017-10-29T05:09:17+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-29T05:25:56+00:00">2017-10-29T05:25:56+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">21.14%</span></span>
+    (<span class="covered_percent"><span class="red">24.57%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.26
+         0.61
        </span>
     </span> hits/line)
   </h2>
@@ -33,8 +33,8 @@
   <div>
     <b>12</b> files in total.
     <b>175</b> relevant lines. 
-    <span class="green"><b>37</b> lines covered</span> and
-    <span class="red"><b>138</b> lines missed </span>
+    <span class="green"><b>43</b> lines covered</span> and
+    <span class="red"><b>132</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -72,12 +72,12 @@
       
       <tr>
         <td class="strong"><a href="#dda49fabbfe8a28ac8869ebb3b87a9a64b6cb38d" class="src_link" title="app/controllers/calumnis_controller.rb">app/controllers/calumnis_controller.rb</a></td>
-        <td class="red strong">42.55 %</td>
+        <td class="red strong">55.32 %</td>
         <td>164</td>
         <td>47</td>
-        <td>20</td>
-        <td>27</td>
-        <td>0.6</td>
+        <td>26</td>
+        <td>21</td>
+        <td>1.9</td>
       </tr>
       
       <tr>
@@ -179,11 +179,11 @@
           <div class="file_list_container" id="Controllers">
   <h2>
     <span class="group_name">Controllers</span>
-    (<span class="covered_percent"><span class="red">19.86%</span></span>
+    (<span class="covered_percent"><span class="red">24.11%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.25
+         0.69
        </span>
     </span> hits/line)
   </h2>
@@ -191,8 +191,8 @@
   <div>
     <b>5</b> files in total.
     <b>141</b> relevant lines. 
-    <span class="green"><b>28</b> lines covered</span> and
-    <span class="red"><b>113</b> lines missed </span>
+    <span class="green"><b>34</b> lines covered</span> and
+    <span class="red"><b>107</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -230,12 +230,12 @@
       
       <tr>
         <td class="strong"><a href="#dda49fabbfe8a28ac8869ebb3b87a9a64b6cb38d" class="src_link" title="app/controllers/calumnis_controller.rb">app/controllers/calumnis_controller.rb</a></td>
-        <td class="red strong">42.55 %</td>
+        <td class="red strong">55.32 %</td>
         <td>164</td>
         <td>47</td>
-        <td>20</td>
-        <td>27</td>
-        <td>0.6</td>
+        <td>26</td>
+        <td>21</td>
+        <td>1.9</td>
       </tr>
       
       <tr>
@@ -1067,11 +1067,11 @@
         <div class="source_table" id="dda49fabbfe8a28ac8869ebb3b87a9a64b6cb38d">
   <div class="header">
     <h3>app/controllers/calumnis_controller.rb</h3>
-    <h4><span class="red">42.55 %</span> covered</h4>
+    <h4><span class="red">55.32 %</span> covered</h4>
     <div>
       <b>47</b> relevant lines. 
-      <span class="green"><b>20</b> lines covered</span> and
-      <span class="red"><b>27</b> lines missed.</span>
+      <span class="green"><b>26</b> lines covered</span> and
+      <span class="red"><b>21</b> lines missed.</span>
     </div>
   </div>
   
@@ -1198,8 +1198,8 @@
           <code class="ruby">  def people_params</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="21">
-          
+        <li class="covered" data-hits="5" data-linenumber="21">
+          <span class="hits">5</span>
           
           <code class="ruby">    params.require(:people).permit(:username, :email, :description, :company, :start_date, :resume, :university, :major, :graduation, :help, :position,:avatar)</code>
         </li>
@@ -1372,14 +1372,14 @@
           <code class="ruby">  def edit_profile</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="50">
-          
+        <li class="covered" data-hits="5" data-linenumber="50">
+          <span class="hits">5</span>
           
           <code class="ruby">    p cookies[:email]</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="51">
-          
+        <li class="covered" data-hits="10" data-linenumber="51">
+          <span class="hits">10</span>
           
           <code class="ruby">    @people= People.select{|p| p.email==cookies[:email]}</code>
         </li>
@@ -1492,14 +1492,14 @@
           <code class="ruby">    # save</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="70">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="11" data-linenumber="70">
+          <span class="hits">11</span>
           
           <code class="ruby">    p cookies[:email]</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="71">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="22" data-linenumber="71">
+          <span class="hits">22</span>
           
           <code class="ruby">    @people= People.select{|p| p.email==cookies[:email]}</code>
         </li>
@@ -1804,20 +1804,20 @@
           <code class="ruby">  def update_profile</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="122">
-          
+        <li class="covered" data-hits="10" data-linenumber="122">
+          <span class="hits">10</span>
           
           <code class="ruby">    @people= People.select{|p| p.email==cookies[:email]}</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="123">
-          
+        <li class="covered" data-hits="5" data-linenumber="123">
+          <span class="hits">5</span>
           
           <code class="ruby">    @people.first.update_attributes(people_params)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="124">
-          
+        <li class="covered" data-hits="5" data-linenumber="124">
+          <span class="hits">5</span>
           
           <code class="ruby">    redirect_to profile_path</code>
         </li>

@@ -27,10 +27,7 @@ module NavigationHelpers
 
     when /^google_callback$/i
       google_callback_path()
-    
-    when /^the Details Page for "(.*)"$/i
-      profile_path()
-      
+
     when /^the Create New Mentor page$/i
       create_mentor_path()
       

@@ -5,8 +5,8 @@ Feature: edit_profile
 Background: logined user
   Given I am successfully signin with "test@berkeley.edu"
   Given the following users exist:
-    |username  |email    | description |
-    |Test_user |test@berkeley.edu  | None |
+    |username |     email       |
+    |Test_user|test@berkeley.edu|
 
 Scenario: Able to edit profile
   Given I am on the home page

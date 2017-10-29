@@ -83,29 +83,26 @@ end
 Given /^the following users exist/ do |peoples_table|
   true
 
-  # peoples_table.hashes.each do |people|
-  #   People.create people
-  # end
+  peoples_table.hashes.each do |people|
+     People.create people
+   end
 end
 
 
 When /^I check "(.*)" in checkbox "(.*)"$/ do |check_list, checkbox|
-  true
-  # pending # Write code here that turns the phrase above into concrete actions
-  # check_list.split(', ').each do |item|
-  #   check("#{checkbox}_#{item}")
-  # end
+   pending # Write code here that turns the phrase above into concrete actions
+   check_list.split(', ').each do |item|
+     check("#{checkbox}_#{item}")
+   end
 end
 
 Then /^I check the respond to request: "(.*)"$/ do |request_type|
-  true
-  # pending # Write code here that turns the phrase above into concrete actions
-  # check("respond_#{request_type}")
+   pending # Write code here that turns the phrase above into concrete actions
+   check("respond_#{request_type}")
 end
 
 When /^I select "(.+)" in "(.+)"$/ do |position,option|
-  true
-  # select(position, :from => option)
+   select(position, :from => option)
 end
 
 Then /^(?:|I )should not see "([^"]*)"$/ do |text|
