@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
-  
+
   include AuthHelper
   # before_action :oldOrnew, only: [:signup]
   # before_action :signed_in, :except => [:google_callback,:home,:signup]
@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   # protect_from_forgery with: :exception
-  
+
   def signed_in
     p "filter is called every controller",myEmail
     p myEmail==""
@@ -20,15 +20,12 @@ class ApplicationController < ActionController::Base
       p request.path,"is "
       # session[:return_to] ||= request.referer
       # request.env["HTTP_REFERER"]=request.path
-      # byebug  
-      p "start to redirect"
-      # byebug
       redirect_to '/auth/google_oauth2'
     end
   end
 
 
-  
+
   def oldOrnew
     ok=People.find_by(email: cookies[:email])
     p ok,"this is in oldOrnew"
@@ -38,10 +35,16 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def current_user
+    cookies[:email]
+  end
+
+
+  helper_method :signed_in, :current_user
 
   # private
   # def after_sign_out_path_for(resource_or_scope)
-  #   # If it's admin 
+  #   # If it's admin
   #    p "####in the signout"
   #   # if myEmail
   #   # ?(current_user)

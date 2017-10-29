@@ -29,8 +29,8 @@ production:
   encoding: utf8
   database: calumni_production
   pool: 5
-  username: 
-  password:
-  
+  # username:
+  # password:
+
 cucumber:
   <<: *test

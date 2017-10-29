@@ -1,7 +1,5 @@
 / image, username, major, graduation data, prior work experience, options
-
 -# edit portrait
-
 -# username
 -# major
 -# graduation data
@@ -10,20 +8,20 @@
 %h2 Hi, #{@people.first.email}
 
 = form_for @people, url: update_profile_path,html: { multipart: true} do |form|
-  
+
    = form.label :username, 'Username'
    = form.text_field :username
 
    = form.label :company, 'Company'
    = form.text_field :company
-   
+
    = form.label :position, 'Position'
    = form.select(:position, options_for_select([['Software Engineering'],['CEO'],['COO'],['MD'],['CFO'],['CTO']]))
 
-   
+
    = form.label :start_date, 'Start Date'
    = form.text_field :start_date
-   
+
    = form.label :description, 'Description'
    = form.text_field :description
 

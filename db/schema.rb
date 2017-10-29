@@ -13,9 +13,27 @@
 
 ActiveRecord::Schema.define(version: 20171028060724) do
 
+  create_table "conversations", force: :cascade do |t|
+    t.integer  "sender_id"
+    t.integer  "recipient_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.text     "body"
+    t.integer  "conversation_id"
+    t.integer  "people_id"
+    t.boolean  "read",            default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "messages", ["conversation_id"], name: "index_messages_on_conversation_id"
+  add_index "messages", ["people_id"], name: "index_messages_on_people_id"
+
   create_table "people", force: :cascade do |t|
     t.string   "username"
-    t.string   "password"
     t.string   "email"
     t.string   "description"
     t.datetime "created_at",          null: false
@@ -23,7 +41,6 @@ ActiveRecord::Schema.define(version: 20171028060724) do
     t.string   "company"
     t.string   "start_date"
     t.string   "resume"
-    t.string   "profile"
     t.string   "university"
     t.string   "major"
     t.string   "graduation"
@@ -31,6 +48,7 @@ ActiveRecord::Schema.define(version: 20171028060724) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.string   "occupation"
     t.string   "position"
   end
 

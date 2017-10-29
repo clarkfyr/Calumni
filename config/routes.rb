@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   get  'login'   => 'calumnis#login',  :as => 'login'
 
   get  'create_mentor'   => 'calumnis#create_mentor',  :as => 'create_mentor'
-  
+  get 'testprofile' => 'calumnis#testprofile', :as =>'testprofile'
+  patch 'testselect' => 'calumnis#testselect', :as => 'testselect'
 
 
   get  'create_mentee'   => 'calumnis#create_mentee',  :as => 'create_mentee'
@@ -22,6 +23,10 @@ Rails.application.routes.draw do
   get "/auth/logout" => "auth#logout", :as => 'logout'
 
   patch'upload' => 'calumnis#receiveimg', :as =>'receiveimg'
+
+  resources :conversations do
+    resources :messages
+  end
 
 # resources :calumni
 
