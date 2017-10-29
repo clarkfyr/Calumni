@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # post  'login'   => 'calumnis#login',  :as => 'login'
   post  'newProfile'   => 'calumnis#createandlogin',  :as => 'createandlogin'
   get  'login'   => 'calumnis#login',  :as => 'login'
+  get  'search'   => 'calumnis#search',  :as => 'search'
 
   get  'create_mentor'   => 'calumnis#create_mentor',  :as => 'create_mentor'
   get 'testprofile' => 'calumnis#testprofile', :as =>'testprofile'
