@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-29T05:25:56+00:00">2017-10-29T05:25:56+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-11-01T02:49:33+00:00">2017-11-01T02:49:33+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.61
+         0.74
        </span>
     </span> hits/line)
   </h2>
@@ -77,7 +77,7 @@
         <td>47</td>
         <td>26</td>
         <td>21</td>
-        <td>1.9</td>
+        <td>2.4</td>
       </tr>
       
       <tr>
@@ -183,7 +183,7 @@
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.69
+         0.85
        </span>
     </span> hits/line)
   </h2>
@@ -235,7 +235,7 @@
         <td>47</td>
         <td>26</td>
         <td>21</td>
-        <td>1.9</td>
+        <td>2.4</td>
       </tr>
       
       <tr>
@@ -1198,8 +1198,8 @@
           <code class="ruby">  def people_params</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="21">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="6" data-linenumber="21">
+          <span class="hits">6</span>
           
           <code class="ruby">    params.require(:people).permit(:username, :email, :description, :company, :start_date, :resume, :university, :major, :graduation, :help, :position,:avatar)</code>
         </li>
@@ -1372,14 +1372,14 @@
           <code class="ruby">  def edit_profile</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="50">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="7" data-linenumber="50">
+          <span class="hits">7</span>
           
           <code class="ruby">    p cookies[:email]</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="51">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="14" data-linenumber="51">
+          <span class="hits">14</span>
           
           <code class="ruby">    @people= People.select{|p| p.email==cookies[:email]}</code>
         </li>
@@ -1492,14 +1492,14 @@
           <code class="ruby">    # save</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="70">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="14" data-linenumber="70">
+          <span class="hits">14</span>
           
           <code class="ruby">    p cookies[:email]</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="71">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="28" data-linenumber="71">
+          <span class="hits">28</span>
           
           <code class="ruby">    @people= People.select{|p| p.email==cookies[:email]}</code>
         </li>
@@ -1804,20 +1804,20 @@
           <code class="ruby">  def update_profile</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="122">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="12" data-linenumber="122">
+          <span class="hits">12</span>
           
           <code class="ruby">    @people= People.select{|p| p.email==cookies[:email]}</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="123">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="6" data-linenumber="123">
+          <span class="hits">6</span>
           
           <code class="ruby">    @people.first.update_attributes(people_params)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="124">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="6" data-linenumber="124">
+          <span class="hits">6</span>
           
           <code class="ruby">    redirect_to profile_path</code>
         </li>
