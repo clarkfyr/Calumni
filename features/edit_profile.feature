@@ -20,25 +20,39 @@ Scenario: Edit Description
   When I follow "Edit"
   And I fill in "Description" with "Hello World"
   And I press "Update"
-  And I should see "Hello World"
+  Then I should see "Hello World"
 
 Scenario: Edit Company
   Given I am on the Profile page
   When I follow "Edit"
   And I fill in "Company" with "Google"
   And I press "Update"
-  And I should see "Google"
+  Then I should see "Google"
 
 Scenario: Edit Position
   Given I am on the Profile page
   When I follow "Edit"
   And I select "CEO" in "Position"
   And I press "Update"
-  And I should see "CEO"
+  Then I should see "CEO"
   
 Scenario: Edit Start Date
   Given I am on the Profile page
   When I follow "Edit"
   And I fill in "Start date" with "10/27/2017"
   And I press "Update"
-  And I should see "10/27/2017"
+  Then I should see "10/27/2017"
+
+Scenario: Edit Photo
+  Given I am on the Profile page
+  When I follow "Edit"
+  And I upload a photo
+  And I press "Update"
+  And I should see the image
+
+Scenario: Edit Resume
+  Given I am on the Profile page
+  When I follow "Edit"
+  And I upload a resume
+  And I press "Update"
+  And I should see the resume

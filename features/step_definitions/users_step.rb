@@ -122,3 +122,27 @@ Then /^(?:|I )should not see \/([^\/]*)\/$/ do |regexp|
     assert page.has_no_xpath?('//*', :text => regexp)
   end
 end
+
+When /^I upload a photo$/ do
+  attach_file('people_avatar', @test_jpg_file_path)
+end
+
+Then /^I should see the image$/ do
+  if page.respond_to? :should
+      page.should have_content(@test_jpg_file_path)
+    else
+      assert page.has_content?(@test_jpg_file_path)
+    end
+end
+
+When /^I upload a resume/ do
+  attach_file('people_resume', @test_file_path)
+end
+
+Then /^I should see the resume$/ do
+  if page.respond_to? :should
+      page.should have_content(@test_file_path)
+    else
+      assert page.has_content?(@test_file_path)
+    end
+end
