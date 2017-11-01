@@ -33,6 +33,8 @@ class CalumnisController < ApplicationController
   end
   def signup
   end
+
+  # not go to this function anymore
   def createandlogin
     p "in createandlogin",params[:people],people_params,cookies[:email]
     params[:people][:email]=cookies[:email]
@@ -98,7 +100,7 @@ class CalumnisController < ApplicationController
       cookies[:username]=cookies[:email]
       # add email
       @calumni=People.new()
-      @calumni.update_attributes(email:cookies[:email])
+      @calumni.update_attributes(email:cookies[:email],username:cookies[:name])
       # tmp_params = ActionController::Parameters.new(email:cookies[:email])
       # People.create!(tmp_params)
     end

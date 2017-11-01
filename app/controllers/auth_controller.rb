@@ -7,7 +7,7 @@ class AuthController < ApplicationController
         cookies[:email] = authentication_info['info']['email']
         
         cookies[:lastname]=authentication_info['info']['last_name']
-        cookies[:name]=authentication_info['info']['last_name']
+        cookies[:name]=authentication_info['info']['name']
         p cookies[:email]
         p session[:people_id]
         p session[:auth_redirect] #requested path
