@@ -6,5 +6,5 @@ As a user
 Scenario:
 	Given I am successfully signin with "test@berkeley.edu"
 	And I am on the home page
-	When I press "Conversation"
-	Then I should be on the conversation page for "test@berkeley.edu"
+	When I follow "Message"
+	Then I should be on the conversations page

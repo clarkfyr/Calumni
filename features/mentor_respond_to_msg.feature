@@ -12,7 +12,6 @@ Scenario:
   And I am on the home page
   When I press "Conversation"
   Then I should be on the Conversation page
-#  And I should see all messages.
   Then I follow "mentee_user"
   And I should see "Dear mentor, Could you please help me with my resume?"
   And I check the respond to request: "Accept"
