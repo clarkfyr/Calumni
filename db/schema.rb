@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171101032443) do
+ActiveRecord::Schema.define(version: 20171101051927) do
 
   create_table "conversations", force: :cascade do |t|
     t.integer  "sender_id"
@@ -40,7 +40,6 @@ ActiveRecord::Schema.define(version: 20171101032443) do
     t.datetime "updated_at",          null: false
     t.string   "company"
     t.string   "start_date"
-    t.string   "resume"
     t.string   "university"
     t.string   "major"
     t.string   "graduation"
@@ -53,6 +52,10 @@ ActiveRecord::Schema.define(version: 20171101032443) do
     t.string   "graduationDate"
     t.string   "helpability"
     t.string   "open_advice"
+    t.string   "resume_file_name"
+    t.string   "resume_content_type"
+    t.integer  "resume_file_size"
+    t.datetime "resume_updated_at"
   end
 
 end

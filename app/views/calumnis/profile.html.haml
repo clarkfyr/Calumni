@@ -32,6 +32,8 @@
             %tr
               %td Company:
               %td #{@people.first.company}
+            %tr
+              %iframe{:width => 320, :height =>480, :src => @people.first.resume.url, :frameborder =>"0"}
 
 
 
