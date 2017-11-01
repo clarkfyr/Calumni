@@ -14,12 +14,6 @@ Scenario: Able to edit profile
   Then I should be on the Profile page
   Then I should see "Edit"
 
-Scenario: Edit Username
-  Given I am on the Profile page
-  When I follow "Edit"
-  And I fill in "Username" with "Test_user"
-  And I press "Update"
-  And I should see "Test_user"
 
 Scenario: Edit Description
   Given I am on the Profile page
@@ -45,6 +39,6 @@ Scenario: Edit Position
 Scenario: Edit Start Date
   Given I am on the Profile page
   When I follow "Edit"
-  And I fill in "Start Date" with "10/27/2017"
+  And I fill in "Start date" with "10/27/2017"
   And I press "Update"
   And I should see "10/27/2017"

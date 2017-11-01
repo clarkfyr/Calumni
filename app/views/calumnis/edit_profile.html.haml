@@ -4,49 +4,20 @@
 -# major
 -# graduation data
 -# prior work experience
-%h1 Edit Page
-%h2 Hi, #{@people.first.email}
 
-= form_for @people, url: update_profile_path,html: { multipart: true} do |form|
 
-   = form.label :username, 'Username'
-   = form.text_field :username
-   %br
 
-   = form.label :company, 'Company'
-   = form.text_field :company
-   %br
+= bootstrap_form_for(@people,url: update_profile_path) do |f|
+  = f.file_field :avatar
+  = f.text_area :description
+  = f.select(:position, options_for_select([['Software Engineering'],['CEO'],['COO'],['MD'],['CFO'],['CTO']]))
+  = f.datetime_field :start_date
+  = f.file_field :resume
+  = f.text_field :company
+  = f.select(:major, options_for_select([['EECS'],['CS'],['BIO'],['Biology']]))
+  = f.datetime_field :graduation_date
+  = f.select(:helpability, options_for_select([['Submit referral'],['resume'],['interview'],['Company tour']]), label:"Help with")
+  = f.text_area :open_advice ,label:"General advice"
 
-   = form.label :position, 'Position'
-   = form.select(:position, options_for_select([['Software Engineering'],['CEO'],['COO'],['MD'],['CFO'],['CTO']]))
-   %br
+  = f.submit "Update"
 
-   = form.label :start_date, 'Start Date'
-   = form.text_field :start_date
-   %br
-
-   = form.label :description, 'Description'
-   = form.text_field :description
-   %br
-
-   = form.label :people, :resume
-   = form.file_field :resume
-   %br
-
-   = form.label :people, :university
-   = form.text_field :university
-   %br
-
-   = form.label :people, :major
-   = form.text_field :major
-   %br
-
-   = form.label :people, :graduation
-   = form.text_field :graduation
-   %br
-
-   = form.label :people, :avatar
-   = form.file_field :avatar
-   %br
-
-   = form.submit 'Update'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171028060724) do
+ActiveRecord::Schema.define(version: 20171101032443) do
 
   create_table "conversations", force: :cascade do |t|
     t.integer  "sender_id"
@@ -49,6 +49,10 @@ ActiveRecord::Schema.define(version: 20171028060724) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.string   "position"
+    t.string   "graduation_date"
+    t.string   "graduationDate"
+    t.string   "helpability"
+    t.string   "open_advice"
   end
 
 end

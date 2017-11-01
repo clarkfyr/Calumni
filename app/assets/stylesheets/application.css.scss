@@ -11,8 +11,12 @@
  * file per style scope.
  *
  */
+/*
+ *= require rails_bootstrap_forms
+ */
 
 @import "semantic-ui";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "custom.css.scss";
+@import "profile.scss";

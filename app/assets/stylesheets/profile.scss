@@ -1,0 +1,47 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+.fb-profile img.fb-image-lg{
+    z-index: 0;
+    width: 100%;  
+    /*margin-bottom: 10px;*/
+    margin: -30px 0px 30px 30px;
+}
+
+.fb-image-profile
+{
+    margin: -70px 10px 0px 50px;
+    z-index: 9;
+    width: 20%; 
+}
+
+@media (max-width:768px)
+{
+    .fb-profile-text>h1{
+        font-weight: 700;
+        font-size:16px;
+    }
+
+    .fb-image-profile
+    {
+        margin: -45px 10px 0px 25px;
+        z-index: 9;
+        width: 20%; 
+    }
+}
+
+.username{
+  font-size: 3em;
+  letter-spacing: -2px;
+  text-align: left;
+  display: inline-block;  
+}
+
+.edit{
+    font-size: 17px;
+    font-weight: 700;
+    float:right;
+    display: inline-block;  
+}
