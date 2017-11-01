@@ -5,3 +5,5 @@ plain
 .byebug_history
 
 coverage/assets/*
+public/system/*
+db/*

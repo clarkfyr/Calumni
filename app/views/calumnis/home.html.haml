@@ -1,84 +1,82 @@
-
 %div{:class=>"container-fluid", :id=>"Company"}
-	%div{:class=>"row"}
-		%div{:class=>"container"}
-			= form_tag search_path, method: :get do
-				= label_tag :search, "Search_Box" 
-				= text_field_tag :search, params[:search], placeholder: "Name, Companies"
-				= submit_tag "Search"
+  %div{:class=>"row"}
+    %div{:class=>"container"}
+      = form_tag search_path, method: :get do
+        = label_tag :search, "Search_Box" 
+        = text_field_tag :search, params[:search], placeholder: "Name, Companies"
+        = submit_tag "Search"
 			
 %div{:class=>"container-fluid", :id=>"Company"}
-	%div{:class=>"row"}
-		%div{:class=>"container"}
-			%div{:class=>"row"}
-				%div{:class=>"col-md-12"}
-					%h3{:class=>"text-center"}
-						%strong Companies
-				%div{:class=>"col-md-12"}
-					%div{:class=>"row"}
-						%div{:class=>"col-md-3 col-sm-4 details"}
-							%h3{:class=>"text-center program"}Google
-							%hr
-							%ul
-								%a{:href=>"#"}
-									%li Collections
-						%div{:class=>"col-md-3 col-sm-4 details"}
-							%h3{:class=>"text-center program"}GOogle
-							%hr
-							%ul
-								%a{:href=>"#"}
-									%li Collections
-						%div{:class=>"col-md-3 col-sm-4 details"}
-							%h3{:class=>"text-center program"}GOogle
-							%hr
-							%ul
-								%a{:href=>"#"}
-									%li Collections
-						%div{:class=>"col-md-3 col-sm-4 details"}
-							%h3{:class=>"text-center program"}GOogle
-							%hr
-							%ul
-								%a{:href=>"#"}
-									%li Collections
+  %div{:class=>"row"}
+    %div{:class=>"container"}
+      %div{:class=>"row"}
+        %div{:class=>"col-md-12"}
+          %h3{:class=>"text-center"}
+            %strong Companies
+        %div{:class=>"col-md-12"}
+          %div{:class=>"row"}
+            %div{:class=>"col-md-3 col-sm-4 details"}
+              %h3{:class=>"text-center program"}Google
+              %hr
+              %ul
+                %a{:href=>"#"}
+                  %li Collections
+            %div{:class=>"col-md-3 col-sm-4 details"}
+              %h3{:class=>"text-center program"}GOogle
+              %hr
+              %ul
+                %a{:href=>"#"}
+                  %li Collections
+            %div{:class=>"col-md-3 col-sm-4 details"}
+              %h3{:class=>"text-center program"}GOogle
+              %hr
+              %ul
+                %a{:href=>"#"}
+                  %li Collections
+            %div{:class=>"col-md-3 col-sm-4 details"}
+              %h3{:class=>"text-center program"}GOogle
+              %hr
+              %ul
+                %a{:href=>"#"}
+                  %li Collections
 
 
 
 %div{:class=>"container-fluid", :id=>"Mentor"}
-	%div{:class=>"row"}
-		%div{:class=>"container"}
-			%div{:class=>"row"}
-				%div{:class=>"col-md-12"}
-					%h3{:class=>"text-center"}
-						%strong Mentors
-				%div{:class=>"col-md-12"}
-					%div{:class=>"row"}
-						%div{:class=>"col-md-4 col-sm-4 details"}
-							%h3{:class=>"text-center program"}Carina
-							%hr
-							%ul
-								%a{:href=>"#"}
-									%li Collections
-						%div{:class=>"col-md-4 col-sm-4 text-center details"}
-							%h3{:class=>"travel"} Clark
-							%hr
-							%p this is a test
-						%div{:class=>"col-md-4 col-sm-4 text-center details"}
-							%h3{:class=>"travel"} Clark
-							%hr
-							%p this is a test
+  %div{:class=>"row"}
+    %div{:class=>"container"}
+      %div{:class=>"row"}
+        %div{:class=>"col-md-12"}
+          %h3{:class=>"text-center"}
+            %strong Mentors
+        %div{:class=>"col-md-12"}
+          %div{:class=>"row"}
+            %div{:class=>"col-md-4 col-sm-4 details"}
+              %h3{:class=>"text-center program"}Carina
+              %hr
+              %ul
+                %a{:href=>"#"}
+                  %li Collections
+            %div{:class=>"col-md-4 col-sm-4 text-center details"}
+              %h3{:class=>"travel"} Clark
+              %hr
+              %p this is a test
+            %div{:class=>"col-md-4 col-sm-4 text-center details"}
+              %h3{:class=>"travel"} Clark
+              %hr
+              %p this is a test
 
 
 %h2 display the company icon
 
 %tr
-	%td= link_to "Google", search_path
-	%td= link_to "Facebook", search_path
-	%td= link_to "Amazon", search_path
-	%td= link_to "Apple", search_path
+  %td= link_to "Google", search_path
+  %td= link_to "Facebook", search_path
+  %td= link_to "Amazon", search_path
+  %td= link_to "Apple", search_path
 
 %h2 display the mentor icon
 %tr
-	%td= link_to "Test_user1", search_path
-	%td= link_to "Test_user2", search_path
-	%td= link_to "Test_user3", search_path
-	
+  %td= link_to "Test_user1", search_path
+  %td= link_to "Test_user2", search_path
+  %td= link_to "Test_user3", search_path

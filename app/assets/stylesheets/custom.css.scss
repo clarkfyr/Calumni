@@ -2,6 +2,7 @@
 @import "bootstrap";
 /* typography */
 
+
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
@@ -11,6 +12,11 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+}
+
+body
+{
+    font-family: 'Open Sans', sans-serif;
 }
 
 h2 {
@@ -128,3 +134,7 @@ textarea {
 #Company .details p{
   font-size: 24px;
 }
+
+
+
+

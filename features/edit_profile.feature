@@ -14,13 +14,6 @@ Scenario: Able to edit profile
   Then I should be on the Profile page
   Then I should see "Edit"
 
-Scenario: Edit Username
-  Given I am on the Profile page
-  When I follow "Edit"
-  And I fill in "Username" with "Test_user"
-  And I press "Update"
-  Then I should see "Test_user"
-
 Scenario: Edit Description
   Given I am on the Profile page
   When I follow "Edit"
@@ -41,11 +34,11 @@ Scenario: Edit Position
   And I select "CEO" in "Position"
   And I press "Update"
   Then I should see "CEO"
-  
+
 Scenario: Edit Start Date
   Given I am on the Profile page
   When I follow "Edit"
-  And I fill in "Start Date" with "10/27/2017"
+  And I fill in "Start date" with "10/27/2017"
   And I press "Update"
   Then I should see "10/27/2017"
 
@@ -56,7 +49,7 @@ Scenario: Edit Photo
   And I press "Update"
   And I should see the image
 
-Scenario: Edit Resume
+Scenario: Edit Photo
   Given I am on the Profile page
   When I follow "Edit"
   And I upload a resume
