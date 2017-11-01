@@ -5,21 +5,21 @@
 
 = image_tag @people.first.avatar.url(:medium)
 
-
 = link_to 'Upload avatar', upload_path
+
 
 
 / = form_for profile_path, html: { multipart: true} do |form|
 /   = form.file_field :avatar
 %table
   %tbody
-
-    %td= @people.first.username
-
-    %td= @people.first.company
-
-    %td= @people.first.position
-
-    %td= @people.first.start_date
-
-    %td= @people.first.description
+    %tr
+      %td= "Username: "+ @people.first.username
+    %tr
+      %td= "Company: "+ @people.first.company
+    %tr
+      %td= "Position: "+ @people.first.position
+    %tr
+      %td= "Start date: "+ @people.first.start_date
+    %tr
+      %td= "Description: "+ @people.first.description
