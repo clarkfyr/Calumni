@@ -6,4 +6,7 @@ plain
 
 coverage/assets/*
 public/system/*
-db/*
+
+db/development.sqlite3
+db/test.sqlite3
+
