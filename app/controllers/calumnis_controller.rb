@@ -29,7 +29,11 @@ class CalumnisController < ApplicationController
   end
 
   def home
-
+    @people= People.select{|p| p.email==cookies[:email]}
+    @mentor1= People.select{|p| p.email=="yima@uiuc.edu"}
+    @mentor2= People.select{|p| p.email=="1@gmail.com"}
+    @mentor3= People.select{|p| p.email=="2@gmail.com"}
+    @mentor4= People.select{|p| p.email=="3@gmail.com"}
   end
   def signup
   end
