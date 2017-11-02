@@ -34,7 +34,7 @@ Scenario: Edit Position
   And I select "CEO" in "Position"
   And I press "Update"
   Then I should see "CEO"
-  
+
 Scenario: Edit Start Date
   Given I am on the Profile page
   When I follow "Edit"
