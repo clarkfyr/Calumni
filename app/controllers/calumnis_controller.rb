@@ -66,6 +66,30 @@ class CalumnisController < ApplicationController
         @people.first.save
         redirect_to profile_path
   end
+  
+  def render_404
+    respond_to do |format|
+      format.html { render :file => "#{Rails.root}/public/404", :layout => false, :status => :not_found }
+      format.xml  { head :not_found }
+      format.any  { head :not_found }
+    end
+  end
+  def showprofile
+
+    @people= People.select{|p| p.email==cookies[:email]}
+    @otheruser= People.select{|p| p.username==params[:username]}
+    # if user not exist
+    if @otheruser.first.nil?
+      render_404
+    end
+    # if user=otheruser
+    if @people==@otheruser
+      redirect_to profile_path
+    end
+
+
+
+  end
 
   def profile
 
