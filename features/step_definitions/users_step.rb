@@ -81,11 +81,9 @@ When /I (un)?check the following (filter_name): (.*)/ do |uncheck, filter_name, 
 end
 
 Given /^the following users exist/ do |peoples_table|
-  true
-
   peoples_table.hashes.each do |people|
      People.create people
-   end
+  end
 end
 
 
