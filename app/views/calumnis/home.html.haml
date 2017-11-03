@@ -31,7 +31,7 @@
     .col-md-3.col-sm-4.details
       .panel.panel-default
         .panel-body
-          %a.ratio.img-responsive.img-circle{:href => "#", :style => "background-image: url(#{@mentor1.first.avatar});"}
+          %a.ratio.img-responsive.img-circle{:href => "#{@mentor1.first.username}", :style => "background-image: url(#{@mentor1.first.avatar});"}
         / List group
         %ul.list-group
           %li.list-group-item #{@mentor1.first.username}
@@ -40,7 +40,16 @@
     .col-md-3.col-sm-4.details
       .panel.panel-default
         .panel-body
-          %a.ratio.img-responsive.img-circle{:href => "#", :style => "background-image: url(#{@mentor2.first.avatar});"}
+          %a.ratio.img-responsive.img-circle{:href => "#{@mentor2.first.username}", :style => "background-image: url(#{@mentor2.first.avatar});"}
+        / List group
+        %ul.list-group
+          %li.list-group-item #{@mentor2.first.username}
+          %li.list-group-item #{@mentor2.first.position}
+          %li.list-group-item #{@mentor2.first.company}
+    .col-md-3.col-sm-4.details
+      .panel.panel-default
+        .panel-body
+          %a.ratio.img-responsive.img-circle{:href => "#{@mentor3.first.username}", :style => "background-image: url(#{@mentor3.first.avatar});"}
         / List group
         %ul.list-group
           %li.list-group-item #{@mentor3.first.username}
@@ -49,16 +58,7 @@
     .col-md-3.col-sm-4.details
       .panel.panel-default
         .panel-body
-          %a.ratio.img-responsive.img-circle{:href => "#", :style => "background-image: url(#{@mentor3.first.avatar});"}
-        / List group
-        %ul.list-group
-          %li.list-group-item #{@mentor3.first.username}
-          %li.list-group-item #{@mentor3.first.position}
-          %li.list-group-item #{@mentor3.first.company}
-    .col-md-3.col-sm-4.details
-      .panel.panel-default
-        .panel-body
-          %a.ratio.img-responsive.img-circle{:href => "#", :style => "background-image: url(#{@mentor4.first.avatar});"}
+          %a.ratio.img-responsive.img-circle{:href => "#{@mentor4.first.username}", :style => "background-image: url(#{@mentor4.first.avatar});"}
         / List group
         %ul.list-group
           %li.list-group-item #{@mentor4.first.username}

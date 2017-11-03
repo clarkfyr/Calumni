@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get  'search'   => 'calumnis#search',  :as => 'search'
 
   get  'create_mentor'   => 'calumnis#create_mentor',  :as => 'create_mentor'
+
   get 'testprofile' => 'calumnis#testprofile', :as =>'testprofile'
   patch 'testselect' => 'calumnis#testselect', :as => 'testselect'
 
@@ -28,6 +29,8 @@ Rails.application.routes.draw do
   resources :conversations do
     resources :messages
   end
+  get ':username'=> 'calumnis#showprofile', :as =>'showprofile'
+
 
 # resources :calumni
 

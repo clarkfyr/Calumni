@@ -1,11 +1,11 @@
 .container
   .fb-profile
     %img.fb-image-lg{:align => "left", :alt => "cover example", :src => "http://liaokeyu.com/assets/img/hero.jpg", :width=>"100",:height=>"250"}/
-    %img.fb-image-profile.thumbnail{:align => "left", :alt => "Not set avatar yet", :src => @people.first.avatar}/
+    %img.fb-image-profile.thumbnail{:align => "left", :alt => "Not set avatar yet", :src => @otheruser.first.avatar}/
     .fb-profile-text
-      .username #{@people.first.username}
+      .username #{@otheruser.first.username}
       .edit 
-      = link_to 'Edit', edit_profile_path
+        = link_to 'Message', conversations_path
 
 
 
@@ -17,25 +17,22 @@
           %tbody
             %tr
               %td Username
-              %td #{@people.first.username}
+              %td #{@otheruser.first.username}
             %tr
               %td Description:
-              %td #{@people.first.description}
+              %td #{@otheruser.first.description}
             %tr
               %td Position:
-              %td #{@people.first.position}
+              %td #{@otheruser.first.position}
             %tr
               %td Start date:
-              %td #{@people.first.start_date}
+              %td #{@otheruser.first.start_date}
             %tr
               %td Graduation date:
-              %td #{@people.first.graduation_date}
+              %td #{@otheruser.first.graduation_date}
             %tr
               %td Company:
-              %td #{@people.first.company}
-            %tr
-              %iframe{:width => 320, :height =>480, :src => @people.first.resume.url, :frameborder =>"0"}
-
-
+              %td #{@otheruser.first.company}
+            
 
 
