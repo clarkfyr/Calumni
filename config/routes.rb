@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # post  'login'   => 'calumnis#login',  :as => 'login'
   post  'newProfile'   => 'calumnis#createandlogin',  :as => 'createandlogin'
   get  'login'   => 'calumnis#login',  :as => 'login'
-  get  'search'   => 'calumnis#search_user',  :as => 'search_user'
+  get  'search'   => 'calumnis#search',  :as => 'search'
 
   get  'create_mentor'   => 'calumnis#create_mentor',  :as => 'create_mentor'
 
@@ -23,7 +23,8 @@ Rails.application.routes.draw do
   root 'calumnis#home'
   get "/auth/google_oauth2/callback" => "auth#google_callback",:as => "google_callback"
   get "/auth/logout" => "auth#logout", :as => 'logout'
-
+  get "edit_error" => 'calumnis#edit_error', :as =>'edit_error'
+  
   patch'upload' => 'calumnis#receiveimg', :as =>'receiveimg'
 
   resources :conversations do

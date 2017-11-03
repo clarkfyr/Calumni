@@ -66,10 +66,14 @@ class CalumnisController < ApplicationController
         @people.first.save
         redirect_to profile_path
   end
-  def search_user
+  def search
+    @type=params[:type]||'username'
     # vague search
-    @search = People.search_user(params[:search]).order("created_at DESC")
+    @search = People.search(params[:search],@type).order("created_at DESC")
     @search_key=params[:search]
+
+
+    # if no type, default search username
     if not @search.to_a.first.nil?
       @result=@search.to_a
       @num=@search.to_a.length()
@@ -157,15 +161,31 @@ class CalumnisController < ApplicationController
   end
   def create_mentee
   end
-
+  def edit_error
+  end
   def update_profile
+    
+    if people_params[:avatar]
+      if people_params[:avatar].size >100.megabytes
+        redirect_to edit_error_path and return
+      end
+      if !["image/jpg","image/jpeg","image/png","image/gif"].include? people_params[:avatar].content_type
+        redirect_to edit_error_path and return
+      end
+    end
+    if people_params[:resume]
+      if people_params[:resume].size >100.megabytes
+        redirect_to edit_error_path and return
+      end
+      if !["application/pdf"].include? people_params[:resume].content_type
+        redirect_to edit_error_path and return
+      end
+    end
     @people= People.select{|p| p.email==cookies[:email]}
     @people.first.update_attributes(people_params)
-    redirect_to profile_path
+    redirect_to profile_path and return
   end
   
-  def search
-  end
 
 
   # def create

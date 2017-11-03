@@ -6,8 +6,8 @@ class People < ActiveRecord::Base
 	do_not_validate_attachment_file_type :resume
    has_many :conversations, :foreign_key => :sender_id
 
-  def self.search_user(search)
-	where("username LIKE ?", "%#{search}%") 
+  def self.search(search,type)
+	where("#{type} LIKE ?", "%#{search}%") 
 	# where("company LIKE ?", "%#{search}%")
   end
 
