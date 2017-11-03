@@ -1,5 +1,22 @@
-%h2 haven't implemented
-%p There is no search result called Calumni
-%p Google
-%p There is no search item called Test_user10
-%p Test_user1
+.container
+  .row
+    %ul.nav.nav-pills
+      - ['username','company','description'].each do |i|
+        - if @type==i
+          %li.active{:role => "presentation"}
+            = link_to i, search_path(:search=>params[:search],:type=>i)
+        - else
+          %li{:role => "presentation"}
+            = link_to i, search_path(:search=>params[:search],:type=>i)
+    - if @num==0
+      %h2 #{@num} result about "#{@search_key}"
+    - else
+      %h2 #{@num} results about "#{@search_key}"
+  %hr
+  - if @num!=0
+    - @result.each do |i|
+      %li.list-group-item 
+        %a{:href => "#{i.username}"} #{i.username}  
+        %br
+        Company: #{i.company}
+      %hr

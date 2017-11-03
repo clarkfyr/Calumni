@@ -66,10 +66,14 @@ class CalumnisController < ApplicationController
         @people.first.save
         redirect_to profile_path
   end
-  def search_user
+  def search
+    @type=params[:type]||'username'
     # vague search
-    @search = People.search_user(params[:search]).order("created_at DESC")
+    @search = People.search(params[:search],@type).order("created_at DESC")
     @search_key=params[:search]
+
+
+    # if no type, default search username
     if not @search.to_a.first.nil?
       @result=@search.to_a
       @num=@search.to_a.length()
@@ -164,8 +168,6 @@ class CalumnisController < ApplicationController
     redirect_to profile_path
   end
   
-  def search
-  end
 
 
   # def create
