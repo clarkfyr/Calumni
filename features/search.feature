@@ -47,19 +47,19 @@ Scenario: Unsuccessfully search with an alumni name #Sad Path
 
 Scenario: Successfully follow company I am interested in
   Given I am on the home page
-  Then I should see "startup-logo"
-  When I follow "Google"
-  Then I should see "Test_user1"
-  And I should not see "Test_user2"
-  And I should see "Google"
+  When I follow company image link "amazon"
+  Then I should see "about "amazon""
+  Then I should see "Test_user3"
+  And I should not see "Test_user1"
+  And I should see "Amazon"
   And I should not see "Facebook"
 
   
 Scenario: Successfully follow alumni I am interested in
   Given I am on the home page
-  Then I should see "Test_user1"
-  When I follow "Test_user1"
-  Then I should see "Test_user1"
+  Then I should see "sam"
+  When I follow user image link "sam"
+  Then I should see "sam"
   And I should not see "Test_user2"
-  And I should see "Google"
+  And I should see "YC"
   And I should not see "Facebook"

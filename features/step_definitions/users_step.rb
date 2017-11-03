@@ -144,3 +144,13 @@ Then /^I should see the resume$/ do
       assert page.has_content?(@test_file_path)
     end
 end
+
+When /^I follow company image link "([^"]*)"$/ do |img_alt|
+    find(:xpath, "//img[@alt = '#{img_alt}']/parent::a").click()
+end
+
+
+When /^I follow user image link "(.*)"$/ do |name|
+  find(:xpath, "//a[@id = '#{name}']").click()
+end
+
