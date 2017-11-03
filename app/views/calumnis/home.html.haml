@@ -1,7 +1,7 @@
 %div{:class=>"container-fluid", :id=>"Company"}
   %div{:class=>"row"}
     %div{:class=>"container"}
-      = form_tag search_user_path, method: :get do
+      = form_tag search_path, method: :get do
         = label_tag :search, "Search_Box" 
         = text_field_tag :search, params[:search], placeholder: "Name, Companies"
         = submit_tag "Search"

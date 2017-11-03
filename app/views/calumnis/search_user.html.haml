@@ -1,9 +1,0 @@
-%h1
-  Search Results
-%h1
-  - if @num==0
-    %h2 there is #{@num} result about "#{@search_key}"
-  - else
-    %h2 there is #{@num} results about "#{@search_key}"
-    %a{:href => "#{@result.first.username}"}#{@result.first.username}
-

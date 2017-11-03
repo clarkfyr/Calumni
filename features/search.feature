@@ -22,6 +22,7 @@ Scenario: Successfully search with a company name
   Given I am on the home page
   When I fill in "Search_Box" with "Google"
   And I press "Search"
+  And I follow "company"
   Then I should see "Test_user1"
   And I should not see "Test_user2"
 
@@ -29,7 +30,7 @@ Scenario: Unsuccessfully search with a company name #Sad Path
   Given I am on the home page
   When I fill in "Search_Box" with "Alibaba"
   And I press "Search"
-  Then I should see "there is 0 result about "Alibaba""
+  Then I should see "0 result about "Alibaba""
   
 Scenario: Successfully search with an alumni name
   Given I am on the home page
@@ -42,7 +43,7 @@ Scenario: Unsuccessfully search with an alumni name #Sad Path
   Given I am on the home page
   When I fill in "Search_Box" with "Test_user10"
   And I press "Search"
-  Then I should see "there is 0 result about "Test_user10""
+  Then I should see "0 result about "Test_user10""
 
 Scenario: Successfully follow company I am interested in
   Given I am on the home page
