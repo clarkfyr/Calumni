@@ -17,24 +17,35 @@
           </div>
         </div>
       </div>
-    <% end %>g
+    <% end %>
   <% end %>
 </div>
 
 <%= form_for [@conversation, @message], html: {class: "ui reply form"} do |f| %>
+
   <div class="field">
     <%= f.text_area :body, class: "form-control" %>
+
   </div>
     <%= f.text_field :people_id, value: current_user.id, type: "hidden"  %>
-    <% @help_with=People.find(@conversation.recipient_id).helpability%>
+    <% if @conversation.recipient_id == current_user.id%>
+        <%@other_id = @conversation.sender_id%>
+    <% else %>
+        <%@other_id = @conversation.recipient_id%>
+    <% end %>
+    <% @help_with=People.find(@other_id).helpability%>
+
   </div>
     <% if !@help_with.blank? %>
       <%="Available to help with: " + (@help_with.to_s) %><br />
       <%="Please only choose at most one help"%><br />
-      <%=check_box 'resume', 'requested', disabled: !@help_with.include?("resume"), type:"radio"%> Resume<br />
-      <%=check_box 'interview', 'requested', disabled: !@help_with.include?("interview"), type:"radio"%> Mock Interview<br />
-      <%=check_box 'Submit referral', 'requested', disabled: !@help_with.include?("Submit referral"), type:"radio"%> Submit referral<br />
-      <%=check_box 'Company tour', 'requested', disabled: !@help_with.include?("Company tour"), type:"radio"%> Company tour<br />
+      <%=check_box 'resume', 'requested', disabled: !@help_with.include?("resume")%> Resume<br />
+      <%=check_box 'interview', 'requested', disabled: !@help_with.include?("interview")%> Mock Interview<br />
+      <%=check_box 'Submit referral', 'requested', disabled: !@help_with.include?("Submit referral")%> Submit referral<br />
+      <%=check_box 'Company tour', 'requested', disabled: !@help_with.include?("Company tour")%> Company tour<br />
+    <% end %>
+    <% if flash[:notice] %>
+        <div class="notice"><%=flash[:notice] %></div>
     <% end %>
   <div>
     <%= f.submit "Add Reply", class: "ui blue labeled submit icon button" %>
