@@ -66,7 +66,18 @@ class CalumnisController < ApplicationController
         @people.first.save
         redirect_to profile_path
   end
-  
+  def search_user
+    # vague search
+    @search = People.search_user(params[:search]).order("created_at DESC")
+    @search_key=params[:search]
+    if not @search.to_a.first.nil?
+      @result=@search.to_a
+      @num=@search.to_a.length()
+    else
+      @num=0
+    end
+  end
+
   def render_404
     respond_to do |format|
       format.html { render :file => "#{Rails.root}/public/404", :layout => false, :status => :not_found }
