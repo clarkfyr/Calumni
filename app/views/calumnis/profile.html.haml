@@ -34,6 +34,9 @@
               %td Company:
               %td #{@people.first.company}
             %tr
+              %td Help with:
+              %td #{@people.first.helpability}
+            %tr
               - if @people.first.resume.url != '/resumes/original/missing.png'
                 %iframe{:width => 320, :height =>480, :src => @people.first.resume.url, :frameborder =>"0"}
 
