@@ -87,6 +87,14 @@ Given /^the following users exist/ do |peoples_table|
 end
 
 
+Given /^the following conversations exist/ do |conversation_table|
+  conversation_table.hashes.each do |conversaion|
+    Conversation.create conversaion
+  end
+end
+
+
+
 When /^I check "(.*)" in checkbox "(.*)"$/ do |check_list, checkbox|
    pending # Write code here that turns the phrase above into concrete actions
    check_list.split(', ').each do |item|
