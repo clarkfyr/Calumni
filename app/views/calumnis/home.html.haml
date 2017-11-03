@@ -5,7 +5,7 @@
         = label_tag :search, "Search_Box" 
         = text_field_tag :search, params[:search], placeholder: "Name, Companies"
         = submit_tag "Search"
-			
+      
 
 .container
   .row
@@ -13,13 +13,17 @@
       %h3.text-center
         %strong COMPANIES
     .col-md-3.mb-5
-      %img.startup-logo{:height => "100", :src => "assets/amazon.jpg"}/
+      = link_to search_path(:search=>"amazon",:type=>"company") do
+        %img{:height => "100", :src => "assets/amazon.jpg"}/
     .col-md-3.mb-5
-      %img.startup-logo{:height => "100", :src => "assets/google.png"}/
+      = link_to search_path(:search=>"google",:type=>"company") do
+        %img{:height => "100", :src => "assets/google.png"}/
     .col-md-3.mb-5
-      %img.startup-logo{:height => "100", :src => "assets/fb.png"}/
+      = link_to search_path(:search=>"fb",:type=>"company") do
+        %img{:height => "100", :src => "assets/fb.png"}/
     .col-md-3.mb-5
-      %img.startup-logo{:height => "100", :src => "assets/snap.png"}/
+      = link_to search_path(:search=>"snap",:type=>"company") do
+        %img{:height => "100", :src => "assets/snap.png"}/
   %hr
 
 
