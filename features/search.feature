@@ -20,7 +20,7 @@ Background: users in database
 
 Scenario: Successfully search with a company name
   Given I am on the home page
-  When I fill in "Search_Box" with "Google"
+  When I fill in "search" with "Google"
   And I press "Search"
   And I follow "company"
   Then I should see "Test_user1"
@@ -28,20 +28,20 @@ Scenario: Successfully search with a company name
 
 Scenario: Unsuccessfully search with a company name #Sad Path
   Given I am on the home page
-  When I fill in "Search_Box" with "Alibaba"
+  When I fill in "search" with "Alibaba"
   And I press "Search"
   Then I should see "0 result about "Alibaba""
   
 Scenario: Successfully search with an alumni name
   Given I am on the home page
-  When I fill in "Search_Box" with "Test_user1"
+  When I fill in "search" with "Test_user1"
   And I press "Search"
   And I should see "Google"
   And I should not see "Facebook"
 
 Scenario: Unsuccessfully search with an alumni name #Sad Path
   Given I am on the home page
-  When I fill in "Search_Box" with "Test_user10"
+  When I fill in "search" with "Test_user10"
   And I press "Search"
   Then I should see "0 result about "Test_user10""
 
