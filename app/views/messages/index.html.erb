@@ -26,13 +26,16 @@
     <%= f.text_area :body, class: "form-control" %>
   </div>
     <%= f.text_field :people_id, value: current_user.id, type: "hidden"  %>
+    <% @help_with=People.find(@conversation.recipient_id).helpability%>
   </div>
-    <%="Available to help with: " + People.find(@conversation.recipient_id).helpability %><br />
-    <%="Please only choose at most one help"%><br />
-    <%=check_box 'resume', 'requested', disabled: !People.find(@conversation.recipient_id).helpability.include?("resume"), type:"radio"%> Resume<br />
-    <%=check_box 'interview', 'requested', disabled: !People.find(@conversation.recipient_id).helpability.include?("interview"), type:"radio"%> Mock Interview<br />
-    <%=check_box 'Submit referral', 'requested', disabled: !People.find(@conversation.recipient_id).helpability.include?("Submit referral"), type:"radio"%> Submit referral<br />
-    <%=check_box 'Company tour', 'requested', disabled: !People.find(@conversation.recipient_id).helpability.include?("Company tour"), type:"radio"%> Company tour<br />
+    <% if !@help_with.blank? %>
+      <%="Available to help with: " + (@help_with.to_s) %><br />
+      <%="Please only choose at most one help"%><br />
+      <%=check_box 'resume', 'requested', disabled: !@help_with.include?("resume"), type:"radio"%> Resume<br />
+      <%=check_box 'interview', 'requested', disabled: !@help_with.include?("interview"), type:"radio"%> Mock Interview<br />
+      <%=check_box 'Submit referral', 'requested', disabled: !@help_with.include?("Submit referral"), type:"radio"%> Submit referral<br />
+      <%=check_box 'Company tour', 'requested', disabled: !@help_with.include?("Company tour"), type:"radio"%> Company tour<br />
+    <% end %>
   <div>
     <%= f.submit "Add Reply", class: "ui blue labeled submit icon button" %>
   </div>
