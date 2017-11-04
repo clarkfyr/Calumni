@@ -9,4 +9,7 @@ class Message < ActiveRecord::Base
   		created_at.strftime("%m/%d/%y at %l:%M %p")
  	end
 
+	def say_hello
+		"Hello World!"
+	end
 end
