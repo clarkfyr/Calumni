@@ -67,19 +67,34 @@ class CalumnisController < ApplicationController
         redirect_to profile_path
   end
   def search
-    @type=params[:type]||'username'
-    # vague search
-    @search = People.search(params[:search],@type).order("created_at DESC")
-    @search_key=params[:search]
-
-
-    # if no type, default search username
-    if not @search.to_a.first.nil?
-      @result=@search.to_a
-      @num=@search.to_a.length()
-    else
-      @num=0
+    @num=[]
+    # modify type
+    if params[:type]=='user'
+      params[:type]='username'
     end
+    # if no type, default search username
+    @type=params[:type]||'username'
+    @type_index=0
+    # vague search
+    ['username','company','description'].each_with_index do |i,index|
+      @search = People.search(params[:search],i).order("created_at DESC")  
+      if not @search.to_a.first.nil?
+        @num.push(@search.to_a.length())
+      else
+        @num.push(0)
+      end
+      if i==@type
+        @search_ret=@search
+        @type_index=index
+      end
+    end
+    @search_key=params[:search]
+    
+    # modify type
+    if @type=='username'
+      @type='user'
+    end
+
   end
 
   def render_404
