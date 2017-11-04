@@ -22,7 +22,7 @@ Scenario: Successfully search with a company name
   Given I am on the home page
   When I fill in "search" with "Google"
   And I press "Search"
-  And I follow "company"
+  And I follow "Company"
   Then I should see "Test_user1"
   And I should not see "Test_user2"
 

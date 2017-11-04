@@ -1,22 +1,24 @@
 .container
   .row
-    %ul.nav.nav-pills
-      - ['username','company','description'].each do |i|
+    %ul.nav.nav-pills.underline-nav
+      - ['user','company','description'].each_with_index do |i,index|
         - if @type==i
-          %li.active{:role => "presentation"}
-            = link_to i, search_path(:search=>params[:search],:type=>i)
+          = link_to search_path(:search=>params[:search],:type=>i), class: "underline-nav-item selected" do
+            #{i.titleize}
+            %span.Counter.ml-2 #{@num[index]}
         - else
-          %li{:role => "presentation"}
-            = link_to i, search_path(:search=>params[:search],:type=>i)
-    - if @num==0
-      %h2 #{@num} result about "#{@search_key}"
+          = link_to search_path(:search=>params[:search],:type=>i), class: "underline-nav-item" do
+            #{i.titleize}
+            %span.Counter.ml-2 #{@num[index]}
+    - if @num[@type_index]==0
+      %h2.left #{@num[@type_index]} result about "#{@search_key}"
     - else
-      %h2 #{@num} results about "#{@search_key}"
+      %h2.left #{@num[@type_index]} results about "#{@search_key}"
   %hr
-  - if @num!=0
-    - @result.each do |i|
-      %li.list-group-item 
-        %a{:href => "#{i.username}"} #{i.username}  
-        %br
-        Company: #{i.company}
-      %hr
+    - if @num[@type_index]!=0
+      - @search_ret.each do |i|
+        %li.list-group-item 
+          %a{:href => "#{i.username}"} #{i.username}  
+          %br
+          Company: #{i.company}
+        %hr
