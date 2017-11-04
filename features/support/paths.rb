@@ -17,8 +17,14 @@ module NavigationHelpers
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
-    #   when /^(.*)'s profile page$/i
-    #     user_profile_path(User.find_by_login($1))
+    when /^(.*)'s profile page$/i
+      showprofile_path($1)
+
+
+    when /^(.*)'s conversation page$/i
+      @conversation = Conversation.find($1)
+      conversation_messages_path(@conversation)
+
     when /^the Profile page$/i
       profile_path()
   
@@ -33,9 +39,8 @@ module NavigationHelpers
       
     when /^the search page for "(.+)"$/i
       search_path()
-    
-    
-    else
+
+      else
       begin
         page_name =~ /^the (.*) page$/
         path_components = $1.split(/\s+/)

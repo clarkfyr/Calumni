@@ -52,6 +52,14 @@ Then /^(?:|I )should be on (.+)$/ do |page_name|
   end
 end
 
+When("In id {string} I should see {string}") do |id, text|
+  if page.respond_to? :should
+    page.find_by_id(id).value.should have_content(text)
+  else
+    assert page.has_content?(text)
+  end
+end
+
 
 When /^(?:|I )fill in "(.*)" with "(.*)"$/ do |field, value|
   fill_in(field, :with => value)
@@ -95,15 +103,11 @@ end
 
 
 
-When /^I check "(.*)" in checkbox "(.*)"$/ do |check_list, checkbox|
-   pending # Write code here that turns the phrase above into concrete actions
-   check_list.split(', ').each do |item|
-     check("#{checkbox}_#{item}")
-   end
+When /^I check "(.*)"$/ do |checkbox|
+  check("#{checkbox}")
 end
 
 Then /^I check the respond to request: "(.*)"$/ do |request_type|
-   pending # Write code here that turns the phrase above into concrete actions
    check("respond_#{request_type}")
 end
 
