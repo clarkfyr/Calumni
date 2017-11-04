@@ -3,7 +3,7 @@
 <% end %>
 <br />Chat History<br />
 
-<div class="ui segment">
+<div class="ui segment", name="history", id="history">
   <% @messages.each do |message| %>
     <% if message.body %>
       <% people = People.find(message.people_id) %>
@@ -26,7 +26,7 @@
 
 <%= form_for [@conversation, @message], html: {class: "ui reply form"} do |f| %>
 
-  <div class="field">
+  <div class="field",  name="msg_body">
     <%= f.text_area :body, class: "form-control" %>
 
   </div>
@@ -48,7 +48,7 @@
       <%=check_box 'Company tour', 'requested', disabled: !@help_with.include?("Company tour")%> Company tour<br />
     <% end %>
     <% if flash[:notice] %>
-        <div class="notice"><%=flash[:notice] %></div>
+        <div class="notice" id="notice"><%=flash[:notice] %></div>
     <% end %>
   <div>
     <%= f.submit "Add Reply", class: "ui blue labeled submit icon button" %>

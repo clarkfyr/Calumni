@@ -5,7 +5,7 @@
     .fb-profile-text
       .username #{@otheruser.first.username}
       .edit 
-        = link_to 'Message', conversations_path(sender_id: current_user, recipient_id: @otheruser.first.id), method: 'post'
+        = link_to 'Message Me!', conversations_path(sender_id: current_user, recipient_id: @otheruser.first.id), method: 'post'
 
 
 
