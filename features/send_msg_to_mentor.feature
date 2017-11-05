@@ -18,13 +18,9 @@ Feature: Send Message to Mentor
 
   Scenario:
     Given I am successfully signin with "test1@berkeley.edu"
-    And I am on the home page
     Given I am on the home page
-    When I fill in "search" with "YC"
-    And I press "Search"
-    And I follow "company"
     Then I should see "sam"
-    When I follow "sam"
+    When I follow user image link "sam"
     Then I should be on sam's profile page
     When I follow "Message Me!"
     And I fill in "message_body" with "Dear mentor, Could you please help me with my resume?"
