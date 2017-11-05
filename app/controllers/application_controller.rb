@@ -13,11 +13,11 @@ class ApplicationController < ActionController::Base
   # protect_from_forgery with: :exception
 
   def signed_in
-    p "filter is called every controller",myEmail
-    p myEmail==""
+    # p "filter is called every controller",myEmail
+    # p myEmail==""
     if (not myEmail) || myEmail==""
       session[:auth_redirect] = request.path
-      p request.path,"is "
+      # p request.path,"is "
       # session[:return_to] ||= request.referer
       # request.env["HTTP_REFERER"]=request.path
       redirect_to '/auth/google_oauth2'
@@ -28,7 +28,7 @@ class ApplicationController < ActionController::Base
 
   def oldOrnew
     ok=People.find_by(email: cookies[:email])
-    p ok,"this is in oldOrnew"
+    # p ok,"this is in oldOrnew"
     if ok!=nil
       # old user, should have profile
       redirect_to profile_path

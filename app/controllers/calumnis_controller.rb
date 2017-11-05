@@ -40,10 +40,10 @@ class CalumnisController < ApplicationController
 
   # not go to this function anymore
   def createandlogin
-    p "in createandlogin",params[:people],people_params,cookies[:email]
+    # p "in createandlogin",params[:people],people_params,cookies[:email]
     params[:people][:email]=cookies[:email]
     people_params[:email]=cookies[:email]
-    p people_params,"again"
+    # p people_params,"again"
     @calumni = People.create!(people_params)
     redirect_to profile_path
   end
@@ -53,7 +53,7 @@ class CalumnisController < ApplicationController
 
 
   def edit_profile
-    p cookies[:email]
+    # p cookies[:email]
     @people= People.select{|p| p.email==cookies[:email]}
   end
 
