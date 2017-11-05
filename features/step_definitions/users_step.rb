@@ -52,6 +52,7 @@ Then /^(?:|I )should be on (.+)$/ do |page_name|
   end
 end
 
+
 When("In id {string} I should see {string}") do |id, text|
   if page.respond_to? :should
     page.find_by_id(id).value.should have_content(text)
@@ -83,6 +84,11 @@ Then /^(?:|I )should see "(.*)"$/ do |text|
   end
 end
 
+#Then /^(?:|I )should see notice "(.*)"$/ do |text|
+#  page.have_css?("notice", text: text)
+#end
+
+
 When /I (un)?check the following (filter_name): (.*)/ do |uncheck, filter_name, help_list|
   true
   # false
@@ -95,12 +101,17 @@ Given /^the following users exist/ do |peoples_table|
 end
 
 
-Given /^the following conversations exist/ do |conversation_table|
-  conversation_table.hashes.each do |conversaion|
+Given /^the following conversations exist/ do |conversations_table|
+  conversations_table.hashes.each do |conversaion|
     Conversation.create conversaion
   end
 end
 
+Given /^the following messages exist/ do |messages_table|
+  messages_table.hashes.each do |message|
+    Message.create message
+  end
+end
 
 
 When /^I check "(.*)"$/ do |checkbox|
