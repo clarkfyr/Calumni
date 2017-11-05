@@ -29,7 +29,11 @@ class CalumnisController < ApplicationController
   end
 
   def home
-
+    @people= People.select{|p| p.email==cookies[:email]}
+    @mentor1= People.select{|p| p.email=="yima@uiuc.edu"}
+    @mentor2= People.select{|p| p.email=="1@gmail.com"}
+    @mentor3= People.select{|p| p.email=="2@gmail.com"}
+    @mentor4= People.select{|p| p.email=="3@gmail.com"}
   end
   def signup
   end
@@ -61,6 +65,60 @@ class CalumnisController < ApplicationController
         @people.first.update_attributes(people_params)
         @people.first.save
         redirect_to profile_path
+  end
+  def search
+    @num=[]
+    # modify type
+    if params[:type]=='user'
+      params[:type]='username'
+    end
+    # if no type, default search username
+    @type=params[:type]||'username'
+    @type_index=0
+    # vague search
+    ['username','company','description'].each_with_index do |i,index|
+      @search = People.search(params[:search],i).order("created_at DESC")  
+      if not @search.to_a.first.nil?
+        @num.push(@search.to_a.length())
+      else
+        @num.push(0)
+      end
+      if i==@type
+        @search_ret=@search
+        @type_index=index
+      end
+    end
+    @search_key=params[:search]
+    
+    # modify type
+    if @type=='username'
+      @type='user'
+    end
+
+  end
+
+  def render_404
+    respond_to do |format|
+      format.html { render :file => "#{Rails.root}/public/404", :layout => false, :status => :not_found }
+      format.xml  { head :not_found }
+      format.any  { head :not_found }
+    end
+  end
+  def showprofile
+
+    @people= People.select{|p| p.email==cookies[:email]}
+    @otheruser= People.select{|p| p.username==params[:username]}
+    # if user not exist
+    if @otheruser.first.nil?
+      render_404
+    end
+    # if user=otheruser
+    if @people==@otheruser
+      redirect_to profile_path
+    end
+
+
+
   end
 
   def profile
@@ -118,15 +176,31 @@ class CalumnisController < ApplicationController
   end
   def create_mentee
   end
-
+  def edit_error
+  end
   def update_profile
+    
+    if people_params[:avatar]
+      if people_params[:avatar].size >100.megabytes
+        redirect_to edit_error_path and return
+      end
+      if !["image/jpg","image/jpeg","image/png","image/gif"].include? people_params[:avatar].content_type
+        redirect_to edit_error_path and return
+      end
+    end
+    if people_params[:resume]
+      if people_params[:resume].size >100.megabytes
+        redirect_to edit_error_path and return
+      end
+      if !["application/pdf"].include? people_params[:resume].content_type
+        redirect_to edit_error_path and return
+      end
+    end
     @people= People.select{|p| p.email==cookies[:email]}
     @people.first.update_attributes(people_params)
-    redirect_to profile_path
+    redirect_to profile_path and return
   end
   
-  def search
-  end
 
 
   # def create

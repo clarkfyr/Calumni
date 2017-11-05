@@ -1,82 +1,63 @@
-%div{:class=>"container-fluid", :id=>"Company"}
-  %div{:class=>"row"}
-    %div{:class=>"container"}
-      = form_tag search_path, method: :get do
-        = label_tag :search, "Search_Box" 
-        = text_field_tag :search, params[:search], placeholder: "Name, Companies"
-        = submit_tag "Search"
-			
-%div{:class=>"container-fluid", :id=>"Company"}
-  %div{:class=>"row"}
-    %div{:class=>"container"}
-      %div{:class=>"row"}
-        %div{:class=>"col-md-12"}
-          %h3{:class=>"text-center"}
-            %strong Companies
-        %div{:class=>"col-md-12"}
-          %div{:class=>"row"}
-            %div{:class=>"col-md-3 col-sm-4 details"}
-              %h3{:class=>"text-center program"}Google
-              %hr
-              %ul
-                %a{:href=>"#"}
-                  %li Collections
-            %div{:class=>"col-md-3 col-sm-4 details"}
-              %h3{:class=>"text-center program"}GOogle
-              %hr
-              %ul
-                %a{:href=>"#"}
-                  %li Collections
-            %div{:class=>"col-md-3 col-sm-4 details"}
-              %h3{:class=>"text-center program"}GOogle
-              %hr
-              %ul
-                %a{:href=>"#"}
-                  %li Collections
-            %div{:class=>"col-md-3 col-sm-4 details"}
-              %h3{:class=>"text-center program"}GOogle
-              %hr
-              %ul
-                %a{:href=>"#"}
-                  %li Collections
+.container
+  .row
+    .col-md-12
+      %h3.text-center
+        %strong COMPANIES
+    .col-md-3.mb-5
+      = link_to search_path(:search=>"amazon",:type=>"company") do
+        %img{:height => "100", :src => "assets/amazon.jpg",:alt=>"amazon"}/
+    .col-md-3.mb-5
+      = link_to search_path(:search=>"google",:type=>"company") do
+        %img{:height => "100", :src => "assets/google.png"}/
+    .col-md-3.mb-5
+      = link_to search_path(:search=>"fb",:type=>"company") do
+        %img{:height => "100", :src => "assets/fb.png"}/
+    .col-md-3.mb-5
+      = link_to search_path(:search=>"snap",:type=>"company") do
+        %img{:height => "100", :src => "assets/snap.png"}/
+  %hr
 
 
+.container
+  .row
+    .col-md-12
+      %h3.text-center
+        %strong MENTORS
+    .col-md-3.col-sm-4.details
+      .panel.panel-default
+        .panel-body
+          %a.ratio.img-responsive.img-circle{:href => "#{@mentor1.first.username}", :style => "background-image: url(#{@mentor1.first.avatar});"}
+        / List group
+        %ul.list-group
+          %li.list-group-item #{@mentor1.first.username}
+          %li.list-group-item #{@mentor1.first.position}
+          %li.list-group-item #{@mentor1.first.company}
+    .col-md-3.col-sm-4.details
+      .panel.panel-default
+        .panel-body
+          %a.ratio.img-responsive.img-circle{:href => "#{@mentor2.first.username}", :style => "background-image: url(#{@mentor2.first.avatar});"}
+        / List group
+        %ul.list-group
+          %li.list-group-item #{@mentor2.first.username}
+          %li.list-group-item #{@mentor2.first.position}
+          %li.list-group-item #{@mentor2.first.company}
+    .col-md-3.col-sm-4.details
+      .panel.panel-default
+        .panel-body
+          %a.ratio.img-responsive.img-circle{:href => "#{@mentor3.first.username}", :style => "background-image: url(#{@mentor3.first.avatar});"}
+        / List group
+        %ul.list-group
+          %li.list-group-item #{@mentor3.first.username}
+          %li.list-group-item #{@mentor3.first.position}
+          %li.list-group-item #{@mentor3.first.company}
+    .col-md-3.col-sm-4.details
+      .panel.panel-default
+        .panel-body
+          %a.ratio.img-responsive.img-circle#sam{:href => "#{@mentor4.first.username}", :style => "background-image: url(#{@mentor4.first.avatar});"} 
+        / List group
+        %ul.list-group
+          %li.list-group-item #{@mentor4.first.username}
+          %li.list-group-item #{@mentor4.first.position}
+          %li.list-group-item #{@mentor4.first.company}
+  %hr
 
-%div{:class=>"container-fluid", :id=>"Mentor"}
-  %div{:class=>"row"}
-    %div{:class=>"container"}
-      %div{:class=>"row"}
-        %div{:class=>"col-md-12"}
-          %h3{:class=>"text-center"}
-            %strong Mentors
-        %div{:class=>"col-md-12"}
-          %div{:class=>"row"}
-            %div{:class=>"col-md-4 col-sm-4 details"}
-              %h3{:class=>"text-center program"}Carina
-              %hr
-              %ul
-                %a{:href=>"#"}
-                  %li Collections
-            %div{:class=>"col-md-4 col-sm-4 text-center details"}
-              %h3{:class=>"travel"} Clark
-              %hr
-              %p this is a test
-            %div{:class=>"col-md-4 col-sm-4 text-center details"}
-              %h3{:class=>"travel"} Clark
-              %hr
-              %p this is a test
-
-
-%h2 display the company icon
-
-%tr
-  %td= link_to "Google", search_path
-  %td= link_to "Facebook", search_path
-  %td= link_to "Amazon", search_path
-  %td= link_to "Apple", search_path
-
-%h2 display the mentor icon
-%tr
-  %td= link_to "Test_user1", search_path
-  %td= link_to "Test_user2", search_path
-  %td= link_to "Test_user3", search_path

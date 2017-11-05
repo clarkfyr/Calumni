@@ -52,6 +52,14 @@ Then /^(?:|I )should be on (.+)$/ do |page_name|
   end
 end
 
+When("In id {string} I should see {string}") do |id, text|
+  if page.respond_to? :should
+    page.find_by_id(id).value.should have_content(text)
+  else
+    assert page.has_content?(text)
+  end
+end
+
 
 When /^(?:|I )fill in "(.*)" with "(.*)"$/ do |field, value|
   fill_in(field, :with => value)
@@ -81,23 +89,25 @@ When /I (un)?check the following (filter_name): (.*)/ do |uncheck, filter_name, 
 end
 
 Given /^the following users exist/ do |peoples_table|
-  true
-
   peoples_table.hashes.each do |people|
      People.create people
-   end
+  end
 end
 
 
-When /^I check "(.*)" in checkbox "(.*)"$/ do |check_list, checkbox|
-   pending # Write code here that turns the phrase above into concrete actions
-   check_list.split(', ').each do |item|
-     check("#{checkbox}_#{item}")
-   end
+Given /^the following conversations exist/ do |conversation_table|
+  conversation_table.hashes.each do |conversaion|
+    Conversation.create conversaion
+  end
+end
+
+
+
+When /^I check "(.*)"$/ do |checkbox|
+  check("#{checkbox}")
 end
 
 Then /^I check the respond to request: "(.*)"$/ do |request_type|
-   pending # Write code here that turns the phrase above into concrete actions
    check("respond_#{request_type}")
 end
 
@@ -146,3 +156,13 @@ Then /^I should see the resume$/ do
       assert page.has_content?(@test_file_path)
     end
 end
+
+When /^I follow company image link "([^"]*)"$/ do |img_alt|
+    find(:xpath, "//img[@alt = '#{img_alt}']/parent::a").click()
+end
+
+
+When /^I follow user image link "(.*)"$/ do |name|
+  find(:xpath, "//a[@id = '#{name}']").click()
+end
+

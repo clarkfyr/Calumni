@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get  'search'   => 'calumnis#search',  :as => 'search'
 
   get  'create_mentor'   => 'calumnis#create_mentor',  :as => 'create_mentor'
+
   get 'testprofile' => 'calumnis#testprofile', :as =>'testprofile'
   patch 'testselect' => 'calumnis#testselect', :as => 'testselect'
 
@@ -22,12 +23,15 @@ Rails.application.routes.draw do
   root 'calumnis#home'
   get "/auth/google_oauth2/callback" => "auth#google_callback",:as => "google_callback"
   get "/auth/logout" => "auth#logout", :as => 'logout'
-
+  get "edit_error" => 'calumnis#edit_error', :as =>'edit_error'
+  
   patch'upload' => 'calumnis#receiveimg', :as =>'receiveimg'
 
   resources :conversations do
     resources :messages
   end
+  get ':username'=> 'calumnis#showprofile', :as =>'showprofile'
+
 
 # resources :calumni
 

@@ -20,47 +20,46 @@ Background: users in database
 
 Scenario: Successfully search with a company name
   Given I am on the home page
-  When I fill in "Search_Box" with "Google"
+  When I fill in "search" with "Google"
   And I press "Search"
-  Then I should be on the search page for "Google"
-  And I should see "Test_user1"
+  And I follow "Company"
+  Then I should see "Test_user1"
   And I should not see "Test_user2"
 
 Scenario: Unsuccessfully search with a company name #Sad Path
   Given I am on the home page
-  When I fill in "Search_Box" with "Alibaba"
+  When I fill in "search" with "Alibaba"
   And I press "Search"
-  Then I should be on the search page for "Not Find"
-  And I should see "There is no search result called Calumni"
+  Then I should see "0 result about "Alibaba""
   
 Scenario: Successfully search with an alumni name
   Given I am on the home page
-  When I fill in "Search_Box" with "Test_user1"
+  When I fill in "search" with "Test_user1"
   And I press "Search"
-  Then I should be on the search page for "Test_user1"
   And I should see "Google"
   And I should not see "Facebook"
 
 Scenario: Unsuccessfully search with an alumni name #Sad Path
   Given I am on the home page
-  When I fill in "Search_Box" with "Test_user10"
+  When I fill in "search" with "Test_user10"
   And I press "Search"
-  Then I should be on the search page for "Not Find"
-  And I should see "There is no search item called Test_user10"
-  
+  Then I should see "0 result about "Test_user10""
+
 Scenario: Successfully follow company I am interested in
   Given I am on the home page
-  Then I should see "Test_user1"
-  When I follow "Test_user1"
-  Then I should be on the search page for "Test_user1"
-  And I should see "Test_user1"
-  And I should see "Google"
+  When I follow company image link "amazon"
+  Then I should see "about "amazon""
+  Then I should see "Test_user3"
+  And I should not see "Test_user1"
+  And I should see "Amazon"
   And I should not see "Facebook"
+
   
 Scenario: Successfully follow alumni I am interested in
   Given I am on the home page
-  Then I should see "Google"
-  When I follow "Google"
-  Then I should be on the search page for "Google"
-  And I should see "Test_user1"
+  Then I should see "sam"
+  When I follow user image link "sam"
+  Then I should see "sam"
   And I should not see "Test_user2"
+  And I should see "YC"
+  And I should not see "Facebook"

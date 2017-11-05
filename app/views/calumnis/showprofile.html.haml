@@ -1,0 +1,41 @@
+.container
+  .fb-profile
+    %img.fb-image-lg{:align => "left", :alt => "cover example", :src => "http://liaokeyu.com/assets/img/hero.jpg", :width=>"100",:height=>"250"}/
+    %img.fb-image-profile.thumbnail{:align => "left", :alt => "Not set avatar yet", :src => @otheruser.first.avatar}/
+    .fb-profile-text
+      .username #{@otheruser.first.username}
+      .edit 
+        = link_to 'Message Me!', conversations_path(sender_id: current_user, recipient_id: @otheruser.first.id), method: 'post'
+
+
+
+%div{:class=>"container-fluid", :id=>"Company"}
+  %div{:class=>"row"}
+    %div{:class=>"container"}
+      .col-md-9.col-lg-9
+        %table.table.table-user-information
+          %tbody
+            %tr
+              %td Username
+              %td #{@otheruser.first.username}
+            %tr
+              %td Description:
+              %td #{@otheruser.first.description}
+            %tr
+              %td Position:
+              %td #{@otheruser.first.position}
+            %tr
+              %td Start date:
+              %td #{@otheruser.first.start_date}
+            %tr
+              %td Graduation date:
+              %td #{@otheruser.first.graduation_date}
+            %tr
+              %td Company:
+              %td #{@otheruser.first.company}
+            %tr
+              %td Help With:
+              %td #{@otheruser.first.helpability}
+            
+
+

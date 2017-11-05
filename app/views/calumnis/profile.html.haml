@@ -5,7 +5,8 @@
     .fb-profile-text
       .username #{@people.first.username}
       .edit 
-        = link_to 'Edit', edit_profile_path
+      = link_to 'Edit', edit_profile_path
+
 
 
 %div{:class=>"container-fluid", :id=>"Company"}
@@ -33,8 +34,11 @@
               %td Company:
               %td #{@people.first.company}
             %tr
-              %iframe{:width => 320, :height =>480, :src => @people.first.resume.url, :frameborder =>"0"}
-
+              %td Help with:
+              %td #{@people.first.helpability}
+            %tr
+              - if @people.first.resume.url != '/resumes/original/missing.png'
+                %iframe{:width => 320, :height =>480, :src => @people.first.resume.url, :frameborder =>"0"}
 
 
 

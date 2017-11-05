@@ -22,3 +22,10 @@ https://www.pivotaltracker.com/n/projects/2118464
 
 - Link to Initial Customer Meeting:
 https://www.youtube.com/watch?v=vLoHODcZZHo
+
+Usage:
+bundle install --without production
+rake db:migrate
+rake db:seed
+source setenv.sh
+
