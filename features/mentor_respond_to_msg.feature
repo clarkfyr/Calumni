@@ -6,10 +6,10 @@ As a Mentor
 
 
 
- Background: logined user
-    Given the following users exist:
-      |username |     email       |
-      |clark      |test1@berkeley.edu  |
+Background: logined user
+  Given the following users exist:
+     |username |     email       |
+     |clark      |test1@berkeley.edu  |
 
 
   Scenario:
@@ -29,6 +29,15 @@ As a Mentor
   And I press "Add Reply"
   And I should be on 1's conversation page
 
+  Given I am on the home page
+  When I fill in "search" with "YC"
+  And I press "Search"
+  And I follow "company"
+  Then I should see "sam"
+  When I follow "sam"
+  Then I should be on sam's profile page
+  When I follow "Message Me!"
+  And I should be on 1's conversation page
 
   Given I am successfully signin with "3@gmail.com"
   And I am on the home page
