@@ -26,14 +26,14 @@ class ApplicationController < ActionController::Base
 
 
 
-  def oldOrnew
-    ok=People.find_by(email: cookies[:email])
-    # p ok,"this is in oldOrnew"
-    if ok!=nil
-      # old user, should have profile
-      redirect_to profile_path
-    end
-  end
+  # def oldOrnew
+  #   ok=People.find_by(email: cookies[:email])
+  #   # p ok,"this is in oldOrnew"
+  #   if ok!=nil
+  #     # old user, should have profile
+  #     redirect_to profile_path
+  #   end
+  # end
 
   def current_user
     People.find_by(email: cookies[:email])

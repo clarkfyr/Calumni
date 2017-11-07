@@ -17,12 +17,15 @@ class AuthController < ApplicationController
           redirect_to '/'
         end
     end
+    def delete(name, options = {})
+      options.stringify_keys!
+      set_cookie(options.merge("name" => name.to_s, "value" => "", "expires" => Time.at(0)))
+    end
     def logout
-        cookies[:email] = nil
+        cookies.delete :email
         # cookies =nil
-        # session.clear
         # reset_session
-
-        redirect_to "https://accounts.google.com/logout"
+        redirect_to home_path
+        # redirect_to "https://accounts.google.com/logout"
     end
 end

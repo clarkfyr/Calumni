@@ -3,10 +3,10 @@ Feature: edit_profile
   so that I can edit my profile
 
 Background: logined user
-  Given I am successfully signin with "test@berkeley.edu"
   Given the following users exist:
-    |username |     email       |
-    |Test_user|test@berkeley.edu|
+    |username |     email       |lastname|
+    |Test_user|test@berkeley.edu|Test|
+  Given I am successfully signin with "test@berkeley.edu"
 
 Scenario: Able to edit profile
   Given I am on the home page

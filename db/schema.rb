@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171101051927) do
+ActiveRecord::Schema.define(version: 20171107073538) do
 
   create_table "conversations", force: :cascade do |t|
     t.integer  "sender_id"
@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 20171101051927) do
     t.string   "resume_content_type"
     t.integer  "resume_file_size"
     t.datetime "resume_updated_at"
+    t.string   "lastname"
   end
 
 end

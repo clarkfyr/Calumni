@@ -18,7 +18,7 @@ class CalumnisController < ApplicationController
 #   end
 
   def people_params
-    params.require(:people).permit(:username, :email, :description, :company, :start_date, :resume, :university, :major, :graduation, :help, :position,:avatar,:graduation_date,:helpability,:major,:open_advice)
+    params.require(:people).permit(:username,:lastname, :email, :description, :company, :start_date, :resume, :university, :major, :graduation, :help, :position,:avatar,:graduation_date,:helpability,:major,:open_advice)
   end
 
   public
@@ -158,7 +158,7 @@ class CalumnisController < ApplicationController
       cookies[:username]=cookies[:email]
       # add email
       @calumni=People.new()
-      @calumni.update_attributes(email:cookies[:email],username:cookies[:name])
+      @calumni.update_attributes(email:cookies[:email],username:cookies[:name],lastname:cookies[:lastname])
       # tmp_params = ActionController::Parameters.new(email:cookies[:email])
       # People.create!(tmp_params)
     end

@@ -15,8 +15,10 @@ Given /^(?:|I )am successfully signin with "(.+)"$/ do |email|
   # #sign in with specific user email
    headers = {}
    Rack::Utils.set_cookie_header!(headers, :email, email)
+   Rack::Utils.set_cookie_header!(headers, :lastname, People.where(email:email).first.lastname)
    cookie_string = headers['Set-Cookie']
    Capybara.current_session.driver.browser.set_cookie(cookie_string)
+   # set lastname
    visit home_path()
 end
 
@@ -28,6 +30,10 @@ When /^(?:|I )follow Mentor$/ do
 
 end
 
+When /^(?:|I )follow Logout$/ do
+  Capybara.reset_sessions!
+  visit home_path()
+end
 
 When /^(?:|I )follow "(.*)"$/ do |link|
   # turns the phrase above into concrete actions
