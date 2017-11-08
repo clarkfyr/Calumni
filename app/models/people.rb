@@ -7,7 +7,7 @@ class People < ActiveRecord::Base
    has_many :conversations, :foreign_key => :sender_id
 
   def self.search(search,type)
-	where("#{type} LIKE ?", "%#{search}%") 
+	where("LOWER(#{type}) LIKE ?", "%#{search}%") 
 	# where("company LIKE ?", "%#{search}%")
   end
 
