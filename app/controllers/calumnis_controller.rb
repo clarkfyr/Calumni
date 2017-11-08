@@ -200,7 +200,10 @@ class CalumnisController < ApplicationController
     @people.first.update_attributes(people_params)
     redirect_to profile_path and return
   end
-  
+
+  def become_mentor
+  end
+
 
 
   # def create
