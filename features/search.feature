@@ -63,3 +63,13 @@ Scenario: Successfully follow alumni I am interested in
   And I should not see "Test_user2"
   And I should see "YC"
   And I should not see "Facebook"
+
+Scenario: Search not capsensitive
+  Given I am on the home page
+  When I fill in "search" with "Test"
+  And I press "Search"
+  Then I should see "8 results about "Test""
+  When I fill in "search" with "test"
+  And I press "Search"
+  Then I should see "8 results about "test""
+
