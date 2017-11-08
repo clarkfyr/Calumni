@@ -22,10 +22,14 @@ https://www.pivotaltracker.com/n/projects/2118464
 
 - Link to Initial Customer Meeting:
 https://www.youtube.com/watch?v=vLoHODcZZHo
-
-Usage:
-bundle install --without production
-rake db:migrate
-rake db:seed
-source setenv.sh
+- Development
+	* bundle install --without production
+	* rake db:migrate
+	* rake db:seed
+	* source setenv.sh
+-	Testing:
+	* rake db:seed RAILS_ENV=test --trace
+- Production:
+	* heroku 
+	* setup environment variable for aws
 
