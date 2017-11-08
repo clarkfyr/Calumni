@@ -30,11 +30,8 @@
     <%= f.text_area :body, class: "form-control" %>
   </div>
 
-<<<<<<< HEAD
-  <div>
-=======
+
   <div class="field">
->>>>>>> 1927775982877afe5734c253d67edb6bfdaccd0d
     <%= f.text_field :people_id, value: current_user.id, type: "hidden"  %>
     <% if @conversation.recipient_id == current_user.id%>
         <%@other_id = @conversation.sender_id%>
