@@ -21,24 +21,33 @@
             %tr
               %td Description:
               %td #{@people.first.description}
-            %tr
-              %td Position:
-              %td #{@people.first.position}
+            
             %tr
               %td Start date:
               %td #{@people.first.start_date}
             %tr
               %td Graduation date:
               %td #{@people.first.graduation_date}
+            
             %tr
+            - if @people.first.role =='mentor'
               %td Company:
               %td #{@people.first.company}
             %tr
+            - if @people.first.role =='mentor'
+              %td Position:
+              %td #{@people.first.position}
+            %tr
+            - if @people.first.role =='mentor'
               %td Help with:
               %td #{@people.first.helpability}
+
             %tr
               - if @people.first.resume.url != '/resumes/original/missing.png'
                 %iframe{:width => 320, :height =>480, :src => @people.first.resume.url, :frameborder =>"0"}
+            / %tr
+            / - if @people.first.role =='mentee'
+            /   = link_to 'BecomeMentor', become_mentor_path
 
 
 

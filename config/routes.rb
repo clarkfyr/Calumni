@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   get "edit_error" => 'calumnis#edit_error', :as =>'edit_error'
   
   patch'upload' => 'calumnis#receiveimg', :as =>'receiveimg'
+  get 'become_mentor' => 'calumnis#become_mentor', :as =>'become_mentor'
 
   resources :conversations do
     resources :messages

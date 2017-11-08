@@ -7,6 +7,10 @@
         = submit_tag "Search", class: "btn btn-default"
 
     %ul.nav.navbar-nav.navbar-right
+      - if cookies[:email]
+        - if @people.first.role =='mentee'
+          %li= link_to "BecomeMentor", become_mentor_path
+
       %li= link_to "Home",   home_path
       %li= link_to "Help",   '#'
       - if not cookies[:email]

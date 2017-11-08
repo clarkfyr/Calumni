@@ -18,7 +18,7 @@ class CalumnisController < ApplicationController
 #   end
 
   def people_params
-    params.require(:people).permit(:username,:lastname, :email, :description, :company, :start_date, :resume, :university, :major, :graduation, :help, :position,:avatar,:graduation_date,:helpability,:major,:open_advice)
+    params.require(:people).permit(:username,:lastname, :email, :description, :company, :start_date, :resume, :university, :major, :graduation, :help, :position,:avatar,:graduation_date,:helpability,:major,:open_advice,:role)
   end
 
   public
@@ -97,6 +97,13 @@ class CalumnisController < ApplicationController
 
   end
 
+  def become_mentor
+     @people= People.select{|p| p.email==cookies[:email]}
+     @people.first.update_attribute(:role,'mentor')
+     # byebug
+     redirect_to edit_profile_path
+  end
+
   def render_404
     respond_to do |format|
       format.html { render :file => "#{Rails.root}/public/404", :layout => false, :status => :not_found }
@@ -159,6 +166,7 @@ class CalumnisController < ApplicationController
       # add email
       @calumni=People.new()
       @calumni.update_attributes(email:cookies[:email],username:cookies[:name],lastname:cookies[:lastname])
+      @calumni.update_attribute(:role,'mentee')
       # tmp_params = ActionController::Parameters.new(email:cookies[:email])
       # People.create!(tmp_params)
     end

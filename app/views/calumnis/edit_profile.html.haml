@@ -11,13 +11,20 @@
     = bootstrap_form_for(@people,url: update_profile_path) do |f|
       = f.file_field :avatar
       = f.text_area :description
-      = f.select(:position, options_for_select([['Software Engineering'],['CEO'],['COO'],['MD'],['CFO'],['CTO']]))
+      
       = f.datetime_field :start_date
+
+      - if @people.first.role == 'mentor'
+        
+        = f.text_field :company
+        = f.select(:position, options_for_select([['Software Engineering'],['CEO'],['COO'],['MD'],['CFO'],['CTO']]))
+        = f.select(:helpability, options_for_select([['Submit referral'],['resume'],['interview'],['Company tour']]), label:"Help with")
+      end
+
       = f.file_field :resume
-      = f.text_field :company
       = f.select(:major, options_for_select([['EECS'],['CS'],['BIO'],['Biology']]))
       = f.datetime_field :graduation_date
-      = f.select(:helpability, options_for_select([['Submit referral'],['resume'],['interview'],['Company tour']]), label:"Help with")
+      
       = f.text_area :open_advice ,label:"General advice"
 
       = f.submit "Update"
