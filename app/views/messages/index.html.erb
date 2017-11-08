@@ -3,7 +3,7 @@
 <% end %>
 <br />Chat History<br />
 
-<div class="ui segment", name="history", id="history">
+<div class="field", name="history", id="history">
   <% @messages.each do |message| %>
     <% if message.body %>
       <% people = People.find(message.people_id) %>
