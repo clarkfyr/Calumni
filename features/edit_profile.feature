@@ -21,20 +21,6 @@ Scenario: Edit Description
   And I press "Update"
   Then I should see "Hello World"
 
-Scenario: Edit Company
-  Given I am on the Profile page
-  When I follow "Edit"
-  And I fill in "Company" with "Google"
-  And I press "Update"
-  Then I should see "Google"
-
-Scenario: Edit Position
-  Given I am on the Profile page
-  When I follow "Edit"
-  And I select "CEO" in "Position"
-  And I press "Update"
-  Then I should see "CEO"
-
 Scenario: Edit Start Date
   Given I am on the Profile page
   When I follow "Edit"
