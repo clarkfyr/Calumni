@@ -30,6 +30,8 @@
     <%= f.text_area :body, class: "form-control" %>
 
   </div>
+
+  <div class="field">
     <%= f.text_field :people_id, value: current_user.id, type: "hidden"  %>
     <% if @conversation.recipient_id == current_user.id%>
         <%@other_id = @conversation.sender_id%>
@@ -39,6 +41,7 @@
     <% @help_with=People.find(@other_id).helpability%>
 
   </div>
+  <div class="field">
     <% if !@help_with.blank? %>
       <%="Available to help with: " + (@help_with.to_s) %><br />
       <%="Please only choose at most one help"%><br />
@@ -50,6 +53,8 @@
     <% if flash[:notice] %>
         <div class="notice" id="notice"><%=flash[:notice] %></div>
     <% end %>
+  </div>
+
   <div>
     <%= f.submit "Add Reply", class: "ui blue labeled submit icon button" %>
   </div>

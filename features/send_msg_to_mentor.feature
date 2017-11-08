@@ -38,12 +38,11 @@ Feature: Send Message to Mentor
     And I check "resume[requested]"
     And I press "Add Reply"
     And I should be on 2's conversation page
+    And I should see "Dear mentor, Could you please help me with my resume?"
     And I should not see "Please do not send empty message"
 
     And I fill in "message_body" with ""
     And I press "Add Reply"
+    And I should see "Please do not send empty message"
     And I should be on 2's conversation page
     And I press "Search"
-    
-
-
