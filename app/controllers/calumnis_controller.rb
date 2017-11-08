@@ -142,7 +142,7 @@ class CalumnisController < ApplicationController
     # end
   end
 
-  def create_mentor
+  def create_account
     # use oauth login first
       # use before action
 

@@ -10,7 +10,7 @@
       %li= link_to "Home",   home_path
       %li= link_to "Help",   '#'
       - if not cookies[:email]
-        %li= link_to "Log in", signup_path
+        %li= link_to "Log in", create_account_path
       - else
         / display dropdown
         %li.dropdown

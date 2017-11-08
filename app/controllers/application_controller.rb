@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   include AuthHelper
   # before_action :oldOrnew, only: [:signup]
   # before_action :signed_in, :except => [:google_callback,:home,:signup]
-  before_action :signed_in, only: [:create_mentor]
+  before_action :signed_in, only: [:create_account]
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.

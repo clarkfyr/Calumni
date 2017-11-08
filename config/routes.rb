@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get  'login'   => 'calumnis#login',  :as => 'login'
   get  'search'   => 'calumnis#search',  :as => 'search'
 
-  get  'create_mentor'   => 'calumnis#create_mentor',  :as => 'create_mentor'
+  get  'create_account'   => 'calumnis#create_account',  :as => 'create_account'
 
   get 'testprofile' => 'calumnis#testprofile', :as =>'testprofile'
   patch 'testselect' => 'calumnis#testselect', :as => 'testselect'
