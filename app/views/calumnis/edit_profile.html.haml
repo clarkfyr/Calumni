@@ -17,8 +17,9 @@
       - if @people.first.role == 'mentor'
         
         = f.text_field :company
-        = f.select(:position, options_for_select([['Software Engineering'],['CEO'],['COO'],['MD'],['CFO'],['CTO']]))
-        = f.select(:helpability, options_for_select([['Submit referral'],['resume'],['interview'],['Company tour']]), label:"Help with")
+        = f.text_field :position
+        = f.text_field :helpability
+
       end
 
       = f.file_field :resume

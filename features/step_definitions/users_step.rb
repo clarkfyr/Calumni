@@ -16,10 +16,12 @@ Given /^(?:|I )am successfully signin with "(.+)"$/ do |email|
    headers = {}
    Rack::Utils.set_cookie_header!(headers, :email, email)
    Rack::Utils.set_cookie_header!(headers, :lastname, People.where(email:email).first.lastname)
+   #Rack::Utils.set_cookie_header!(headers, :username, People.where(email:email).first.username)
    cookie_string = headers['Set-Cookie']
    Capybara.current_session.driver.browser.set_cookie(cookie_string)
    # set lastname
-   visit home_path()
+  # visit home_path()
+   visit create_account_path()
 end
 
 When /^(?:|I )follow Mentor$/ do

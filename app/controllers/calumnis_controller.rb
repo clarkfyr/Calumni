@@ -209,9 +209,6 @@ class CalumnisController < ApplicationController
     redirect_to profile_path and return
   end
 
-  def become_mentor
-  end
-
 
 
   # def create
