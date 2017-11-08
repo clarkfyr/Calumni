@@ -10,8 +10,8 @@ Background: logined user
 
 Scenario: Able to become a mentor for a mentee
   Given I am on the home page
-  Then I should see "Become Mentor"
-  When I follow "Become Mentor"
+  Then I should see "BecomeMentor"
+  When I follow "BecomeMentor"
   And I fill in "Company" with "Google"
   And I fill in "Position" with "Software Development Engineer"
   And I check the following help type: resume, interview
