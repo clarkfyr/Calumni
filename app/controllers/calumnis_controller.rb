@@ -77,7 +77,7 @@ class CalumnisController < ApplicationController
     @type_index=0
     # vague search
     ['username','company','description'].each_with_index do |i,index|
-      @search = People.search(params[:search],i).order("created_at DESC")  
+      @search = People.search(params[:search].downcase,i).order("created_at DESC")  
       if not @search.to_a.first.nil?
         @num.push(@search.to_a.length())
       else
