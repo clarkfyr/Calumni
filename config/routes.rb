@@ -32,7 +32,7 @@ Rails.application.routes.draw do
     resources :messages
   end
   get ':username'=> 'calumnis#showprofile', :as =>'showprofile'
-  get '/become_mentor'=> 'calumnis#become_mentor', :as =>'become_mentor'
+ 
 
 
 # resources :calumni
