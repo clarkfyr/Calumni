@@ -28,8 +28,8 @@
 
   <div class="field",  name="msg_body">
     <%= f.text_area :body, class: "form-control" %>
-
   </div>
+
 
   <div class="field">
     <%= f.text_field :people_id, value: current_user.id, type: "hidden"  %>
@@ -41,14 +41,16 @@
     <% @help_with=People.find(@other_id).helpability%>
 
   </div>
+
   <div class="field">
     <% if !@help_with.blank? %>
       <%="Available to help with: " + (@help_with.to_s) %><br />
       <%="Please only choose at most one help"%><br />
       <%=check_box 'resume', 'requested', disabled: !@help_with.include?("resume")%> Resume<br />
-      <%=check_box 'interview', 'requested', disabled: !@help_with.include?("interview")%> Mock Interview<br />
-      <%=check_box 'Submit referral', 'requested', disabled: !@help_with.include?("Submit referral")%> Submit referral<br />
-      <%=check_box 'Company tour', 'requested', disabled: !@help_with.include?("Company tour")%> Company tour<br />
+      <%=check_box 'interview', 'requested', disabled: !@help_with.include?("interview")%> Mock Interview <br />
+      <%=check_box 'Submit referral', 'requested', disabled: !@help_with.include?("Submit referral")%> Submit referral <br />
+      <%=check_box 'Company tour', 'requested', disabled: !@help_with.include?("Company tour")%> Company tour <br />
+      <%=check_box 'Other', 'requested' %> Other <br />
     <% end %>
     <% if flash[:notice] %>
         <div class="notice" id="notice"><%=flash[:notice] %></div>
