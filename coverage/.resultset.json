@@ -1,7 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/Users/cheng/Desktop/git_reportory/Calumni/app/models/people.rb": [
+      "/Users/denghanxiao/Desktop/CS 169/Calumni/app/models/people.rb": [
         1,
         1,
         1,
@@ -17,7 +17,7 @@
         null,
         null
       ],
-      "/Users/cheng/Desktop/git_reportory/Calumni/app/controllers/calumnis_controller.rb": [
+      "/Users/denghanxiao/Desktop/CS 169/Calumni/app/controllers/calumnis_controller.rb": [
         1,
         null,
         null,
@@ -49,11 +49,11 @@
         null,
         null,
         1,
-        2,
-        2,
-        2,
-        2,
-        2,
+        14,
+        14,
+        14,
+        14,
+        14,
         null,
         1,
         null,
@@ -269,7 +269,7 @@
         null,
         null
       ],
-      "/Users/cheng/Desktop/git_reportory/Calumni/app/controllers/application_controller.rb": [
+      "/Users/denghanxiao/Desktop/CS 169/Calumni/app/controllers/application_controller.rb": [
         1,
         null,
         null,
@@ -328,32 +328,32 @@
         null,
         null
       ],
-      "/Users/cheng/Desktop/git_reportory/Calumni/app/helpers/application_helper.rb": [
+      "/Users/denghanxiao/Desktop/CS 169/Calumni/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/cheng/Desktop/git_reportory/Calumni/app/helpers/auth_helper.rb": [
+      "/Users/denghanxiao/Desktop/CS 169/Calumni/app/helpers/auth_helper.rb": [
         1,
         1,
         0,
         null,
         null,
-        null,
-        null,
-        null
-      ],
-      "/Users/cheng/Desktop/git_reportory/Calumni/app/helpers/calumnis_helper.rb": [
-        1,
-        1,
-        0,
-        0,
-        null,
-        0,
         null,
         null,
         null
       ],
-      "/Users/cheng/Desktop/git_reportory/Calumni/app/controllers/auth_controller.rb": [
+      "/Users/denghanxiao/Desktop/CS 169/Calumni/app/helpers/calumnis_helper.rb": [
+        1,
+        1,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/denghanxiao/Desktop/CS 169/Calumni/app/controllers/auth_controller.rb": [
         0,
         0,
         0,
@@ -386,7 +386,7 @@
         0,
         0
       ],
-      "/Users/cheng/Desktop/git_reportory/Calumni/app/controllers/conversations_controller.rb": [
+      "/Users/denghanxiao/Desktop/CS 169/Calumni/app/controllers/conversations_controller.rb": [
         0,
         null,
         null,
@@ -420,7 +420,7 @@
         null,
         0
       ],
-      "/Users/cheng/Desktop/git_reportory/Calumni/app/controllers/messages_controller.rb": [
+      "/Users/denghanxiao/Desktop/CS 169/Calumni/app/controllers/messages_controller.rb": [
         0,
         null,
         0,
@@ -475,7 +475,7 @@
         null,
         0
       ],
-      "/Users/cheng/Desktop/git_reportory/Calumni/app/models/conversation.rb": [
+      "/Users/denghanxiao/Desktop/CS 169/Calumni/app/models/conversation.rb": [
         0,
         null,
         0,
@@ -493,7 +493,7 @@
         null,
         0
       ],
-      "/Users/cheng/Desktop/git_reportory/Calumni/app/models/message.rb": [
+      "/Users/denghanxiao/Desktop/CS 169/Calumni/app/models/message.rb": [
         0,
         null,
         0,
@@ -508,7 +508,7 @@
         0
       ]
     },
-    "timestamp": 1510123583
+    "timestamp": 1510123967
   },
   "RSpec": {
     "coverage": {

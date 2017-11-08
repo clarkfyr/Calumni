@@ -15,7 +15,7 @@ Scenario: Able to become a mentor for a mentee
   And I fill in "Company" with "Google"
   And I fill in "Position" with "Software Development Engineer"
   And I check the following help type: resume, interview
-  And I Press "Update"
+  And I press "Update"
   Then I should see "Google"
   And I should see "Software Development Engineer"
   And I should see "resume"
