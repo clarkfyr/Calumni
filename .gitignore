@@ -1,12 +1,12 @@
 tmp/*
 log/development.log
-plain 
+plain
 # Ignore Byebug command history file.
 .byebug_history
 
-coverage/assets/*
+coverage/*
 public/system/*
-
+.DS_Store
 db/development.sqlite3
 db/test.sqlite3
-
+.bundle/config
