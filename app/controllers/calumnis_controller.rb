@@ -67,6 +67,7 @@ class CalumnisController < ApplicationController
         redirect_to profile_path
   end
   def search
+    @people= People.select{|p| p.email==cookies[:email]}
     @num=[]
     # modify type
     if params[:type]=='user'
@@ -77,7 +78,7 @@ class CalumnisController < ApplicationController
     @type_index=0
     # vague search
     ['username','company','description'].each_with_index do |i,index|
-      @search = People.search(params[:search].downcase,i).order("created_at DESC")  
+      @search = People.cust_search(params[:search].downcase,i).order("created_at DESC")  
       if not @search.to_a.first.nil?
         @num.push(@search.to_a.length())
       else
@@ -243,5 +244,8 @@ class CalumnisController < ApplicationController
 #   def lose
 #     redirect_to game_path unless @game.check_win_or_lose == :lose
 #   end
+  def autocomplete
+    render json: People.search(params[:query], autocomplete: true, limit: 10).map(&:username)
+  end
 
 end
