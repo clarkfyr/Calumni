@@ -4,11 +4,13 @@ class ConversationsController < ApplicationController
 	before_action :signed_in
 
 def index
+    @people= People.select{|p| p.email==cookies[:email]}
 	@peoples = People.all
 	@conversations = Conversation.all
 end
 
 def create
+    @people= People.select{|p| p.email==cookies[:email]}
 	p "sender_id"
 	p params[:sender_id]
 	p "recipient_id"
@@ -26,6 +28,7 @@ end
 private
 
 def conversation_params
+    @people= People.select{|p| p.email==cookies[:email]}
 	params.permit(:sender_id, :recipient_id)
 end
 

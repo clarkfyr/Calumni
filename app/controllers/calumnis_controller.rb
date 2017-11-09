@@ -67,6 +67,7 @@ class CalumnisController < ApplicationController
         redirect_to profile_path
   end
   def search
+    @people= People.select{|p| p.email==cookies[:email]}
     @num=[]
     # modify type
     if params[:type]=='user'
