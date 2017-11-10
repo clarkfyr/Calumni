@@ -48,7 +48,6 @@ group :development, :test do
   gem 'sqlite3'
 
 end
-gem 'bonsai-elasticsearch-rails'
 group :production do
   gem "pg"
 

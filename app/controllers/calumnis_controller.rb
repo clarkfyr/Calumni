@@ -74,17 +74,17 @@ class CalumnisController < ApplicationController
       limit: 10,
       load: false,
       misspellings: {below: 3}
-    })
+    }).map(&:username)
     @search_company=People.search(params[:search], {
       fields: [:company],
       autocomplete:true,
       limit: 10,
       load: false,
       misspellings: {below: 3}
-    })
+    }).map(&:company)
     p @search_username,@search_company
     if @search_username.length==1 and @search_company.length==0
-      redirect_to showprofile_path(:username=>params[:search])
+      redirect_to showprofile_path(:username=>@search_username)
     elsif @search_username.length==0 and @search_company.length==1
       params[:type]="company"
     end
