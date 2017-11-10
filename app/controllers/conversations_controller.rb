@@ -4,7 +4,7 @@ class ConversationsController < ApplicationController
 	before_action :signed_in
 
 def index
-    @people= People.select{|p| p.email==cookies[:email]}
+	@people= People.select{|p| p.email==cookies[:email]}
 	@peoples = People.all
 	@conversations = Conversation.all
 end

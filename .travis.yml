@@ -1,5 +1,11 @@
 language: ruby
 rvm:
- - 2.3.0
+ - 2.3
+
+services:
+ - elasticsearch
+before_script:
+ - sleep 10
 script:
  - bundle exec rake db:setup
+ - bundle exec cucumber features

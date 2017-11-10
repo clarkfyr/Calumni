@@ -66,7 +66,43 @@ class CalumnisController < ApplicationController
         @people.first.save
         redirect_to profile_path
   end
-  def search
+
+  def search_core
+    @search_username=People.search(params[:search], {
+      fields: [:username],
+      autocomplete:true,
+      limit: 10,
+      load: false,
+      misspellings: {below: 3}
+    }).map(&:username)
+    @search_company=People.search(params[:search], {
+      fields: [:company],
+      autocomplete:true,
+      limit: 10,
+      load: false,
+      misspellings: {below: 3}
+    }).map(&:company)
+    p @search_username,@search_company
+    if @search_username.length==1 and @search_company.length==0
+      # not use autocomplete
+      if params[:search]==@search_username[0]
+        redirect_to showprofile_path(:username=>@search_username[0])
+      end
+    elsif @search_username.length==0 and @search_company.length==1
+      params[:type]="company"
+    end
+    
+    # if more than one result
+    # not design
+
+
+    # if not People.select{|p| p.commany==params[:search]}.first.nil?
+    #   params[:type]="company"
+    # # if use autocomplete and username, exactly one username
+    # elsif not People.select{|p| p.username==params[:search]}.first.nil?
+    #   redirect_to profile_path(:username=>params[:search])
+    # # if not use autocomplete, display all results
+    # end
     @people= People.select{|p| p.email==cookies[:email]}
     @num=[]
     # modify type
@@ -76,9 +112,10 @@ class CalumnisController < ApplicationController
     # if no type, default search username
     @type=params[:type]||'username'
     @type_index=0
+    p params[:search]
     # vague search
     ['username','company','description'].each_with_index do |i,index|
-      @search = People.search(params[:search].downcase,i).order("created_at DESC")  
+      @search = People.cust_search(params[:search].downcase,i).order("created_at DESC")  
       if not @search.to_a.first.nil?
         @num.push(@search.to_a.length())
       else
@@ -244,5 +281,25 @@ class CalumnisController < ApplicationController
 #   def lose
 #     redirect_to game_path unless @game.check_win_or_lose == :lose
 #   end
+  def autocomplete
+    # render json: People.search(params[:search], autocomplete: true, limit: 10).map(&:username)
+    ret_username=People.search(params[:search], {
+      fields: [:username],
+      autocomplete:true,
+      limit: 10,
+      load: false,
+      misspellings: {below: 5}
+    }).map(&:username)
+    ret_company=People.search(params[:search], {
+      fields: [:company],
+      autocomplete:true,
+      limit: 10,
+      load: false,
+      misspellings: {below: 5}
+    }).map(&:company)
+    render json:ret_username+ret_company
+
+  end
+
 
 end

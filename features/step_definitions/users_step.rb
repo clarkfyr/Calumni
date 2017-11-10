@@ -106,6 +106,7 @@ Given /^the following users exist/ do |peoples_table|
   peoples_table.hashes.each do |people|
      People.create people
   end
+  People.reindex
 end
 
 

@@ -6,13 +6,13 @@ Rails.application.routes.draw do
   # post  'login'   => 'calumnis#login',  :as => 'login'
   post  'newProfile'   => 'calumnis#createandlogin',  :as => 'createandlogin'
   get  'login'   => 'calumnis#login',  :as => 'login'
-  get  'search'   => 'calumnis#search',  :as => 'search'
+  get  'search'   => 'calumnis#search_core',  :as => 'search'
 
   get  'create_account'   => 'calumnis#create_account',  :as => 'create_account'
 
   get 'testprofile' => 'calumnis#testprofile', :as =>'testprofile'
   patch 'testselect' => 'calumnis#testselect', :as => 'testselect'
-
+  get 'autocomplete'=> 'calumnis#autocomplete', :as => 'autocomplete'
 
   get  'create_mentee'   => 'calumnis#create_mentee',  :as => 'create_mentee'
   get  'profile'   => 'calumnis#profile',  :as => 'profile'

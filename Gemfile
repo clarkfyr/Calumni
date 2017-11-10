@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-# Declared a Ruby version
-ruby '2.3.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
@@ -12,9 +10,10 @@ gem 'bootstrap_form'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
+gem "searchkick"
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-# gem "pg"
+gem "pg"
 gem "omniauth-google-oauth2"
 gem "webmock"
 # Use jquery as the JavaScript library
@@ -49,9 +48,9 @@ group :development, :test do
   gem 'sqlite3'
 
 end
-
 group :production do
   gem "pg"
+
 end
 
 group :test do
