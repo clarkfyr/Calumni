@@ -13,7 +13,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem "searchkick"
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-# gem "pg"
+gem "pg"
 gem "omniauth-google-oauth2"
 gem "webmock"
 # Use jquery as the JavaScript library
