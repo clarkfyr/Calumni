@@ -84,7 +84,10 @@ class CalumnisController < ApplicationController
     }).map(&:company)
     p @search_username,@search_company
     if @search_username.length==1 and @search_company.length==0
-      redirect_to showprofile_path(:username=>@search_username)
+      # not use autocomplete
+      if @params[:search]==@search_username[0]
+        redirect_to showprofile_path(:username=>@search_username[0])
+      end
     elsif @search_username.length==0 and @search_company.length==1
       params[:type]="company"
     end
