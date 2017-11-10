@@ -3,3 +3,8 @@ rvm:
  - 2.3
 script:
  - bundle exec rake db:setup
+
+services:
+ - elasticsearch
+before_script:
+ - sleep 10
