@@ -40,14 +40,18 @@ $(function() {
 var numbers = new Bloodhound({
   datumTokenizer: Bloodhound.tokenizers.whitespace,
   queryTokenizer: Bloodhound.tokenizers.whitespace,
-  local:  ["(A)labama","Alaska","Arizona","Arkansas","Arkansas2","Barkansas"]
+  // local:  ["(A)labama","Alaska","Arizona","Arkansas","Arkansas2","Barkansas"]
+  remote: {
+  	url: "autocomplete?search=%QUERY",
+  	wildcard: "%QUERY"
+  }
 });
 
 // initialize the bloodhound suggestion engine
 numbers.initialize();
 
 $("#username_search").typeahead({
-  items: 4,
+  items: 6,
   source:numbers.ttAdapter()
 });
 

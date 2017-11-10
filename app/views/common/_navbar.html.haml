@@ -3,7 +3,7 @@
     = link_to "Calumni", home_path, id: "logo"
     .input-group-btn.navbar-form.navbar-left
       = form_tag search_path, :method => 'get', class: 'input-group'   do
-        = text_field_tag :query, params[:query], class: 'form-control', placeholder: 'Name, Company ', id: "username_search",autocomplete:"off"
+        = text_field_tag :search, params[:search], class: 'form-control', placeholder: 'Name, Company ', id: "username_search",autocomplete:"off"
         = submit_tag "Search", class: "btn btn-default"
 
 

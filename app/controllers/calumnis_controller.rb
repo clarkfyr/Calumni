@@ -66,7 +66,39 @@ class CalumnisController < ApplicationController
         @people.first.save
         redirect_to profile_path
   end
-  def search
+  def search_core
+    @search_username=People.search(params[:search], {
+      fields: [:username],
+      autocomplete:true,
+      limit: 10,
+      load: false,
+      misspellings: {below: 3}
+    })
+    @search_company=People.search(params[:search], {
+      fields: [:company],
+      autocomplete:true,
+      limit: 10,
+      load: false,
+      misspellings: {below: 3}
+    })
+    p @search_username,@search_company
+    if @search_username.length==1 and @search_company.length==0
+      redirect_to showprofile_path(:username=>params[:search])
+    elsif @search_username.length==0 and @search_company.length==1
+      params[:type]="company"
+    end
+    
+    # if more than one result
+    # not design
+
+
+    # if not People.select{|p| p.commany==params[:search]}.first.nil?
+    #   params[:type]="company"
+    # # if use autocomplete and username, exactly one username
+    # elsif not People.select{|p| p.username==params[:search]}.first.nil?
+    #   redirect_to profile_path(:username=>params[:search])
+    # # if not use autocomplete, display all results
+    # end
     @people= People.select{|p| p.email==cookies[:email]}
     @num=[]
     # modify type
@@ -76,6 +108,7 @@ class CalumnisController < ApplicationController
     # if no type, default search username
     @type=params[:type]||'username'
     @type_index=0
+    p params[:search]
     # vague search
     ['username','company','description'].each_with_index do |i,index|
       @search = People.cust_search(params[:search].downcase,i).order("created_at DESC")  
@@ -245,7 +278,16 @@ class CalumnisController < ApplicationController
 #     redirect_to game_path unless @game.check_win_or_lose == :lose
 #   end
   def autocomplete
-    render json: People.search(params[:query], autocomplete: true, limit: 10).map(&:username)
+    # render json: People.search(params[:search], autocomplete: true, limit: 10).map(&:username)
+    render json:People.search(params[:search], {
+      fields: [:username, :company],
+      autocomplete:true,
+      limit: 10,
+      load: false,
+      misspellings: {below: 5}
+    }).map(&:username)
+
   end
+
 
 end

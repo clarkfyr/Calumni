@@ -5,6 +5,7 @@ before_action do
 end
 
 def index
+    @people= People.select{|p| p.email==cookies[:email]}
     @messages = @conversation.messages
 
     if @messages.length > 10
