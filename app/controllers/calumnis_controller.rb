@@ -66,6 +66,7 @@ class CalumnisController < ApplicationController
         @people.first.save
         redirect_to profile_path
   end
+
   def search_core
     @search_username=People.search(params[:search], {
       fields: [:username],

@@ -29,10 +29,12 @@ end
 
 
 def new
+    @people= People.select{|p| p.email==cookies[:email]}
     @message = @conversation.messages.new
 end
 
 def create
+    @people= People.select{|p| p.email==cookies[:email]}
     @message = @conversation.messages.new(message_params)
     if message_params[:body].blank?
         flash[:notice] = "Please do not send empty message"
@@ -46,6 +48,7 @@ end
 private
 
 def message_params
+    @people= People.select{|p| p.email==cookies[:email]}
     params.require(:message).permit(:body, :people_id)
     # params.permit(:body, :people_id)
 end
