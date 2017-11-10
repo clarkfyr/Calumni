@@ -1,4 +1,7 @@
+require 'elasticsearch/model'
 class People < ActiveRecord::Base
+   include Elasticsearch::Model
+   include Elasticsearch::Model::Callbacks
    searchkick autocomplete: ['username',"company"]
    has_attached_file :avatar,styles: { medium: "300x300>", thumb: "100x100>" }
    do_not_validate_attachment_file_type :avatar
@@ -13,3 +16,4 @@ class People < ActiveRecord::Base
   end
 
 end
+People.import
