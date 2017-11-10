@@ -16,4 +16,3 @@ class People < ActiveRecord::Base
   end
 
 end
-People.import
