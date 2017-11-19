@@ -35,7 +35,7 @@ Feature: Send Message to Mentor
     When I follow user image link "sam"
     And I follow "Message Me!"
     And I fill in "message_body" with "Dear mentor, Could you please help me with my resume?"
-    And I check "resume[requested]"
+    #And I check "helps_#{resume}"
     And I press "Add Reply"
     And I should be on 2's conversation page
     And I should see "Dear mentor, Could you please help me with my resume?"

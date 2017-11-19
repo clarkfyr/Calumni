@@ -50,7 +50,6 @@ private
 def message_params
     @people= People.select{|p| p.email==cookies[:email]}
     params.require(:message).permit(:body, :people_id)
-    # params.permit(:body, :people_id)
 end
 
 
