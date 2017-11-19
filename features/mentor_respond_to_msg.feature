@@ -35,7 +35,7 @@ Scenario:
   Then I follow "Message Me!"
 
   And I fill in "message_body" with "Dear Sam, Could you please help me with my resume?"
-  And I check "resume[requested]"
+  #And I check "helps_#{resume}]"
   And I press "Add Reply"
   And I should be on 2's conversation page
 
