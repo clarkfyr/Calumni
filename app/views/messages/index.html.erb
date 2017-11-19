@@ -1,7 +1,12 @@
 <% if @over_ten %>
    <%= link_to 'Show Previous', '?m=all' %>
 <% end %>
-<br />Chat History<br />
+<% if @conversation.recipient_id == current_user.id%>
+    <%@other_id = @conversation.sender_id%>
+<% else %>
+    <%@other_id = @conversation.recipient_id%>
+<% end %>
+<%=People.find(@other_id).username%>
 
 <div class="field", name="history", id="history">
   <% @messages.each do |message| %>
@@ -33,11 +38,6 @@
 
   <div class="field">
     <%= f.text_field :people_id, value: current_user.id, type: "hidden"  %>
-    <% if @conversation.recipient_id == current_user.id%>
-        <%@other_id = @conversation.sender_id%>
-    <% else %>
-        <%@other_id = @conversation.recipient_id%>
-    <% end %>
     <% @help_with=People.find(@other_id).helpability%>
 
   </div>

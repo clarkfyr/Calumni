@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20171108055144) do
   create_table "conversations", force: :cascade do |t|
     t.integer  "sender_id"
     t.integer  "recipient_id"
+    t.string   "help_status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
