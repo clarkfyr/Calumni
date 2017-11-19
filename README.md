@@ -39,8 +39,7 @@ https://www.youtube.com/watch?v=vLoHODcZZHo
 - Search feature
 	* We use gem Searchkick to implement search function, while Searchkick supports the complete Elasticsearch Search API. You have to install elasticsearch before you can use searchkick.
 	* ElasticSearch Installation
-		* [Installation](https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html), currently using 5.6.4
-		* For macOS user: install by `brew install elasticsearch@5.6`
+		* [Installation](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/zip-targz.html), currently using 5.6.4
 		* use curl -XGET 'localhost:9200/?pretty' to make sure you have start elasticsearch service
 	* use 'rake searchkick:reindex CLASS=People' to build the index
 	* use People.search("xxx" ,autocomplete:true,fields:[:username,:company]).map{|u| {username:u.username,company: u.company}}	to make sure your searchkick works
