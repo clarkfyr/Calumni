@@ -22,12 +22,6 @@ class CalumnisController < ApplicationController
   end
 
   public
-  # def new
-  # end
-  def new
-    @calumni=People.new()
-  end
-
   def home
     @people= People.select{|p| p.email==cookies[:email]}
     @mentor1= People.select{|p| p.email=="yima@uiuc.edu"}
@@ -38,15 +32,6 @@ class CalumnisController < ApplicationController
   def signup
   end
 
-  # not go to this function anymore
-  def createandlogin
-    # p "in createandlogin",params[:people],people_params,cookies[:email]
-    params[:people][:email]=cookies[:email]
-    people_params[:email]=cookies[:email]
-    # p people_params,"again"
-    @calumni = People.create!(people_params)
-    redirect_to profile_path
-  end
   def login
 
   end
@@ -208,8 +193,8 @@ class CalumnisController < ApplicationController
       # tmp_params = ActionController::Parameters.new(email:cookies[:email])
       # People.create!(tmp_params)
     end
-    redirect_to home_path
-
+    # redirect_to home_path
+    redirect_to session[:HTTP_REFERER]||home_path
     # redirect to previous page
     # redirect_to home_path
     # byebug
