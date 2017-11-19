@@ -16,6 +16,10 @@ class ApplicationController < ActionController::Base
     # p "filter is called every controller",myEmail
     # p myEmail==""
     if (not myEmail) || myEmail==""
+      # hardcode this
+      if not request.referer.include? "create"
+        session[:HTTP_REFERER]=request.referer
+      end
       session[:auth_redirect] = request.path
       # p request.path,"is "
       # session[:return_to] ||= request.referer

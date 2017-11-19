@@ -208,8 +208,8 @@ class CalumnisController < ApplicationController
       # tmp_params = ActionController::Parameters.new(email:cookies[:email])
       # People.create!(tmp_params)
     end
-    redirect_to home_path
-
+    # redirect_to home_path
+    redirect_to session[:HTTP_REFERER]||home_path
     # redirect to previous page
     # redirect_to home_path
     # byebug
