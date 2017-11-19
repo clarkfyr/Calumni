@@ -4,9 +4,13 @@
   <title>Calumni</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.min.js" %> 
+  <%= javascript_include_tag "bootstrap3-typeahead.min.js" %>
+ <%= javascript_include_tag "search.js" %>
+
+
   <%= csrf_meta_tags %>
 </head>
-
 <body>
 
 <div class="container-fluid">

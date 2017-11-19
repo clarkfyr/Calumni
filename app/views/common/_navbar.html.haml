@@ -3,10 +3,17 @@
     = link_to "Calumni", home_path, id: "logo"
     .input-group-btn.navbar-form.navbar-left
       = form_tag search_path, :method => 'get', class: 'input-group'   do
-        = text_field_tag :search, params[:search], class: 'form-control', placeholder: 'Name, Company '
+        = text_field_tag :search, params[:search], class: 'form-control', placeholder: 'Name, Company ', id: "username_search",autocomplete:"off"
         = submit_tag "Search", class: "btn btn-default"
 
+
     %ul.nav.navbar-nav.navbar-right
+
+      - if cookies[:email]
+        - if @people.first.role =='mentee'
+          %li= link_to "BecomeMentor", become_mentor_path
+
+
       %li= link_to "Home",   home_path
       %li= link_to "Help",   '#'
       - if not cookies[:email]
@@ -22,3 +29,16 @@
             %li= link_to "Message",conversations_path
             %li.divider{:role => "separator"}
             %li= link_to "Logout",logout_path
+
+
+/ = form_tag search_path, :method => 'get', class: 'input-group'   do
+/   = text_field_tag :query, params[:query], class: 'form-control typeahead', placeholder: 'Name, Company ', id: "username_search",autocomplete:"off"
+/   = submit_tag "Search", class: "btn btn-default"
+/ %input.typeahead.form-control#username_search{:placeholder => "States of USA", :type => "text"}/
+/ .container
+/   .row
+/     .input-group.col-sm-3
+/       %input#typeahead#username_search.form-control{:type => "text"}/
+/       %span.input-group-addon #
+
+

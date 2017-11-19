@@ -10,9 +10,10 @@ gem 'bootstrap_form'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
+gem "searchkick"
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-# gem "pg"
+gem "pg"
 gem "omniauth-google-oauth2"
 gem "webmock"
 # Use jquery as the JavaScript library
@@ -47,9 +48,9 @@ group :development, :test do
   gem 'sqlite3'
 
 end
-
 group :production do
   gem "pg"
+
 end
 
 group :test do

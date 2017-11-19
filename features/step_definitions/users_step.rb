@@ -16,10 +16,12 @@ Given /^(?:|I )am successfully signin with "(.+)"$/ do |email|
    headers = {}
    Rack::Utils.set_cookie_header!(headers, :email, email)
    Rack::Utils.set_cookie_header!(headers, :lastname, People.where(email:email).first.lastname)
+   #Rack::Utils.set_cookie_header!(headers, :username, People.where(email:email).first.username)
    cookie_string = headers['Set-Cookie']
    Capybara.current_session.driver.browser.set_cookie(cookie_string)
    # set lastname
-   visit home_path()
+  # visit home_path()
+   visit create_account_path()
 end
 
 When /^(?:|I )follow Mentor$/ do
@@ -104,6 +106,7 @@ Given /^the following users exist/ do |peoples_table|
   peoples_table.hashes.each do |people|
      People.create people
   end
+  People.reindex
 end
 
 
@@ -181,5 +184,18 @@ end
 
 When /^I follow user image link "(.*)"$/ do |name|
   find(:xpath, "//a[@id = '#{name}']").click()
+end
+
+When /I (un)?check the following help type: (.*)/ do |uncheck, help_list|
+  # HINT: use String#split to split up the rating_list, then
+  #   iterate over the ratings and reuse the "When I check..." or
+  #   "When I uncheck..." steps in lines 89-95 of web_steps.rb
+  help_list.split(', ').each do |help|
+    if uncheck
+      uncheck("help_type#{help}")
+    else
+      check("help_type#{help}")
+    end
+  end
 end
 
