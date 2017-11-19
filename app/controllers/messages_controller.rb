@@ -42,9 +42,9 @@ def create
         flash[:notice] = "Please do not send empty message"
         redirect_to conversation_messages_path(@conversation)
 
-    elsif @selected_help != {} and @selected_help.keys.size > 1
+    elsif @selected_help&.keys.size > 1
         flash[:notice] = "Please do not choose more than one help type."
-        redirect_to conversation_messages_path(@conversation)
+        redirect_to conversation_messages_path(@conversation) and return
 
     elsif @selected_help != {}
         @conversation.update_attribute(:help_type, @selected_help.keys[0])
