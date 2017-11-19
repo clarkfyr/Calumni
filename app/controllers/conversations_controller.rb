@@ -20,6 +20,10 @@ def create
 	else
 		@conversation = Conversation.create!(conversation_params)
 	end
+
+	@conversation.update_attribute(:help_status, "")
+    @conversation.update_attribute(:help_type, "")
+
 	redirect_to conversation_messages_path(@conversation)
 end
 
