@@ -43,8 +43,12 @@
 
   <div class="field">
     <%= f.text_field :people_id, value: current_user.id, type: "hidden"  %>
+    <% if @conversation.recipient_id == current_user.id%>
+        <%@other_id = @conversation.sender_id%>
+    <% else %>
+        <%@other_id = @conversation.recipient_id%>
+    <% end %>
     <% @help_with=People.find(@other_id).helpability%>
-
   </div>
 
   <div class="field">
@@ -62,9 +66,11 @@
     </ul>
     <% end %>
 
+
     <% if flash[:notice] %>
         <div class="notice" id="notice"><%=flash[:notice] %></div>
     <% end %>
+    
   </div>
 
   <div>
