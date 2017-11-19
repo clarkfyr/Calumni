@@ -12,4 +12,8 @@ class People < ActiveRecord::Base
 	# where("company LIKE ?", "%#{search}%")
   end
 
+  def self.all_helps
+    ["resume", "interview", "submit referral", "company tour", "other"]
+  end
+
 end
