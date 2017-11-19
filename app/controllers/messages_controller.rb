@@ -34,7 +34,6 @@ def new
 end
 
 def create
-    @people= People.select{|p| p.email==cookies[:email]}
     @message = @conversation.messages.new(message_params)
     @selected_help = params[:helps] || {}
 
