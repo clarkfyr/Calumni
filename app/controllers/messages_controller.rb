@@ -45,17 +45,13 @@ def create
 
     @selected_help = params[:helps] || {}
 
-    if @selected_help != {}
-        if @selected_help.keys.size > 1
-            flash[:notice] = "Please do not choose more than one help type."
-            redirect_to conversation_messages_path(@conversation) and return
-        else
-            @conversation.update_attribute(:help_type, @selected_help.keys[0])
-            @conversation.update_attribute(:help_status, "Pending")
-        end
+    if @selected_help != {} and @selected_help.keys.size > 1
+        flash[:notice] = "Please do not choose more than one help type."
+        redirect_to conversation_messages_path(@conversation) and return
+    elsif @selected_help != {}
+        @conversation.update_attribute(:help_type, @selected_help.keys[0])
+        @conversation.update_attribute(:help_status, "Pending")
     end
-    p @conversation
-
 
     if @message.save
         redirect_to conversation_messages_path(@conversation)
