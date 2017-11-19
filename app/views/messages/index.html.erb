@@ -6,12 +6,26 @@
     <%@other_id = @conversation.sender_id%>
 <% else %>
     <%@other_id = @conversation.recipient_id%>
-<%@help_status = @conversation.help_status%>
 <% end %>
-<%=People.find(@other_id).username%>
-<% if @help_status%>
-    <%=@help_status%>
-<% end %>
+
+<% @show_checkbox = ((@conversation.help_status=="Reject") or (@conversation.help_status=="Done") or (@conversation.help_status==""))%>
+<%=@conversation.help_status%>
+<%=@conversation.help_type%>
+<%=@show_checkbox%>
+
+hahaha
+haha
+hahahahah
+
+<div class="header">
+  <strong><%=People.find(@other_id).username%></strong>
+
+  <% if @conversation.help_status != "" %>
+      <% if @conversation.help_status%><%=@conversation.help_status%><% end %>
+      <% if @conversation.help_type%><%=@conversation.help_type%><% end %>
+  <%end%>
+
+</div>
 
 <div class="field", name="history", id="history">
   <% @messages.each do |message| %>
@@ -40,7 +54,6 @@
     <%= f.text_area :body, class: "form-control" %>
   </div>
 
-
   <div class="field">
     <%= f.text_field :people_id, value: current_user.id, type: "hidden"  %>
     <% if @conversation.recipient_id == current_user.id%>
@@ -48,24 +61,26 @@
     <% else %>
         <%@other_id = @conversation.recipient_id%>
     <% end %>
-    <% @help_with=People.find(@other_id).helpability%>
   </div>
 
   <div class="field">
-    <%="Available to help with: " + (@help_with.to_s) %><br/>
-    <%="Please only choose at most one help"%><br/>
+    <% if @show_checkbox%>
 
-    <% if @help_with%>
-    <ul>
-      <% People.all_helps.each do |help| %>
-          <li>
-            <%= check_box_tag "helps[#{help}]", 1, false, disabled: !@help_with.include?(help) && help != "other", :id => "helps_#{help}" -%>
-            <%= h help -%>
-          </li>
-      <% end %>
-    </ul>
+        <% @help_with=People.find(@other_id).helpability%>
+        <% if @help_with%>
+          <%="Available to help with: " + (@help_with.to_s) %><br/>
+          <%="Please only choose at most one help"%><br/>
+        <ul>
+          <% People.all_helps.each do |help| %>
+              <li>
+                <%= check_box_tag "helps[#{help}]", 1, false, disabled: !@help_with.include?(help) && help != "other", :id => "helps_#{help}" -%>
+                <%= h help -%>
+              </li>
+          <% end %>
+        </ul>
+        <% end %>
+
     <% end %>
-
 
     <% if flash[:notice] %>
         <div class="notice" id="notice"><%=flash[:notice] %></div>
