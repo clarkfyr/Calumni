@@ -1,7 +1,16 @@
 <% if @over_ten %>
    <%= link_to 'Show Previous', '?m=all' %>
 <% end %>
-<br />Chat History<br />
+<% if @conversation.recipient_id == current_user.id%>
+    <%@other_id = @conversation.sender_id%>
+<% else %>
+    <%@other_id = @conversation.recipient_id%>
+<%@help_status = @conversation.help_status%>
+<% end %>
+<%=People.find(@other_id).username%>
+<% if @help_with%>
+    <%=@help_status%>
+<% end %>
 
 <div class="field", name="history", id="history">
   <% @messages.each do |message| %>
@@ -38,9 +47,7 @@
     <% else %>
         <%@other_id = @conversation.recipient_id%>
     <% end %>
-
     <% @help_with=People.find(@other_id).helpability%>
-
   </div>
 
   <div class="field">
@@ -59,6 +66,7 @@
     <% if flash[:notice] %>
         <div class="notice" id="notice"><%=flash[:notice] %></div>
     <% end %>
+    
   </div>
 
   <div>
