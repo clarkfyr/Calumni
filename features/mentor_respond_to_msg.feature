@@ -47,7 +47,7 @@ Scenario:
   And I should not see "Available to help with:"
 
   Given I am successfully signin with "3@gmail.com"
-  When I follow "Message"
+  When I follow "Mailbox"
   Then I should be on the conversations page
   And I should see "clark"
   When I follow "clark"

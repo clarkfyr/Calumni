@@ -32,7 +32,7 @@ Background: users in database
 Scenario: can see all conversations
 	Given I am successfully signin with "test2@berkeley.edu"
 	And I am on the home page
-	When I follow "Message"
+	When I follow "Mailbox"
 	Then I should be on the conversations page
 	Then I should see "clark"
 	And I should see "Ma yi"
@@ -40,7 +40,7 @@ Scenario: can see all conversations
 
 Scenario: show no more than 10 messages on conversation page
 	Given I am successfully signin with "test2@berkeley.edu"
-	When I follow "Message"
+	When I follow "Mailbox"
 	Then I should see "clark"
 	When I follow "clark"
   And I fill in "message_body" with "msg1"
