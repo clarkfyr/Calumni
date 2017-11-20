@@ -7,11 +7,6 @@ class People < ActiveRecord::Base
 	do_not_validate_attachment_file_type :resume
   has_many :conversations, :foreign_key => :sender_id
 
-
-  def self.all_helps
-    ["resume", "interview", "submit referral", "company tour", "other"]
-  end
-
   def self.cust_search(search,type)
 	where("LOWER(#{type}) LIKE ?", "%#{search}%") 
 	# where("company LIKE ?", "%#{search}%")
