@@ -138,9 +138,11 @@ class CalumnisController < ApplicationController
 
     @people= People.select{|p| p.email==cookies[:email]}
     @otheruser= People.select{|p| p.username==params[:username]}
+    p params[:username]
+    p @otheruser
     # if user not exist
     if @otheruser.first.nil?
-      render_404
+      render_404 and return
     end
     # if user=otheruser
     if @people==@otheruser
