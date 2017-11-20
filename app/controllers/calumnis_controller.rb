@@ -46,12 +46,12 @@ class CalumnisController < ApplicationController
     @people= People.select{|p| p.email==cookies[:email]}
   end
 
-  def receiveimg
-        @people= People.select{|p| p.email==cookies[:email]}
-        @people.first.update_attributes(people_params)
-        @people.first.save
-        redirect_to profile_path
-  end
+  # def receiveimg
+  #       @people= People.select{|p| p.email==cookies[:email]}
+  #       @people.first.update_attributes(people_params)
+  #       @people.first.save
+  #       redirect_to profile_path
+  # end
 
   def search_core
     @search_username = People.search(params[:search], {fields: [:username], autocomplete: true, 
