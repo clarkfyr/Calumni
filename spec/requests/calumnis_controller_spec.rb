@@ -4,12 +4,12 @@ require 'spec_helper'
 RSpec.describe "CalumnisController", type: :request do
 
   describe '.create_account' do
-    # it 'is a old user' do
-    #   @user1=create(:mentor, :username=>"factory1",:email=>"factory1@gmail.com")
-    #   cookies[:email]=@user1.email
-    #   get "/create_account"
-    #   expect(response).to have_http_status(302)
-    # end
+    it 'is a old user' do
+      @user1=create(:mentor, :username=>"factory1",:email=>"factory1@gmail.com")
+      cookies[:email]=@user1.email
+      get "/create_account"
+      expect(response).to have_http_status(302)
+    end
     it 'is a new user' do
       # go to google_oauth
       stub_google_omniauth
