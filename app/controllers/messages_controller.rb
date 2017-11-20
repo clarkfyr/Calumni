@@ -38,11 +38,8 @@ def create
     @selected_help = params[:helps] || {}
     if respond_to_help != false
         p 1
-    elsif message_params[:body].blank?
-        flash[:notice] = "Please do not send empty message."
-    elsif @selected_help&.keys.size > 1
-        flash[:notice] = "Please do not choose more than one help type."
-
+    elsif flash_msg != false
+        p 1
     elsif @selected_help != {}
         update_help
     elsif !@message.save
@@ -84,4 +81,15 @@ def respond_to_help
     return false
 end
 
+def flash_msg
+    @selected_help = params[:helps] || {}
+    if message_params[:body].blank?
+        flash[:notice] = "Please do not send empty message."
+        return true
+    elsif @selected_help&.keys.size > 1
+        flash[:notice] = "Please do not choose more than one help type."
+        return true
+    end
+    return false
+end
 end
