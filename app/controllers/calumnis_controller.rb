@@ -95,22 +95,19 @@ class CalumnisController < ApplicationController
     end
   end
   def showprofile
-
     @people= People.select{|p| p.email==cookies[:email]}
     @otheruser= People.select{|p| p.username==params[:username]}
-    p params[:username]
-    p @otheruser
-    # if user not exist
+    # if otheruser not exist
     if @otheruser.first.nil?
       render_404 and return
     end
-    # if user=otheruser
-    if @people==@otheruser
-      redirect_to profile_path
+    # if not login
+    if not @people.first.nil?
+      # if login_user=otheruser
+      if @people.first.email==@otheruser.first.email
+        redirect_to profile_path
+      end
     end
-
-
-
   end
 
   def profile
