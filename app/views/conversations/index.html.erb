@@ -24,7 +24,7 @@
     <% @peoples.each do |user| %>
       <% if user != current_user %>
       <div class="item">
-        <%= user.username %> <%= link_to 'Message me!', conversations_path(sender_id: current_user, recipient_id: user), method: 'post'%>
+        <%= link_to user.username, conversations_path(sender_id: current_user, recipient_id: user), method: 'post'%> 'Message me!'
       </div>
       <% end %>
     <% end %>

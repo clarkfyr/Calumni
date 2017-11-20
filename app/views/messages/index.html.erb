@@ -1,6 +1,8 @@
-<% if @over_ten %>
+<div class="header">
+  <% if @over_ten %>
    <%= link_to 'Show Previous', '?m=all' %>
-<% end %>
+  <% end %>
+</div>
 
 <% if @conversation.recipient_id == current_user.id%>
     <%@other_id = @conversation.sender_id%>
