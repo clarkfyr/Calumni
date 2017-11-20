@@ -20,8 +20,6 @@
         = f.text_field :position
         = f.text_field :helpability
 
-      end
-
       = f.file_field :resume
       = f.select(:major, options_for_select([['EECS'],['CS'],['BIO'],['Biology']]))
       = f.datetime_field :graduation_date
