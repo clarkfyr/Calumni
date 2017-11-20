@@ -21,15 +21,21 @@ def create
 		@conversation = Conversation.create!(conversation_params)
 	end
 
-	redirect_to conversation_messages_path(@conversation)
+	@conversation.update_attribute(:help_status, "")
+    @conversation.update_attribute(:help_type, "")
 
+	redirect_to conversation_messages_path(@conversation)
+end
+
+def update_help_type
+    @conversation= Conversation.find(params[:conversation_id])
+    @conversation.first.update_attributes(conversation_params)
+    redirect_to conversation_messages_path(@conversation)
 end
 
 private
-
 def conversation_params
     @people= People.select{|p| p.email==cookies[:email]}
 	params.permit(:sender_id, :recipient_id)
 end
-
 end

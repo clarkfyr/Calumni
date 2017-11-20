@@ -1,16 +1,31 @@
 <% if @over_ten %>
    <%= link_to 'Show Previous', '?m=all' %>
 <% end %>
+
 <% if @conversation.recipient_id == current_user.id%>
     <%@other_id = @conversation.sender_id%>
 <% else %>
     <%@other_id = @conversation.recipient_id%>
-<%@help_status = @conversation.help_status%>
 <% end %>
-<%=People.find(@other_id).username%>
-<% if @help_with%>
-    <%=@help_status%>
-<% end %>
+
+<% @show_checkbox = ((@conversation.help_status=="Reject") or (@conversation.help_status=="Done") or (@conversation.help_status==""))%>
+<%=@conversation.help_status%>
+<%=@conversation.help_type%>
+<%=@show_checkbox%>
+
+hahaha
+haha
+hahahahah
+
+<div class="header">
+  <strong><%=People.find(@other_id).username%></strong>
+
+  <% if @conversation.help_status != "" %>
+      <% if @conversation.help_status%><%=@conversation.help_status%><% end %>
+      <% if @conversation.help_type%><%=@conversation.help_type%><% end %>
+  <%end%>
+
+</div>
 
 <div class="field", name="history", id="history">
   <% @messages.each do |message| %>
@@ -39,26 +54,39 @@
     <%= f.text_area :body, class: "form-control" %>
   </div>
 
-
   <div class="field">
     <%= f.text_field :people_id, value: current_user.id, type: "hidden"  %>
-    <% @help_with=People.find(@other_id).helpability%>
-
+    <% if @conversation.recipient_id == current_user.id%>
+        <%@other_id = @conversation.sender_id%>
+    <% else %>
+        <%@other_id = @conversation.recipient_id%>
+    <% end %>
   </div>
 
   <div class="field">
-    <% if !@help_with.blank? %>
-      <%="Available to help with: " + (@help_with.to_s) %><br />
-      <%="Please only choose at most one help"%><br />
-      <%=check_box 'resume', 'requested', disabled: !@help_with.include?("resume")%> Resume<br />
-      <%=check_box 'interview', 'requested', disabled: !@help_with.include?("interview")%> Mock Interview <br />
-      <%=check_box 'Submit referral', 'requested', disabled: !@help_with.include?("Submit referral")%> Submit referral <br />
-      <%=check_box 'Company tour', 'requested', disabled: !@help_with.include?("Company tour")%> Company tour <br />
-      <%=check_box 'Other', 'requested' %> Other <br />
+    <% if @show_checkbox%>
+
+        <% @help_with=People.find(@other_id).helpability%>
+        <% if @help_with%>
+          <%="Available to help with: " + (@help_with.to_s) %><br/>
+          <%="Please only choose at most one help"%><br/>
+        <ul>
+          <% People.all_helps.each do |help| %>
+              <li>
+                <%= check_box_tag "helps[#{help}]", 1, false, disabled: !@help_with.include?(help) && help != "other", :id => "helps_#{help}" -%>
+                <%= h help -%>
+              </li>
+          <% end %>
+        </ul>
+        <% end %>
+
     <% end %>
+
+
     <% if flash[:notice] %>
         <div class="notice" id="notice"><%=flash[:notice] %></div>
     <% end %>
+    
   </div>
 
   <div>
@@ -66,3 +94,7 @@
   </div>
 
 <% end %>
+
+
+
+

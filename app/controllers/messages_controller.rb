@@ -34,15 +34,23 @@ def new
 end
 
 def create
-    @people= People.select{|p| p.email==cookies[:email]}
     @message = @conversation.messages.new(message_params)
+    @selected_help = params[:helps] || {}
+
     if message_params[:body].blank?
-        flash[:notice] = "Please do not send empty message"
-        redirect_to conversation_messages_path(@conversation)
+        flash[:notice] = "Please do not send empty message."
+
+    elsif @selected_help&.keys.size > 1
+        flash[:notice] = "Please do not choose more than one help type."
+
+    elsif @selected_help != {}
+        @conversation.update_attribute(:help_type, @selected_help.keys[0])
+        @conversation.update_attribute(:help_status, "Pending")
+    elsif !@message.save
+        return
     end
-    if @message.save
-        redirect_to conversation_messages_path(@conversation)
-    end
+    
+    redirect_to conversation_messages_path(@conversation)
 end
 
 private
@@ -50,7 +58,6 @@ private
 def message_params
     @people= People.select{|p| p.email==cookies[:email]}
     params.require(:message).permit(:body, :people_id)
-    # params.permit(:body, :people_id)
 end
 
 

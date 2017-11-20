@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   get  '/'    => 'calumnis#home', :as =>'home'
   get 'signup' => 'calumnis#signup',:as => 'signup'
   # post  'login'   => 'calumnis#login',  :as => 'login'
-  post  'newProfile'   => 'calumnis#createandlogin',  :as => 'createandlogin'
   get  'login'   => 'calumnis#login',  :as => 'login'
   get  'search'   => 'calumnis#search_core',  :as => 'search'
 
