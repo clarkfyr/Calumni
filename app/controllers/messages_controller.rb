@@ -29,26 +29,22 @@ end
 
 
 def new
-    @people= People.select{|p| p.email==cookies[:email]}
-    @message = @conversation.messages.new
 end
 
 def create
     @message = @conversation.messages.new(message_params)
     @selected_help = params[:helps] || {}
-
-    if message_params[:body].blank?
-        flash[:notice] = "Please do not send empty message."
-
-    elsif @selected_help&.keys.size > 1
-        flash[:notice] = "Please do not choose more than one help type."
-
+    if respond_to_help != false
+        p 1
+    elsif flash_msg != false
+        p 1
     elsif @selected_help != {}
-        @conversation.update_attribute(:help_type, @selected_help.keys[0])
-        @conversation.update_attribute(:help_status, "Pending")
+        update_help
     elsif !@message.save
         return
     end
+
+    p @conversation
     
     redirect_to conversation_messages_path(@conversation)
 end
@@ -61,4 +57,37 @@ def message_params
 end
 
 
+
+def update_help
+    @selected_help = params[:helps] || {}
+    @conversation.update_attribute(:help_type, @selected_help.keys[0])
+    @conversation.update_attribute(:help_status, "Pending")
+    @conversation.update_attribute(:requester, current_user.id)
+end
+
+def respond_to_help
+    @people= People.select{|p| p.email==cookies[:email]}
+    @help_responds = params[:responds] || {}
+    if @help_responds != {} and @help_responds.keys[0] == "Done"
+        @conversation.update_attribute(:help_status, @help_responds.keys[0])
+        @people.first.update_attribute(:helped_count, @people.first.helped_count+1)
+        return true
+    elsif @help_responds != {}
+        @conversation.update_attribute(:help_status, @help_responds.keys[0])
+        return true
+    end
+    return false
+end
+
+def flash_msg
+    @selected_help = params[:helps] || {}
+    if message_params[:body].blank?
+        flash[:notice] = "Please do not send empty message."
+        return true
+    elsif @selected_help&.keys.size > 1
+        flash[:notice] = "Please do not choose more than one help type."
+        return true
+    end
+    return false
+end
 end

@@ -144,6 +144,10 @@ class CalumnisController < ApplicationController
       @calumni=People.new()
       @calumni.update_attributes(email:cookies[:email],username:cookies[:name],lastname:cookies[:lastname])
       @calumni.update_attribute(:role,'mentee')
+      @calumni.update_attribute(:helped_count, 0)
+      # tmp_params = ActionController::Parameters.new(email:cookies[:email])
+      # People.create!(tmp_params)
+
     end
     # redirect_to home_path
     redirect_to session[:HTTP_REFERER]||home_path

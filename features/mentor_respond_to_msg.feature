@@ -9,9 +9,6 @@ Background: logined user
       |clark      |test1@berkeley.edu  |1
       |yingying   |test2@berkeley.edu  |2
 
-    Given the following conversations exist:
-      | sender_id  | recipient_id | id
-      | 1          | 2            | 1
 
     Given the following messages exist:
       | body | people_id | conversation_id
@@ -35,16 +32,26 @@ Scenario:
   Then I follow "Message Me!"
 
   And I fill in "message_body" with "Dear Sam, Could you please help me with my resume?"
-  #And I check "helps_#{resume}]"
+  And I check "resume"
+  And I check "other"
   And I press "Add Reply"
-  And I should be on 2's conversation page
+  And I should see "Please do not choose more than one help type."
+
+  Then I fill in "message_body" with "Dear Sam, Could you please help me with my resume?"
+  And I check "resume"
+  And I press "Add Reply"
+  And I should be on 1's conversation page
+  And I should not see "Please do not choose more than one help type."
+  And I should see "Pending"
+  And I should see "resume"
+  And I should not see "Available to help with:"
 
   Given I am successfully signin with "3@gmail.com"
   When I follow "Message"
   Then I should be on the conversations page
   And I should see "clark"
   When I follow "clark"
-  And I should be on 2's conversation page
-  #And I should see "Dear Sam, Could you please help me with my resume?"
+  And I should be on 1's conversation page
+  And I should see "Dear Sam, Could you please help me with my resume?"
   #And I check the respond to request: "Accept"
 
