@@ -1,6 +1,11 @@
 class People < ActiveRecord::Base
    searchkick autocomplete: ['username',"company"]
-   has_attached_file :avatar,styles: { medium: "300x300>", thumb: "100x100>" }
+   has_attached_file :avatar,styles: { medium: "300x300>", thumb: "100x100>" },
+   
+   :default_url=>"/missing.png"
+
+
+   
    do_not_validate_attachment_file_type :avatar
 	
 	has_attached_file :resume
