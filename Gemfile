@@ -57,6 +57,7 @@ group :test do
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
   gem 'database_cleaner'
+  gem 'factory_bot_rails'
 end
 
 

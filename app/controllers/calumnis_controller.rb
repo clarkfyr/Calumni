@@ -45,6 +45,7 @@ class CalumnisController < ApplicationController
   def upload
     @people= People.select{|p| p.email==cookies[:email]}
   end
+
   def receiveimg
         @people= People.select{|p| p.email==cookies[:email]}
         @people.first.update_attributes(people_params)
@@ -53,71 +54,30 @@ class CalumnisController < ApplicationController
   end
 
   def search_core
-    @search_username=People.search(params[:search], {
-      fields: [:username],
-      autocomplete:true,
-      limit: 10,
-      load: false,
-      misspellings: {below: 3}
-    }).map(&:username)
-    @search_company=People.search(params[:search], {
-      fields: [:company],
-      autocomplete:true,
-      limit: 10,
-      load: false,
-      misspellings: {below: 3}
-    }).map(&:company)
-    p @search_username,@search_company
-    if @search_username.length==1 and @search_company.length==0
-      # not use autocomplete
-      if params[:search]==@search_username[0]
-        redirect_to showprofile_path(:username=>@search_username[0])
-      end
-    elsif @search_username.length==0 and @search_company.length==1
+    @search_username = People.search(params[:search], {fields: [:username], autocomplete: true, 
+      limit: 10, load: false, misspellings: {below: 3}}).map(&:username)
+    @search_company = People.search(params[:search], {fields: [:company], autocomplete: true, 
+      limit: 10, load: false, misspellings: {below: 3}}).map(&:company)
+    if @search_username.length == 1 and @search_company.length == 0 and params[:search] == @search_username[0]
+        redirect_to showprofile_path(:username => @search_username[0])
+    elsif @search_username.length == 0 and @search_company.length == 1
       params[:type]="company"
-    end
-    
-    # if more than one result
-    # not design
-
-
-    # if not People.select{|p| p.commany==params[:search]}.first.nil?
-    #   params[:type]="company"
-    # # if use autocomplete and username, exactly one username
-    # elsif not People.select{|p| p.username==params[:search]}.first.nil?
-    #   redirect_to profile_path(:username=>params[:search])
-    # # if not use autocomplete, display all results
-    # end
-    @people= People.select{|p| p.email==cookies[:email]}
-    @num=[]
-    # modify type
-    if params[:type]=='user'
-      params[:type]='username'
-    end
-    # if no type, default search username
-    @type=params[:type]||'username'
-    @type_index=0
-    p params[:search]
-    # vague search
+    end  
+    @people = People.select{|p| p.email == cookies[:email]}
+    @num = []
+    if params[:type] == 'user' then params[:type] = 'username' end
+    @type = params[:type] || 'username'
+    @type_index = 0
     ['username','company','description'].each_with_index do |i,index|
       @search = People.cust_search(params[:search].downcase,i).order("created_at DESC")  
-      if not @search.to_a.first.nil?
-        @num.push(@search.to_a.length())
-      else
-        @num.push(0)
-      end
-      if i==@type
+      if not @search.to_a.first.nil? then @num.push(@search.to_a.length()) else @num.push(0) end
+      if i == @type
         @search_ret=@search
         @type_index=index
       end
     end
-    @search_key=params[:search]
-    
-    # modify type
-    if @type=='username'
-      @type='user'
-    end
-
+    @search_key = params[:search]
+    if @type == 'username' then @type = 'user' end
   end
 
   def become_mentor
@@ -135,20 +95,19 @@ class CalumnisController < ApplicationController
     end
   end
   def showprofile
-
     @people= People.select{|p| p.email==cookies[:email]}
     @otheruser= People.select{|p| p.username==params[:username]}
-    # if user not exist
+    # if otheruser not exist
     if @otheruser.first.nil?
-      render_404
+      render_404 and return
     end
-    # if user=otheruser
-    if @people==@otheruser
-      redirect_to profile_path
+    # if not login
+    if not @people.first.nil?
+      # if login_user=otheruser
+      if @people.first.email==@otheruser.first.email
+        redirect_to profile_path
+      end
     end
-
-
-
   end
 
   def profile
@@ -213,20 +172,22 @@ class CalumnisController < ApplicationController
     
     if people_params[:avatar]
       if people_params[:avatar].size >100.megabytes
-        redirect_to edit_error_path and return
+        redirect_to edit_error_path
       end
       if !["image/jpg","image/jpeg","image/png","image/gif"].include? people_params[:avatar].content_type
-        redirect_to edit_error_path and return
+        redirect_to edit_error_path
       end
     end
+
     if people_params[:resume]
       if people_params[:resume].size >100.megabytes
-        redirect_to edit_error_path and return
+        redirect_to edit_error_path
       end
       if !["application/pdf"].include? people_params[:resume].content_type
-        redirect_to edit_error_path and return
+        redirect_to edit_error_path
       end
     end
+
     @people= People.select{|p| p.email==cookies[:email]}
     @people.first.update_attributes(people_params)
     redirect_to profile_path and return
