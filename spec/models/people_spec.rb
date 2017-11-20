@@ -1,5 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe People, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "all_helps" do
+    it "can see all_helps" do
+	    expect(People.all_helps).to eq(["resume", "interview", "submit referral", "company tour", "other"])
+    end
+  end
 end
