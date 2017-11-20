@@ -7,22 +7,23 @@
 <% else %>
     <%@other_id = @conversation.recipient_id%>
 <% end %>
-
 <% @show_checkbox = ((@conversation.help_status=="Reject") or (@conversation.help_status=="Done") or (@conversation.help_status==""))%>
-<%=@conversation.help_status%>
-<%=@conversation.help_type%>
-<%=@show_checkbox%>
+<% @show_options = (((@conversation.help_status=="Pending") or (@conversation.help_status=="Accept")) and (@conversation.requester!=current_user.id))%>
 
-hahaha
-haha
-hahahahah
 
 <div class="header">
-  <strong><%=People.find(@other_id).username%></strong>
+  <strong>Talking to: <%=People.find(@other_id).username%></strong><br/><br/>
+
 
   <% if @conversation.help_status != "" %>
-      <% if @conversation.help_status%><%=@conversation.help_status%><% end %>
-      <% if @conversation.help_type%><%=@conversation.help_type%><% end %>
+      <% if @conversation.requester == current_user.id%>
+          <%@requester_name = "me"%>
+      <% else %>
+          <%@requester_name = People.find_by_id(@conversation.requester).username%>
+      <% end %>
+      Helped <%=@requester_name %>
+      with request <strong><% if @conversation.help_type%><%=@conversation.help_type%><% end %></strong>
+      <br/>Help Status: <strong><% if @conversation.help_status%><%=@conversation.help_status%><% end %></strong><br/><br/>
   <%end%>
 
 </div>
@@ -46,13 +47,14 @@ hahahahah
   <% end %>
 </div>
 
-<br />Message<br /><br />
+
+<br />Message<br /></br>
 
 <%= form_for [@conversation, @message], html: {class: "ui reply form"} do |f| %>
 
-  <div class="field",  name="msg_body">
+    <div class="field",  name="msg_body">
     <%= f.text_area :body, class: "form-control" %>
-  </div>
+    </div>
 
   <div class="field">
     <%= f.text_field :people_id, value: current_user.id, type: "hidden"  %>
@@ -88,6 +90,18 @@ hahahahah
     <% end %>
     
   </div>
+
+    <div class="field">
+      <% if @show_options%>
+          <li>(Message is optional)</li>
+          <% People.mentor_response.each do |r| %>
+              <li>
+                <%= check_box_tag "responds[#{r}]", 1, false, disabled: ((@conversation.help_status == "Pending" and r == "Done") or (@conversation.help_status == "Accept" and r != "Done")), :id => "responds#{r}" -%>
+                <%= h r -%>
+              </li>
+          <% end %>
+      <% end %>
+    </div>
 
   <div>
     <%= f.submit "Add Reply", class: "ui blue labeled submit icon button" %>

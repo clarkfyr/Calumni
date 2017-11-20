@@ -41,6 +41,10 @@
             - if @people.first.role =='mentor'
               %td Help with:
               %td #{@people.first.helpability}
+            %tr
+            - if @people.first.role =='mentor'
+              %td Help Count:
+              %td #{@people.first.helped_count}
 
             %tr
               - if @people.first.resume.url != '/resumes/original/missing.png'

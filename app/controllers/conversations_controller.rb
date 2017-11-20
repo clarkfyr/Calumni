@@ -10,19 +10,19 @@ def index
 end
 
 def create
-    @people= People.select{|p| p.email==cookies[:email]}
+  @people= People.select{|p| p.email==cookies[:email]}
 	p "sender_id"
 	p params[:sender_id]
 	p "recipient_id"
 	p params[:recipient_id]
+	p "calling create"
 	if Conversation.between(params[:sender_id],params[:recipient_id]).present?
 		@conversation = Conversation.between(params[:sender_id], params[:recipient_id]).first
 	else
 		@conversation = Conversation.create!(conversation_params)
+		@conversation.update_attribute(:help_status, "")
+		@conversation.update_attribute(:help_type, "")
 	end
-
-	@conversation.update_attribute(:help_status, "")
-    @conversation.update_attribute(:help_type, "")
 
 	redirect_to conversation_messages_path(@conversation)
 end
