@@ -133,36 +133,20 @@ class CalumnisController < ApplicationController
 
   def create_account
     # use oauth login first
-      # use before action
 
     # check user exists or not
-    p @people
+    p "people, ",@people
     ok= People.select{|p| p.email==cookies[:email]}
     # if user exists
     p "this is ok",ok
-    # byebug
-    if ok.first!=nil # old user
-      cookies[:username]=ok.first.username
-    else #new user
-      cookies[:username]=cookies[:email]
-      # add email
+    if ok.first.nil?
+      # add email to database
       @calumni=People.new()
       @calumni.update_attributes(email:cookies[:email],username:cookies[:name],lastname:cookies[:lastname])
       @calumni.update_attribute(:role,'mentee')
-      # tmp_params = ActionController::Parameters.new(email:cookies[:email])
-      # People.create!(tmp_params)
     end
     # redirect_to home_path
     redirect_to session[:HTTP_REFERER]||home_path
-    # redirect to previous page
-    # redirect_to home_path
-    # byebug
-    # redirect_to request.path
-
-    # return an array, if [] or has value
-    # if ok[0]!=nil
-    #   redirect_to profile_path
-    # end
   end
   def create_mentee
   end

@@ -14,7 +14,6 @@ gem "searchkick"
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem "omniauth-google-oauth2"
-gem "webmock"
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -45,7 +44,7 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
   gem 'sqlite3'
-
+  gem 'webmock'
 end
 group :production do
   gem "pg"

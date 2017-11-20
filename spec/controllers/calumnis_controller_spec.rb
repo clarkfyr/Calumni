@@ -21,7 +21,5 @@ RSpec.describe CalumnisController, type: :controller do
       # redirect to current user
       expect(response).to have_http_status(302)
     end
-
   end
-
 end
