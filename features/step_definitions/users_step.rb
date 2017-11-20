@@ -39,8 +39,7 @@ end
 
 When /^(?:|I )follow "(.*)"$/ do |link|
   # turns the phrase above into concrete actions
-
-   click_link(link)
+   first(:link, link).click
 end
 
 
@@ -124,7 +123,7 @@ end
 
 
 When /^I check "(.*)"$/ do |checkbox|
-  check("#{checkbox}")
+  check("helps_#{checkbox}")
 end
 
 Then /^I check the respond to request: "(.*)"$/ do |request_type|

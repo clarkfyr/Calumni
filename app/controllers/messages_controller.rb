@@ -29,8 +29,6 @@ end
 
 
 def new
-    @people= People.select{|p| p.email==cookies[:email]}
-    @message = @conversation.messages.new
 end
 
 def create
