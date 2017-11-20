@@ -22,10 +22,10 @@ Scenario: Successfully enter homepage
 #  Then I should see "company_show"
 #  Then I should see "mentor_show"
 
-Scenario: Successfully signin with CalID
-  Given I am on the home page
-#  Then I should see "Signin"
-#  When I follow "Signin"
+#Scenario: Successfully signin with gmail
+#  Given I am on the home page
+#  Then I should see "Log in"
+#  When I follow "Log in"
 #  When I follow Mentor
 #  Then I should see "Google"
 #  And fill in "Email or phone" with "test@berkeley.edu"

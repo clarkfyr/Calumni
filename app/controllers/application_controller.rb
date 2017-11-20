@@ -14,8 +14,12 @@ class ApplicationController < ActionController::Base
 
   def signed_in
     # p "filter is called every controller",myEmail
-    # p myEmail==""
+    p "myEmail ",myEmail
     if (not myEmail) || myEmail==""
+      # if direct access this url, goto root_path after login
+      if request.referer.nil?
+        request.env['HTTP_REFERER']=root_path
+      end
       # hardcode this
       if not request.referer.include? "create"
         session[:HTTP_REFERER]=request.referer
@@ -24,6 +28,7 @@ class ApplicationController < ActionController::Base
       # p request.path,"is "
       # session[:return_to] ||= request.referer
       # request.env["HTTP_REFERER"]=request.path
+      p "start to redirect to google_oauth2"
       redirect_to '/auth/google_oauth2'
     end
   end

@@ -1,6 +1,6 @@
 class AuthController < ApplicationController
     def google_callback
-        p "start login"
+        p "start login###"
         p request.env["omniauth.auth"]
         authentication_info = request.env["omniauth.auth"]
         p authentication_info

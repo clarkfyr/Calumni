@@ -1,16 +1,16 @@
-require 'sinatra/base'
-
-class FakeGitHub < Sinatra::Base
-  get '/repos/:organization/:project/contributors' do
-    json_response 200, 'contributors.json'
-  end
-
-  private
-
-  def json_response(response_code, file_name)
-    content_type :json
-    status response_code
-    File.open(File.dirname(__FILE__) + '/fixtures/' + file_name, 'rb').read
-  end
+def stub_google_omniauth
+  OmniAuth.config.test_mode=true
+  OmniAuth.config.mock_auth[:google] = OmniAuth::AuthHash.new({
+    "provider" => "google_oauth2",
+    "uid" => "1234567890",
+    "info" => {
+      "name" => "Test User",
+      "email" => "stub_google_omniauth@gmail.com",
+    },
+    "credentials" => {
+      "token" => "TEST_TOKEN",
+      "refresh_token" => "TEST_REFRESH_TOKEN",
+      "expires_at" => DateTime.now, # 3000/1/1
+    }
+  })
 end
-
