@@ -68,6 +68,9 @@ When("In id {string} I should see {string}") do |id, text|
   end
 end
 
+When /^(?:|I )fill invisible field in "(.*)" with "(.*)"$/ do |field, value|
+  find("##{field.downcase}_search").set(value)
+end
 
 When /^(?:|I )fill in "(.*)" with "(.*)"$/ do |field, value|
   fill_in(field, :with => value)
