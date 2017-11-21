@@ -17,7 +17,7 @@
       = f.date_field :graduation_date
 
       - if @people.first.role == 'mentor'
-        = f.text_field :company, label: "Company"
+        = f.text_field :company, label: "Company", id: "company_search",autocomplete:"off"
         = f.text_field :position
         %hr
         %h5
@@ -31,3 +31,4 @@
       = f.file_field :resume
 
       = f.submit "Update"
+

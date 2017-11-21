@@ -50,10 +50,19 @@ var numbers = new Bloodhound({
 // initialize the bloodhound suggestion engine
 numbers.initialize();
 
-$("#username_search").typeahead({
+$("#nav_search").typeahead({
   items: 6,
   source:numbers.ttAdapter()
 });
+$("#company_search").typeahead({
+  items: 6,
+  source:numbers.ttAdapter()
+});
+$("#position_search").typeahead({
+  items: 6,
+  source:numbers.ttAdapter()
+});
+
 
   // $('#username_search').typeahead({
 	
