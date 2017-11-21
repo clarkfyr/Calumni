@@ -35,7 +35,9 @@
               %td #{@otheruser.first.company}
             %tr
               %td Help With:
-              %td #{@otheruser.first.helpability}
+              %td #{@otheruser}
+              - if not @otheruser.first.helpability.first.nil?
+                %td #{@otheruser.first.helpability}
             %tr
               %td Help Count:
               %td #{@otheruser.first.helped_count}

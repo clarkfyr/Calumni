@@ -13,8 +13,8 @@
       = f.text_area :description
       = f.select(:major, options_for_select([['EECS'],['CS'],['BIO'],['Biology']]))
       
-      = f.datetime_field :start_date
-      = f.datetime_field :graduation_date
+      = f.date_field :start_date
+      = f.date_field :graduation_date
 
       - if @people.first.role == 'mentor'
         = f.text_field :company, label: "Company"

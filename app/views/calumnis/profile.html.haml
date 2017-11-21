@@ -40,7 +40,8 @@
             %tr
             - if @people.first.role =='mentor'
               %td Help with:
-              %td #{@people.first.helpability}
+              - if not @people.first.helpability.first.nil?
+                %td #{@people.first.display_helpability}
             %tr
             - if @people.first.role =='mentor'
               %td Help Count:

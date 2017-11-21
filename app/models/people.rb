@@ -20,6 +20,10 @@ class People < ActiveRecord::Base
   def self.mentor_response
     ["Accept", "Reject", "Done"]
   end
+  def display_helpability
+    self.helpability.join(", ")
+  end
+
 
   def self.cust_search(search,type)
 	where("LOWER(#{type}) LIKE ?", "%#{search}%") 
