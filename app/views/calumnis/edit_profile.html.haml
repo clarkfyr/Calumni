@@ -19,8 +19,7 @@
         = f.text_field :company
         = f.text_field :position
         / = f.text_field :helpability
-        = f.select(:helpability, options_for_select([['Edit Resume'],['Consult'],['Refer']]))
-      
+        = f.select(:helpability, options_for_select(People::all_helps))
 
       = f.file_field :resume
       = f.select(:major, options_for_select([['EECS'],['CS'],['BIO'],['Biology']]))
