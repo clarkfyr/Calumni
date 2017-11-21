@@ -14,7 +14,7 @@ Scenario: Able to become a mentor for a mentee
   When I follow "BecomeMentor"
   And I fill in "Company" with "Google"
   And I fill in "Position" with "Software Development Engineer"
-  And I select "resume" in "Helpability"
+  And I check "resume"
   And I press "Update"
   Then I should see "Google"
   And I should see "Software Development Engineer"

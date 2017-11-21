@@ -4,7 +4,7 @@ FactoryBot.define do
     start_date "teststart_date"
     company "testcompany"
     position "testposition"
-    helpability "testhelpability"
+    helpability ["testhelpability"]
     major "testmajor"
     open_advice "testopen_advice"
     graduation_date "testgraduation_date"

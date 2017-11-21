@@ -157,7 +157,6 @@ class CalumnisController < ApplicationController
   def edit_error
   end
   def update_profile
-    
     if people_params[:avatar]
       if people_params[:avatar].size >100.megabytes
         redirect_to edit_error_path
@@ -178,6 +177,7 @@ class CalumnisController < ApplicationController
 
     @people= People.select{|p| p.email==cookies[:email]}
     @people.first.update_attributes(people_params)
+    @people.first.update_attributes(:helpability=>params[:helps])
     redirect_to profile_path and return
   end
 

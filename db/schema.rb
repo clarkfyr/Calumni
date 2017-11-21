@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171120070202) do
+ActiveRecord::Schema.define(version: 20171121041758) do
 
   create_table "conversations", force: :cascade do |t|
     t.integer  "sender_id"
@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(version: 20171120070202) do
     t.string   "username"
     t.string   "email"
     t.string   "description"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
     t.string   "company"
     t.string   "start_date"
     t.string   "university"
@@ -53,7 +53,6 @@ ActiveRecord::Schema.define(version: 20171120070202) do
     t.string   "position"
     t.string   "graduation_date"
     t.string   "graduationDate"
-    t.string   "helpability"
     t.string   "open_advice"
     t.string   "resume_file_name"
     t.string   "resume_content_type"
@@ -62,6 +61,7 @@ ActiveRecord::Schema.define(version: 20171120070202) do
     t.string   "lastname"
     t.string   "role"
     t.integer  "helped_count"
+    t.string   "helpability",         default: "--- []\n"
   end
 
 end

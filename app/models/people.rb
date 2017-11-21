@@ -1,4 +1,6 @@
 class People < ActiveRecord::Base
+  serialize :helpability, Array
+
    searchkick autocomplete: ['username',"company"]
    has_attached_file :avatar,styles: { medium: "300x300>", thumb: "100x100>" },
    
