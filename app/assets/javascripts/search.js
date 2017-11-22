@@ -36,19 +36,34 @@ $(function() {
 //         'Hurricane',
 //   ]                                                                           
 // }); 
-
+var array=["nav_search","company_search","position_search"];
+var state=["","",""];
 var numbers = new Bloodhound({
   datumTokenizer: Bloodhound.tokenizers.whitespace,
   queryTokenizer: Bloodhound.tokenizers.whitespace,
-  // local:  ["(A)labama","Alaska","Arizona","Arkansas","Arkansas2","Barkansas"]
   remote: {
   	url: "autocomplete?search=%QUERY",
-  	wildcard: "%QUERY"
+  	wildcard: "%QUERY",
+    replace: function(){
+      // add type info
+      var q="autocomplete?search=";
+      for (var j = 0 ; j < array.length; j++) {
+        // console.log(j);
+        // console.log(array[j]);
+        // console.log($("#"+array[j]).val());
+        // only capture the changed input
+        if($("#"+array[j]).val()!== state[j]){
+          q+=encodeURIComponent($("#"+array[j]).val())+"&type="+array[j];
+          state[j]=$("#"+array[j]).val();
+        };
+      }
+      return q;
+    }
   }
 });
-
 // initialize the bloodhound suggestion engine
 numbers.initialize();
+
 
 $("#nav_search").typeahead({
   items: 6,

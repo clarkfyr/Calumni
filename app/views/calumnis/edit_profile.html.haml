@@ -18,7 +18,7 @@
 
       - if @people.first.role == 'mentor'
         = f.text_field :company, label: "Company", id: "company_search",autocomplete:"off"
-        = f.text_field :position
+        = f.text_field :position,id: "position_search",autocomplete:"off"
         %hr
         %h5
           %strong Willing to Help with

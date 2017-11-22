@@ -217,21 +217,34 @@ class CalumnisController < ApplicationController
 #   end
   def autocomplete
     # render json: People.search(params[:search], autocomplete: true, limit: 10).map(&:username)
-    ret_username=People.search(params[:search], {
-      fields: [:username],
-      autocomplete:true,
-      limit: 10,
-      load: false,
-      misspellings: {below: 5}
-    }).map(&:username)
-    ret_company=People.search(params[:search], {
-      fields: [:company],
-      autocomplete:true,
-      limit: 10,
-      load: false,
-      misspellings: {below: 5}
-    }).map(&:company)
-    render json:ret_username+ret_company
+    # byebug
+
+    p params
+    # prebuild
+    field=[]
+    case params[:type]
+    when "company_search"
+      field.push("company")
+    when "position_search"
+      field.push("position")
+    else
+      field.push("position")
+      field.push("company")
+    end
+    p field
+
+    # autocomplete
+    ret_val=[]
+    field.each do |f|
+      ret_val+=(People.search(params[:search], {
+        fields: [f],
+        autocomplete:true,
+        limit: 10,
+        load: false,
+        misspellings: {below: 5}
+      }).map(&f.to_sym))
+    end
+    render json:ret_val
 
   end
 

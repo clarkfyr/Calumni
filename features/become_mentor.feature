@@ -13,7 +13,7 @@ Scenario: Able to become a mentor for a mentee
   Then I should see "BecomeMentor"
   When I follow "BecomeMentor"
   And I fill invisible field in "Company" with "Google"
-  And I fill in "Position" with "Software Development Engineer"
+  And I fill invisible field in "Position" with "Software Development Engineer"
   And I fill in "Start date" with "07/11/1111"
   And I check "resume"
   And I press "Update"
