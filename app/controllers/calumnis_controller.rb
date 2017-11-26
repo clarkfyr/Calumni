@@ -180,7 +180,6 @@ class CalumnisController < ApplicationController
         redirect_to edit_error_path
       end
     end
-
     @people= People.select{|p| p.email==cookies[:email]}
     @people.first.update_attributes(people_params)
     @people.first.update_attributes(:helpability=>params[:helps])
@@ -238,7 +237,7 @@ class CalumnisController < ApplicationController
       field.push("company")
     end
     p "search type",field
-    
+
     # autocomplete
     ret_val=[]
     field.each do |f|

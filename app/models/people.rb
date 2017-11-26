@@ -2,6 +2,13 @@ class People < ActiveRecord::Base
   serialize :helpability, Array
 
   searchkick autocomplete: ['username',"company",'position']
+  def search_data
+    {
+      username: username,
+      company: company,
+      position: position
+    }
+  end
   has_attached_file :avatar,styles: { medium: "300x300>", thumb: "100x100>" },
 
   :default_url => ActionController::Base.helpers.asset_path('missing.png')
