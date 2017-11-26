@@ -19,6 +19,11 @@ Rails.application.routes.draw do
   get  'edit_profile'   => 'calumnis#edit_profile',  :as => 'edit_profile'
   get  'upload' => 'calumnis#upload', :as =>'upload'
 
+  get "add_feedback" => 'calumnis#add_feedback', :as => :add_feedback
+  post "store_feedback" => 'calumnis#store_feedback', :as => :store_feedback
+  get "display_feedback" => 'calumnis#display_feedback', :as => :display_feedback
+
+
   root 'calumnis#home'
   get "/auth/google_oauth2/callback" => "auth#google_callback",:as => "google_callback"
   get "/auth/logout" => "auth#logout", :as => 'logout'

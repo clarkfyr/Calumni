@@ -109,6 +109,12 @@ class CalumnisController < ApplicationController
       end
     end
   end
+  def add_feedback
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
 
   def profile
 
@@ -248,5 +254,13 @@ class CalumnisController < ApplicationController
 
   end
 
+  def store_feedback
+    @msg=Feedback.new({:feedback=>params[:msg],:email=>"anonymous"})
+    if @msg.save
+      render :json =>{}
+    else
+      render :json =>{},:status => 500
+    end
+  end
 
 end

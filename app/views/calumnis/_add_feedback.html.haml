@@ -1,0 +1,20 @@
+.modal-dialog
+  .modal-content
+    .modal-header
+      %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button","id"=>"close_button"} ×
+      %h3#myModalLabel
+        %strong Any suggestions?
+    .modal-body
+      .form-group
+        %label.control-label#feedback_msg{:for => "message-text"}
+        %textarea#message-text.form-control{:placeholder=>"We cherish every single piece of suggestion.",:rows=>4}
+
+    .modal-footer
+      %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Cancel
+      %button.btn.btn-primary#feedback_sub{:type => "button"} Send
+    /   %form.button_to{store_feedback_path, :method => "post"}
+    /   %input{:type => "submit", :value => "New"}
+
+  
+  
+

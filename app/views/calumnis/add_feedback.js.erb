@@ -1,0 +1,19 @@
+$("#modal-window").html("<%= j (render 'add_feedback') %>");
+
+$("#feedback_sub").click(function(e) {
+    e.preventDefault();
+    $.ajax({
+        type: "POST",
+        url: "/store_feedback",
+        data: { 
+            msg: $("#message-text").val(), 
+        },
+        success: function(result) {
+            // alert('ok');
+            $("#close_button").click();
+        },
+        error: function(result) {
+            console.log("server connection error");
+        }
+    });
+});

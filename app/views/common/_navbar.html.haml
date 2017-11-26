@@ -25,7 +25,13 @@
           %ul.dropdown-menu
             %li= link_to "Profile",profile_path
             %li.divider{:role => "separator"}
+            %li= link_to 'Feedback', add_feedback_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}
             %li= link_to "Logout",logout_path
+
+#modal-window.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog","tabindex"=>"-1"}
+
+
+
 
 
 / = form_tag search_path, :method => 'get', class: 'input-group'   do
