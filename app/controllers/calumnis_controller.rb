@@ -225,7 +225,7 @@ class CalumnisController < ApplicationController
     # render json: People.search(params[:search], autocomplete: true, limit: 10).map(&:username)
     # byebug
 
-    p params
+    p "params ",params
     # prebuild
     field=[]
     case params[:type]
@@ -237,8 +237,8 @@ class CalumnisController < ApplicationController
       field.push("position")
       field.push("company")
     end
-    p field
-
+    p "search type",field
+    
     # autocomplete
     ret_val=[]
     field.each do |f|

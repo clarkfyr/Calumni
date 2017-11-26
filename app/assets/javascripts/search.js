@@ -37,7 +37,7 @@ $(function() {
 //   ]                                                                           
 // }); 
 var array=["nav_search","company_search","position_search"];
-var state=["","",""];
+var state=[$("#"+array[0]).val(),$("#"+array[1]).val(),$("#"+array[2]).val()];
 var numbers = new Bloodhound({
   datumTokenizer: Bloodhound.tokenizers.whitespace,
   queryTokenizer: Bloodhound.tokenizers.whitespace,
@@ -49,7 +49,7 @@ var numbers = new Bloodhound({
       var q="autocomplete?search=";
       for (var j = 0 ; j < array.length; j++) {
         // console.log(j);
-        // console.log(array[j]);
+        console.log(array[j]);
         // console.log($("#"+array[j]).val());
         // only capture the changed input
         if($("#"+array[j]).val()!== state[j]){
@@ -77,13 +77,6 @@ $("#position_search").typeahead({
   items: 6,
   source:numbers.ttAdapter()
 });
-
-
-  // $('#username_search').typeahead({
-	
-  //   name: "book",
-  //   remote: "autocomplete?query=%QUERY"
-  // });
 
 
 });
