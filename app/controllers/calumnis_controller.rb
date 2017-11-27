@@ -18,7 +18,7 @@ class CalumnisController < ApplicationController
 #   end
 
   def people_params
-    params.require(:people).permit(:username,:lastname, :email, :description, :company, :start_date, :resume, :university, :major, :graduation, :help, :position,:avatar,:graduation_date,:major,:open_advice,:role,:helpability => [])
+    params.require(:people).permit(:username,:lastname, :email, :description, :company, :start_date, :resume, :university, :major, :graduation, :help, :position,:avatar,:graduation_date,:major,:url,:open_advice,:role,:helpability => [])
   end
 
   public
@@ -54,30 +54,36 @@ class CalumnisController < ApplicationController
   # end
 
   def search_core
-    @search_username = People.search(params[:search], {fields: [:username], autocomplete: true, 
-      limit: 10, load: false, misspellings: {below: 3}}).map(&:username)
-    @search_company = People.search(params[:search], {fields: [:company], autocomplete: true, 
-      limit: 10, load: false, misspellings: {below: 3}}).map(&:company)
-    if @search_username.length == 1 and @search_company.length == 0 and params[:search] == @search_username[0]
-        redirect_to showprofile_path(:username => @search_username[0])
-    elsif @search_username.length == 0 and @search_company.length == 1
-      params[:type]="company"
-    end  
     @people = People.select{|p| p.email == cookies[:email]}
-    @num = []
-    if params[:type] == 'user' then params[:type] = 'username' end
-    @type = params[:type] || 'username'
-    @type_index = 0
-    ['username','company','description'].each_with_index do |i,index|
-      @search = People.cust_search(params[:search].downcase,i).order("created_at DESC")  
-      if not @search.to_a.first.nil? then @num.push(@search.to_a.length()) else @num.push(0) end
-      if i == @type
-        @search_ret=@search
-        @type_index=index
-      end
+    #input params[:search], params[:type]
+    #output
+    # @search_ret store ret value
+    # @nums number of result
+    # @type_index, index of num
+    # @type, search type
+    # @search_key, params[:search]
+
+    # default, display user
+    if params[:type] == 'user'
+      params[:type] = 'username' 
     end
     @search_key = params[:search]
-    if @type == 'username' then @type = 'user' end
+    @type = params[:type] || 'username'
+    @type_index = 0
+
+    @search_result=[]
+    @num=[]
+    People.search_type.each_with_index do |type,index|
+      result=People.search(params[:search], {fields: [type], autocomplete: true, 
+      limit: 10, load: false, misspellings: {below: 3}})
+      @search_result.push(result)
+      @num.push(result.total_count)
+      if type==@type
+        @type_index=index
+        @search_ret=result.map{|u| {username:u.username, company:u.company,url:u.url}}
+      end
+    end
+    # if @type == 'username' then @type = 'user' end
   end
 
   def become_mentor
@@ -96,13 +102,13 @@ class CalumnisController < ApplicationController
   end
   def showprofile
     @people= People.select{|p| p.email==cookies[:email]}
-    @otheruser= People.select{|p| p.username==params[:username]}
+    @otheruser= People.select{|p| p.url==params[:url]}
     # if otheruser not exist
-    if @otheruser.first.nil?
+    if @otheruser.first.nil? or @otheruser.first.role=="mentee"
       render_404 and return
     end
-    # if not login
-    if not @people.first.nil?
+    # if not login or mentee
+    if (not @people.first.nil?) 
       # if login_user=otheruser
       if @people.first.email==@otheruser.first.email
         redirect_to profile_path
@@ -151,6 +157,15 @@ class CalumnisController < ApplicationController
       @calumni.update_attributes(email:cookies[:email],username:cookies[:name],lastname:cookies[:lastname])
       @calumni.update_attribute(:role,'mentee')
       @calumni.update_attribute(:helped_count, 0)
+      while
+        val=rand(1...100000).to_s
+        ok=People.select{|p| p.url==cookies[:name]+"-"+val}
+        # unique url
+        if ok.first.nil?
+          @calumni.update_attribute(:url, cookies[:name]+"-"+val)
+          break
+        end
+      end
       # tmp_params = ActionController::Parameters.new(email:cookies[:email])
       # People.create!(tmp_params)
 

@@ -6,7 +6,8 @@ class People < ActiveRecord::Base
     {
       username: username,
       company: company,
-      position: position
+      position: position,
+      url:url
     }
   end
   has_attached_file :avatar,styles: { medium: "300x300>", thumb: "100x100>" },
@@ -20,6 +21,9 @@ class People < ActiveRecord::Base
   do_not_validate_attachment_file_type :resume
   has_many :conversations, :foreign_key => :sender_id
 
+  def self.search_type
+    ['username','company','position']
+  end
   def self.all_helps
     ["resume", "interview", "submit_referral", "company tour", "general advice"]
   end
@@ -27,7 +31,15 @@ class People < ActiveRecord::Base
     ["Accept", "Reject", "Done"]
   end
   def display_helpability
-    self.helpability[1,self.helpability.length].join(" ,")
+    if self.helpability.length>0
+      # for collection checkbox, the first element is ""
+      if self.helpability[0]==""
+        start=1
+      else
+        start=0
+      end
+      self.helpability[start,self.helpability.length].join(" ,")
+    end
   end
 
 

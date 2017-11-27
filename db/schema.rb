@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171126064532) do
+ActiveRecord::Schema.define(version: 20171127065642) do
 
   create_table "conversations", force: :cascade do |t|
     t.integer  "sender_id"
@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(version: 20171126064532) do
     t.string   "role"
     t.integer  "helped_count"
     t.string   "helpability",         default: "--- []\n"
+    t.string   "url"
   end
 
 end

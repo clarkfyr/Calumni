@@ -18,7 +18,7 @@ module NavigationHelpers
     # Here is an example that pulls values out of the Regexp:
     #
     when /^(.*)'s profile page$/i
-      showprofile_path($1)
+      showprofile_path(:url=>$1)
 
 
     when /^(.*)'s conversation page$/i

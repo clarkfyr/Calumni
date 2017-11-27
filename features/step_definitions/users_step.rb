@@ -126,7 +126,6 @@ end
 
 When /^I check "(.*)"$/ do |checkbox|
   check("helps_#{checkbox}")
-  p page.html
 end
 
 When /^I collection-check "(.*)"$/ do |checkbox|

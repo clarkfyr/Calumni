@@ -32,7 +32,6 @@
               %td #{@otheruser.first.graduation_date}
             %tr
               %td General advice:
-              %td #{@otheruser}
               - if not @otheruser.first.open_advice.nil?
                 %td #{@otheruser.first.open_advice}
             %tr
@@ -40,9 +39,8 @@
               %td #{@otheruser.first.company}
             %tr
               %td Help With:
-              %td #{@otheruser}
               - if not @otheruser.first.helpability.first.nil?
-                %td #{@otheruser.first.helpability}
+                %td #{@otheruser.first.display_helpability}
             %tr
               %td Help Count:
               %td #{@otheruser.first.helped_count}

@@ -1,7 +1,7 @@
 .container
   .row
     %ul.nav.nav-pills.underline-nav
-      - ['user','company','description'].each_with_index do |i,index|
+      - People.search_type.each_with_index do |i,index|
         - if @type==i
           = link_to search_path(:search=>params[:search],:type=>i), class: "underline-nav-item selected" do
             #{i.titleize}
@@ -10,6 +10,7 @@
           = link_to search_path(:search=>params[:search],:type=>i), class: "underline-nav-item" do
             #{i.titleize}
             %span.Counter.ml-2 #{@num[index]}
+
     - if @num[@type_index]==0
       %h2.left #{@num[@type_index]} result about "#{@search_key}"
     - else
@@ -18,7 +19,7 @@
     - if @num[@type_index]!=0
       - @search_ret.each do |i|
         %li.list-group-item 
-          %a{:href => "#{i.username}"} #{i.username}  
+          %a{:href => "#{i[:url]}"} #{i[:username]}  
           %br
-          Company: #{i.company}
+          Company: #{i[:company]}
         %hr

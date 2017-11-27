@@ -35,7 +35,7 @@ Rails.application.routes.draw do
   resources :conversations do
     resources :messages
   end
-  get ':username'=> 'calumnis#showprofile', :as =>'showprofile'
+  get ':url'=> 'calumnis#showprofile', :as =>'showprofile'
  
 
 
