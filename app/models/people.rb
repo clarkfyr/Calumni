@@ -21,13 +21,13 @@ class People < ActiveRecord::Base
   has_many :conversations, :foreign_key => :sender_id
 
   def self.all_helps
-    ["resume", "interview", "submit_referral", "company tour", "other"]
+    ["resume", "interview", "submit_referral", "company tour", "general advice"]
   end
   def self.mentor_response
     ["Accept", "Reject", "Done"]
   end
   def display_helpability
-    self.helpability.join(" ").split().join(", ")
+    self.helpability[1,self.helpability.length].join(" ,")
   end
 
 

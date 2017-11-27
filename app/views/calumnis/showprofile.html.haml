@@ -31,6 +31,11 @@
               %td Graduation date:
               %td #{@otheruser.first.graduation_date}
             %tr
+              %td General advice:
+              %td #{@otheruser}
+              - if not @otheruser.first.open_advice.nil?
+                %td #{@otheruser.first.open_advice}
+            %tr
               %td Company:
               %td #{@otheruser.first.company}
             %tr

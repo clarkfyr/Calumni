@@ -16,9 +16,13 @@
       = f.date_field :start_date
       = f.date_field :graduation_date
 
+      
       - if @people.first.role == 'mentor'
-        = f.text_field :company, label: "Company", id: "company_search",autocomplete:"off"
-        = f.text_field :position,id: "position_search",autocomplete:"off"
+        %hr
+        %h4 Mentor information
+        %h6 Fill out additional information about yourself and where you work to become a mentor for other UC Berkeley students
+        = f.text_field :company, label: "Company", id: "company_search",autocomplete:"off", :required=>"true",:oninvalid=>"this.setCustomValidity('Fill this to become a mentor')",:oninput=>"this.setCustomValidity('')"
+        = f.text_field :position,id: "position_search",autocomplete:"off",:required=>"true",:oninvalid=>"this.setCustomValidity('Fill this to become a mentor')",:oninput=>"this.setCustomValidity('')"
         = f.collection_check_boxes :helpability, People.all_helps, :downcase, :downcase,:label=>'Willing to help with' do |cb|
           = cb.label id:"helps_#{cb}" do
             =cb.text

@@ -77,7 +77,7 @@
         <ul>
           <% People.all_helps.each do |help| %>
               <li>
-                <%= check_box_tag "helps[#{help}]", 1, false, disabled: !@help_with.include?(help) && help != "other", :id => "helps_#{help}" -%>
+                <%= check_box_tag "helps[#{help}]", 1, false, disabled: !@help_with.include?(help) && help != "general advice", :id => "helps_#{help}" -%>
                 <%= h help -%>
               </li>
           <% end %>

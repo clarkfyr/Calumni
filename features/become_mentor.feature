@@ -10,8 +10,8 @@ Background: logined user
   
 Scenario: Able to become a mentor for a mentee
   Given I am on the home page
-  Then I should see "BecomeMentor"
-  When I follow "BecomeMentor"
+  Then I should see "Become a mentor"
+  When I follow "Become a mentor"
   And I fill invisible field in "Company" with "Google"
   And I fill invisible field in "Position" with "Software Development Engineer"
   And I fill in "Start date" with "07/11/1111"
@@ -21,3 +21,6 @@ Scenario: Able to become a mentor for a mentee
   And I should see "Software Development Engineer"
   And I should see "07/11/1111"
   And I should see "resume"
+
+# should use js to test this
+Scenario: two columns must be filled to become a mentor

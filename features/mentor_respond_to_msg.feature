@@ -33,7 +33,7 @@ Scenario:
 
   And I fill in "message_body" with "Dear Sam, Could you please help me with my resume?"
   And I check "resume"
-  And I check "other"
+  And I check "general advice"
   And I press "Add Reply"
   And I should see "Please do not choose more than one help type."
 

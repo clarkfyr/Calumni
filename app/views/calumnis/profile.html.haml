@@ -35,6 +35,10 @@
               %td #{@people.first.company}
             %tr
             - if @people.first.role =='mentor'
+              %td General advice:
+              %td #{@people.first.open_advice}
+            %tr
+            - if @people.first.role =='mentor'
               %td Position:
               %td #{@people.first.position}
             %tr

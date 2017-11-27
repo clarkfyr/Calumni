@@ -10,7 +10,7 @@
     %ul.nav.navbar-nav.navbar-right
       - if cookies[:email]
         - if @people.first.role =='mentee'
-          %li= link_to "BecomeMentor", become_mentor_path
+          %li= link_to "Become a mentor", become_mentor_path
       %li= link_to "Home",   home_path
       - if cookies[:email]
         %li= link_to "Mailbox",conversations_path
