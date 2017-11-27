@@ -124,9 +124,12 @@ Given /^the following messages exist/ do |messages_table|
   end
 end
 
-
 When /^I check "(.*)"$/ do |checkbox|
   check("helps_#{checkbox}")
+end
+
+When /^I collection-check "(.*)"$/ do |checkbox|
+  check("people_helpability_#{checkbox}")
 end
 
 Then /^I check the respond to request: "(.*)"$/ do |request_type|

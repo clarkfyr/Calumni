@@ -19,14 +19,10 @@
       - if @people.first.role == 'mentor'
         = f.text_field :company, label: "Company", id: "company_search",autocomplete:"off"
         = f.text_field :position,id: "position_search",autocomplete:"off"
-        %hr
-        %h5
-          %strong Willing to Help with
-        - People.all_helps.each do |help|
-          = f.label help
-          = check_box_tag "helps[]", help,false,:id => "helps_#{help}"
-        %hr
-      
+        = f.collection_check_boxes :helpability, People.all_helps, :downcase, :downcase,:label=>'Willing to help with' do |cb|
+          = cb.label id:"helps_#{cb}" do
+            =cb.text
+
       = f.text_area :open_advice ,label:"General advice"
       = f.file_field :resume
 

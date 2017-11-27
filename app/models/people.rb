@@ -20,15 +20,14 @@ class People < ActiveRecord::Base
   do_not_validate_attachment_file_type :resume
   has_many :conversations, :foreign_key => :sender_id
 
-
   def self.all_helps
-    ["resume", "interview", "submit referral", "company tour", "other"]
+    ["resume", "interview", "submit_referral", "company tour", "other"]
   end
   def self.mentor_response
     ["Accept", "Reject", "Done"]
   end
   def display_helpability
-    self.helpability.join(", ")
+    self.helpability.join(" ").split().join(", ")
   end
 
 

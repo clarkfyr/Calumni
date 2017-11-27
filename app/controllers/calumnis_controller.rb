@@ -18,7 +18,7 @@ class CalumnisController < ApplicationController
 #   end
 
   def people_params
-    params.require(:people).permit(:username,:lastname, :email, :description, :company, :start_date, :resume, :university, :major, :graduation, :help, :position,:avatar,:graduation_date,:helpability,:major,:open_advice,:role)
+    params.require(:people).permit(:username,:lastname, :email, :description, :company, :start_date, :resume, :university, :major, :graduation, :help, :position,:avatar,:graduation_date,:major,:open_advice,:role,:helpability => [])
   end
 
   public
@@ -182,7 +182,7 @@ class CalumnisController < ApplicationController
     end
     @people= People.select{|p| p.email==cookies[:email]}
     @people.first.update_attributes(people_params)
-    @people.first.update_attributes(:helpability=>params[:helps])
+    # @people.first.update_attributes(:helpability=>params[:helps])
     redirect_to profile_path and return
   end
 

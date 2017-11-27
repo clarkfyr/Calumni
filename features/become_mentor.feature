@@ -15,7 +15,7 @@ Scenario: Able to become a mentor for a mentee
   And I fill invisible field in "Company" with "Google"
   And I fill invisible field in "Position" with "Software Development Engineer"
   And I fill in "Start date" with "07/11/1111"
-  And I check "resume"
+  And I collection-check "resume"
   And I press "Update"
   Then I should see "Google"
   And I should see "Software Development Engineer"
