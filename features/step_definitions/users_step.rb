@@ -129,7 +129,9 @@ When /^I check "(.*)"$/ do |checkbox|
 end
 
 When /^I collection-check "(.*)"$/ do |checkbox|
-  check("people_helpability_#{checkbox}")
+  checkbox.split().each do|help|
+    check("people_helpability_#{help}")
+  end
 end
 
 Then /^I check the respond to request: "(.*)"$/ do |request_type|

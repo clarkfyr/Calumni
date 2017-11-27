@@ -35,9 +35,10 @@ Scenario: Edit Photo
   And I press "Update"
   And I should see the image
 
-Scenario: Edit Photo
+Scenario: Edit Resume
   Given I am on the Profile page
   When I follow "Edit"
   And I upload a resume
   And I press "Update"
   And I should see the resume
+
