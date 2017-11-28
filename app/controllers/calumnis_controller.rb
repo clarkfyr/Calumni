@@ -248,6 +248,7 @@ class CalumnisController < ApplicationController
     when "position_search"
       field.push("position")
     else
+      field.push("username")
       field.push("position")
       field.push("company")
     end
@@ -255,15 +256,29 @@ class CalumnisController < ApplicationController
 
     # autocomplete
     ret_val=[]
-    field.each do |f|
-      ret_val+=(People.search(params[:search], {
-        fields: [f],
+    field.each do |fi|
+      result=People.search(params[:search], {
+        fields: [fi],
         autocomplete:true,
         limit: 10,
         load: false,
         misspellings: {below: 5}
-      }).map(&f.to_sym))
+      })
+      # p "val ",result.map(&fi.to_sym),result
+      # p fi
+      hash=result.map{|u| {url:u.url,type:fi,username:u.username,val:u[fi],name:u[fi]}}
+      # p hash
+      # hash.each do |k|
+      #   tmp={}
+      #   tmp.push(k[:url])
+      #   tmp.push(k[:type])
+      #   tmp.push(k[:username])
+      #   tmp.push(k[:val])
+      #   ret_val.push(tmp)
+      # end
+      ret_val+=hash
     end
+    p "ret_val ",ret_val
     render json:ret_val
 
   end

@@ -57,6 +57,7 @@ var numbers = new Bloodhound({
           state[j]=$("#"+array[j]).val();
         };
       }
+      console.log(q);
       return q;
     }
   }
@@ -67,7 +68,14 @@ numbers.initialize();
 
 $("#nav_search").typeahead({
   items: 6,
-  source:numbers.ttAdapter()
+  source:numbers.ttAdapter(),
+  templates: {
+    suggestion: function(data){
+      console.log(data);
+      return '<div><strong>{{url}}</strong>-{{username}}</div>';
+    }
+  },
+  display: 'value',
 });
 $("#company_search").typeahead({
   items: 6,
