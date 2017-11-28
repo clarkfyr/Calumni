@@ -266,16 +266,7 @@ class CalumnisController < ApplicationController
       })
       # p "val ",result.map(&fi.to_sym),result
       # p fi
-      hash=result.map{|u| {url:u.url,type:fi,username:u.username,val:u[fi],name:u[fi]}}
-      # p hash
-      # hash.each do |k|
-      #   tmp={}
-      #   tmp.push(k[:url])
-      #   tmp.push(k[:type])
-      #   tmp.push(k[:username])
-      #   tmp.push(k[:val])
-      #   ret_val.push(tmp)
-      # end
+      hash=result.map{|u| {url:u.url,type:fi,username:u.username,company:u.company,name:u[fi],position:u.position}}
       ret_val+=hash
     end
     p "ret_val ",ret_val

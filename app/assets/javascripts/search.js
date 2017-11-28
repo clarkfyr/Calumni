@@ -69,13 +69,17 @@ numbers.initialize();
 $("#nav_search").typeahead({
   items: 6,
   source:numbers.ttAdapter(),
-  templates: {
-    suggestion: function(data){
-      console.log(data);
-      return '<div><strong>{{url}}</strong>-{{username}}</div>';
-    }
+  displayText: function(data){
+      // console.log(data);
+      return '<div><strong>'+data.username+'</strong>'+'-'+data.position+' at '+data.company+'</div>';
   },
-  display: 'value',
+  fitToElement: true,
+  afterSelect: function(data){
+    window.location.href=data.url;
+  }
+}).on('typeahead:selected',function(obj,datum,evt){
+  console.log(evt);
+  $(this).typeahead("val","");
 });
 $("#company_search").typeahead({
   items: 6,
