@@ -7,7 +7,8 @@ class People < ActiveRecord::Base
       username: username,
       company: company,
       position: position,
-      url:url
+      url:url,
+      avatar:avatar,
     }
   end
   has_attached_file :avatar,styles: { medium: "300x300>", thumb: "100x100>" },

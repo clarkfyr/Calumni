@@ -49,7 +49,7 @@ var numbers = new Bloodhound({
       var q="autocomplete?search=";
       for (var j = 0 ; j < array.length; j++) {
         // console.log(j);
-        console.log(array[j]);
+        // console.log(array[j]);
         // console.log($("#"+array[j]).val());
         // only capture the changed input
         if($("#"+array[j]).val()!== state[j]){
@@ -57,7 +57,7 @@ var numbers = new Bloodhound({
           state[j]=$("#"+array[j]).val();
         };
       }
-      console.log(q);
+      // console.log(q);
       return q;
     }
   }
@@ -65,22 +65,42 @@ var numbers = new Bloodhound({
 // initialize the bloodhound suggestion engine
 numbers.initialize();
 
+var nav_search_tmp;
+$("#nav_search").bind('input',function(){
+  nav_search_tmp=$("#nav_search").val();
+});
 
 $("#nav_search").typeahead({
   items: 6,
   source:numbers.ttAdapter(),
   displayText: function(data){
       // console.log(data);
-      return '<div><strong>'+data.username+'</strong>'+'-'+data.position+' at '+data.company+'</div>';
+      if(data.type=="last"){
+        return '<div><strong>'+data.username+'</strong></div>';
+      }else {
+        var dis_start='<div><img src='+data.img+' alt=" " width="30" height="30" style="border-radius:50%;margin-left:-0.3cm;">'
+        if(data.type=="username"){
+          return dis_start+'<strong>'+data.username+'</strong>'+' - '+data.position+' at '+data.company+'</div>';
+        }else if(data.type=="company"){
+          return dis_start+data.username+' - '+data.position+' at '+'<strong>'+data.company+'</strong>'+'</div>';
+        }else if(data.type=="position"){
+          return dis_start+data.username+' - '+'<strong>'+data.position+'</strong>'+' at '+data.company+'</div>';
+        };
+      }
   },
   fitToElement: true,
   afterSelect: function(data){
+    $("#nav_search").val(nav_search_tmp);
     window.location.href=data.url;
+  },
+}).on('keydown',this,function(e){
+  if(e.which==38 || e.which==40){
+    $("#nav_search").val(nav_search_tmp);
   }
-}).on('typeahead:selected',function(obj,datum,evt){
-  console.log(evt);
-  $(this).typeahead("val","");
 });
+
+
+
 $("#company_search").typeahead({
   items: 6,
   source:numbers.ttAdapter()
