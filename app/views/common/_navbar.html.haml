@@ -7,7 +7,6 @@
           = text_field_tag :search, params[:search], class: 'form-control', placeholder: 'Name, Company ', id: "nav_search",autocomplete:"off"
           = submit_tag "Search", class: "btn btn-default"
 
-
     %ul.nav.navbar-nav.navbar-right
       - if cookies[:email]
         - if @people.first.role =='mentee'

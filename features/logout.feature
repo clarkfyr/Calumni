@@ -5,8 +5,8 @@ Feature: logout
 
 Scenario: able to logout
   Given the following users exist:
-    |username |     email       |lastname|
-    |Test_user|test@berkeley.edu|Test|
+    |username |     email       |firstname|
+    |Test_user|test@berkeley.edu|Test     |
   Given I am successfully signin with "test@berkeley.edu"
   Then I should see "Test"
   When I follow Logout
