@@ -9,6 +9,7 @@ class People < ActiveRecord::Base
       position: position,
       url:url,
       avatar:avatar,
+      description:description,
     }
   end
   has_attached_file :avatar,styles: { medium: "300x300>", thumb: "100x100>" },

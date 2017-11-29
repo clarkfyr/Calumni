@@ -78,14 +78,9 @@ $("#nav_search").typeahead({
       if(data.type=="last"){
         return '<div><strong>'+data.username+'</strong></div>';
       }else {
-        var dis_start='<div><img src='+data.img+' alt=" " width="30" height="30" style="border-radius:50%;margin-left:-0.3cm;">'
-        if(data.type=="username"){
-          return dis_start+'<strong>'+data.username+'</strong>'+' - '+data.position+' at '+data.company+'</div>';
-        }else if(data.type=="company"){
-          return dis_start+data.username+' - '+data.position+' at '+'<strong>'+data.company+'</strong>'+'</div>';
-        }else if(data.type=="position"){
-          return dis_start+data.username+' - '+'<strong>'+data.position+'</strong>'+' at '+data.company+'</div>';
-        };
+        var dis_start='<div><img src='+data.img+' alt=" " width="30" height="30" style="border-radius:50%;margin-left:-0.3cm;">';
+        
+        return dis_start+'<strong>'+data.username+'</strong>'+' - '+data.descrip+'</div>';
       }
   },
   fitToElement: true,
