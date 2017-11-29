@@ -262,10 +262,12 @@ class CalumnisController < ApplicationController
         autocomplete:true,
         limit: 10,
         load: false,
-        misspellings: {below: 5}
+        misspellings: {below: 5},
+        where: {:role=>"mentor"},
       })
       # p "val ",result.map(&fi.to_sym),result
       # p fi
+      p result
       hash=result.map{|u| {url:u.url,type:fi,username:u.username,company:u.company,name:u[fi],position:u.position,img:u.avatar,descrip:u.description}}
       ret_val+=hash
     end
