@@ -186,7 +186,7 @@ Then /^I should see the resume$/ do
 end
 
 When /^I follow company image link "([^"]*)"$/ do |img_alt|
-    find(:xpath, "//img[@alt = '#{img_alt}-2017']/parent::a").click()
+    find(:xpath, "//img[@alt = '#{img_alt}']/parent::a").click()
 end
 
 
