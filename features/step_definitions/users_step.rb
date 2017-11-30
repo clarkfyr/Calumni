@@ -15,7 +15,7 @@ Given /^(?:|I )am successfully signin with "(.+)"$/ do |email|
   # #sign in with specific user email
   headers = {}
   Rack::Utils.set_cookie_header!(headers, :email, email)
-  Rack::Utils.set_cookie_header!(headers, :lastname, People.where(email:email).first.lastname)
+  Rack::Utils.set_cookie_header!(headers, :firstname, People.where(email:email).first.firstname)
   #Rack::Utils.set_cookie_header!(headers, :username, People.where(email:email).first.username)
   cookie_string = headers['Set-Cookie']
   Capybara.current_session.driver.browser.set_cookie(cookie_string)

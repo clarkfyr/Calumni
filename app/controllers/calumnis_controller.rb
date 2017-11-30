@@ -262,13 +262,25 @@ class CalumnisController < ApplicationController
         autocomplete:true,
         limit: 10,
         load: false,
-        misspellings: {below: 5}
+        misspellings: {below: 5},
+        where: {:role=>"mentor"},
       })
       # p "val ",result.map(&fi.to_sym),result
       # p fi
-      hash=result.map{|u| {url:u.url,type:fi,username:u.username,company:u.company,name:u[fi],position:u.position}}
+      p result
+      hash=result.map{|u| {url:u.url,type:fi,username:u.username,company:u.company,name:u[fi],position:u.position,img:u.avatar,descrip:u.description}}
       ret_val+=hash
     end
+
+    if ret_val.length>5
+      lastitem= [{
+        "url":"/search?search="+params[:search],
+        "username":"See all search results",
+        "type":"last",
+      }]  
+      ret_val+=lastitem
+    end
+
     p "ret_val ",ret_val
     render json:ret_val
 
