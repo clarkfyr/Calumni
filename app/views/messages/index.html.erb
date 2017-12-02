@@ -50,22 +50,23 @@
 </div>
 
 
-<br />Message<br /></br>
+<br /><br /></br>
 
 <%= form_for [@conversation, @message], html: {class: "ui reply form"} do |f| %>
-
-    <div class="field",  name="msg_body">
-    <%= f.text_area :body, class: "form-control" %>
+    <div class="field">
+      <%= f.text_field :people_id, value: current_user.id, type: "hidden"  %>
+      <% if @conversation.recipient_id == current_user.id%>
+          <%@other_id = @conversation.sender_id%>
+      <% else %>
+          <%@other_id = @conversation.recipient_id%>
+      <% end %>
     </div>
 
-  <div class="field">
-    <%= f.text_field :people_id, value: current_user.id, type: "hidden"  %>
-    <% if @conversation.recipient_id == current_user.id%>
-        <%@other_id = @conversation.sender_id%>
-    <% else %>
-        <%@other_id = @conversation.recipient_id%>
-    <% end %>
-  </div>
+    <div class="field",  name="msg_body">
+      <%= f.text_area :body, class: "form-control", placeholder:"Reply to #{People.find_by_id(@other_id).username}"%>
+    </div>
+
+
 
   <div class="field">
     <% if @show_checkbox%>
@@ -105,12 +106,12 @@
     <div class="field">
       <% if @show_options%>
         <% if @conversation.help_status == "Pending" %>
-          <br/><br/><%= f.submit "Accept", class: "ui green labeled submit icon button" %> <%= f.submit "Reject", class: "ui red labeled submit icon button" %><br/><br/>
+          <br/><br/><%= f.submit "Accept", class: "ui huge green submit icon button" %> <%= f.submit "Reject", class: "ui huge red submit icon button" %><br/><br/>
         <% elsif @conversation.help_status == "Accept" %>
-          <br/><br/><%= f.submit "Mark as Done", class: "ui grey labeled submit icon button" %>  <%= f.submit "Send", class: "ui blue labeled submit icon button" %>
+          <br/><br/><%= f.submit "Mark as Done", class: "ui huge grey submit icon button" %>  <%= f.submit "Send", class: "ui huge blue submit icon button" %>
         <% end %>
       <% else %>
-        <%= f.submit "Send", class: "ui blue labeled submit icon button" %>
+        <%= f.submit "Send", class: "ui huge blue submit icon button" %>
       <% end %>
     </div>
 <% end %>
