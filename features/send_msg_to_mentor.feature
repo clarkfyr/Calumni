@@ -36,13 +36,13 @@ Feature: Send Message to Mentor
     And I follow "Message Me!"
     And I fill in "message_body" with "Dear mentor, Could you please help me with my resume?"
     #And I check "helps_#{resume}"
-    And I press "Add Reply"
+    And I press "Send"
     And I should be on 2's conversation page
     And I should see "Dear mentor, Could you please help me with my resume?"
     And I should not see "Please do not send empty message"
 
     And I fill in "message_body" with ""
-    And I press "Add Reply"
+    And I press "Send"
     And I should see "Please do not send empty message"
     And I should be on 2's conversation page
     And I press "Search"

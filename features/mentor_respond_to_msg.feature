@@ -34,12 +34,12 @@ Scenario:
   And I fill in "message_body" with "Dear Sam, Could you please help me with my resume?"
   And I check "resume"
   And I check "general advice"
-  And I press "Add Reply"
+  And I press "Send"
   And I should see "Please do not choose more than one help type."
 
   Then I fill in "message_body" with "Dear Sam, Could you please help me with my resume?"
   And I check "resume"
-  And I press "Add Reply"
+  And I press "Send"
   And I should be on 1's conversation page
   And I should not see "Please do not choose more than one help type."
   And I should see "Pending"
@@ -53,5 +53,3 @@ Scenario:
   When I follow "clark"
   And I should be on 1's conversation page
   And I should see "Dear Sam, Could you please help me with my resume?"
-  #And I check the respond to request: "Accept"
-
