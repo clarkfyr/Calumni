@@ -69,10 +69,20 @@
 
   <div class="field">
     <% if @show_checkbox%>
-
-        <% @help_with=People.find(@other_id).helpability%>
-        <% if @help_with%>
-          <%="Available to help with: " + (@help_with.to_s) %><br/>
+        <% @is_mentor=(People.find(@other_id).role == "mentor")%>
+        <% if @is_mentor%>
+          <!-- <% @help_with=People.find(@other_id).helpability%> -->
+          <% @all_help_type=[]%>
+          <% People.find(@other_id).helpability.each do |help| %>
+            <% if help != ""%>
+              <% @all_help_type.push(help) %>
+            <% end %>
+          <% end %>
+          <% if @all_help_type != []%>
+            <%="Available to help with: " + @all_help_type.to_s %><br/>
+          <% else %>
+            <%="Available to help with: " + '["General Help"]'.to_s %><br/>
+          <% end %>
           <%="Please only choose at most one help"%><br/>
         <ul>
           <% People.all_helps.each do |help| %>
@@ -83,34 +93,24 @@
           <% end %>
         </ul>
         <% end %>
-
     <% end %>
 
 
     <% if flash[:notice] %>
         <div class="notice" id="notice"><%=flash[:notice] %></div>
     <% end %>
-    
+
   </div>
 
     <div class="field">
       <% if @show_options%>
-          <li>(Message is optional)</li>
-          <% People.mentor_response.each do |r| %>
-              <li>
-                <%= check_box_tag "responds[#{r}]", 1, false, disabled: ((@conversation.help_status == "Pending" and r == "Done") or (@conversation.help_status == "Accept" and r != "Done")), :id => "responds#{r}" -%>
-                <%= h r -%>
-              </li>
-          <% end %>
+        <% if @conversation.help_status == "Pending" %>
+          <br/><br/><%= f.submit "Accept", class: "ui green labeled submit icon button" %> <%= f.submit "Reject", class: "ui red labeled submit icon button" %><br/><br/>
+        <% elsif @conversation.help_status == "Accept" %>
+          <br/><br/><%= f.submit "Mark as Done", class: "ui grey labeled submit icon button" %>  <%= f.submit "Send", class: "ui blue labeled submit icon button" %>
+        <% end %>
+      <% else %>
+        <%= f.submit "Send", class: "ui blue labeled submit icon button" %>
       <% end %>
     </div>
-
-  <div>
-    <%= f.submit "Add Reply", class: "ui blue labeled submit icon button" %>
-  </div>
-
 <% end %>
-
-
-
-

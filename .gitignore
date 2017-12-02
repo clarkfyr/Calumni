@@ -10,3 +10,7 @@ public/system/*
 db/development.sqlite3
 db/test.sqlite3
 .bundle/config
+setenv.sh
+heroku_deploy.sh
+cc-test-reporter
+.idea/

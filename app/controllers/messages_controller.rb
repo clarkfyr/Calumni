@@ -45,7 +45,7 @@ def create
     end
 
     p @conversation
-    
+
     redirect_to conversation_messages_path(@conversation)
 end
 
@@ -65,19 +65,37 @@ def update_help
     @conversation.update_attribute(:requester, current_user.id)
 end
 
+# def respond_to_help
+#     @people= People.select{|p| p.email==cookies[:email]}
+#     @help_responds = params[:responds] || {}
+#     if @help_responds != {} and @help_responds.keys[0] == "Done"
+#         @conversation.update_attribute(:help_status, @help_responds.keys[0])
+#         @people.first.update_attribute(:helped_count, @people.first.helped_count+1)
+#         return true
+#     elsif @help_responds != {}
+#         @conversation.update_attribute(:help_status, @help_responds.keys[0])
+#         return true
+#     end
+#     return false
+# end
+
+
 def respond_to_help
     @people= People.select{|p| p.email==cookies[:email]}
-    @help_responds = params[:responds] || {}
-    if @help_responds != {} and @help_responds.keys[0] == "Done"
-        @conversation.update_attribute(:help_status, @help_responds.keys[0])
+    @help_respond = params[:commit]
+    if @help_respond == "Send"
+        return false
+    end
+    if @help_respond == "Mark as Done"
+        @conversation.update_attribute(:help_status, "Done")
         @people.first.update_attribute(:helped_count, @people.first.helped_count+1)
         return true
-    elsif @help_responds != {}
-        @conversation.update_attribute(:help_status, @help_responds.keys[0])
+    else
+        @conversation.update_attribute(:help_status, @help_respond)
         return true
     end
-    return false
 end
+
 
 def flash_msg
     @selected_help = params[:helps] || {}
