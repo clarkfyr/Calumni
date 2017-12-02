@@ -32,23 +32,25 @@
 
 <div class="field", name="history", id="history">
   <% @messages.each do |message| %>
+  <div class="list">
     <% if message.body %>
       <% people = People.find(message.people_id) %>
-      <div class="item">
-        <div class="content">
-          <div class="header"><strong><%= people.username %></strong> <%= message.message_time %></div>
-          <div class="list">
-            <div class="item">
-              <i class="right triangle icon"></i>
-              <%= message.body %>
-            </div>
-          </div>
+        <% if people == current_user %>
+        <div class="item">
+          <div class="right-message"><%= people.username %><%= message.message_time %></div>
+          <div class="from-me"><%= message.body %></div>
         </div>
-      </div>
-    <% end %>
-  <% end %>
-</div>
 
+        <% else %>
+        <div class="item">
+          <div class="left-message"><%= people.username %><%= message.message_time %></div>
+          <div class="from-them"><%= message.body %></div>
+        </div>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
 
 <br /><br /></br>
 
