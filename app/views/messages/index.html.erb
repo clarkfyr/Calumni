@@ -32,47 +32,60 @@
 
 <div class="field", name="history", id="history">
   <% @messages.each do |message| %>
+  <div class="list">
     <% if message.body %>
       <% people = People.find(message.people_id) %>
-      <div class="item">
-        <div class="content">
-          <div class="header"><strong><%= people.username %></strong> <%= message.message_time %></div>
-          <div class="list">
-            <div class="item">
-              <i class="right triangle icon"></i>
-              <%= message.body %>
-            </div>
-          </div>
+        <% if people == current_user %>
+        <div class="item">
+          <div class="right-message"><%= people.username %><%= message.message_time %></div>
+          <div class="from-me"><%= message.body %></div>
         </div>
-      </div>
-    <% end %>
-  <% end %>
-</div>
 
-
-<br />Message<br /></br>
-
-<%= form_for [@conversation, @message], html: {class: "ui reply form"} do |f| %>
-
-    <div class="field",  name="msg_body">
-    <%= f.text_area :body, class: "form-control" %>
-    </div>
-
-  <div class="field">
-    <%= f.text_field :people_id, value: current_user.id, type: "hidden"  %>
-    <% if @conversation.recipient_id == current_user.id%>
-        <%@other_id = @conversation.sender_id%>
-    <% else %>
-        <%@other_id = @conversation.recipient_id%>
+        <% else %>
+        <div class="item">
+          <div class="left-message"><%= people.username %><%= message.message_time %></div>
+          <div class="from-them"><%= message.body %></div>
+        </div>
+        <% end %>
+      <% end %>
     <% end %>
   </div>
+</div>
+
+<br /><br /></br>
+
+<%= form_for [@conversation, @message], html: {class: "ui reply form"} do |f| %>
+    <div class="field">
+      <%= f.text_field :people_id, value: current_user.id, type: "hidden"  %>
+      <% if @conversation.recipient_id == current_user.id%>
+          <%@other_id = @conversation.sender_id%>
+      <% else %>
+          <%@other_id = @conversation.recipient_id%>
+      <% end %>
+    </div>
+
+    <div class="field",  name="msg_body">
+      <%= f.text_area :body, class: "form-control", placeholder:"Reply to #{People.find_by_id(@other_id).username}"%>
+    </div>
+
+
 
   <div class="field">
     <% if @show_checkbox%>
-
-        <% @help_with=People.find(@other_id).helpability%>
-        <% if @help_with%>
-          <%="Available to help with: " + (@help_with.to_s) %><br/>
+        <% @is_mentor=(People.find(@other_id).role == "mentor")%>
+        <% if @is_mentor%>
+          <!-- <% @help_with=People.find(@other_id).helpability%> -->
+          <% @all_help_type=[]%>
+          <% People.find(@other_id).helpability.each do |help| %>
+            <% if help != ""%>
+              <% @all_help_type.push(help) %>
+            <% end %>
+          <% end %>
+          <% if @all_help_type != []%>
+            <%="Available to help with: " + @all_help_type.to_s %><br/>
+          <% else %>
+            <%="Available to help with: " + '["General Help"]'.to_s %><br/>
+          <% end %>
           <%="Please only choose at most one help"%><br/>
         <ul>
           <% People.all_helps.each do |help| %>
@@ -83,34 +96,24 @@
           <% end %>
         </ul>
         <% end %>
-
     <% end %>
 
 
     <% if flash[:notice] %>
         <div class="notice" id="notice"><%=flash[:notice] %></div>
     <% end %>
-    
+
   </div>
 
     <div class="field">
       <% if @show_options%>
-          <li>(Message is optional)</li>
-          <% People.mentor_response.each do |r| %>
-              <li>
-                <%= check_box_tag "responds[#{r}]", 1, false, disabled: ((@conversation.help_status == "Pending" and r == "Done") or (@conversation.help_status == "Accept" and r != "Done")), :id => "responds#{r}" -%>
-                <%= h r -%>
-              </li>
-          <% end %>
+        <% if @conversation.help_status == "Pending" %>
+          <br/><br/><%= f.submit "Accept", class: "ui huge green submit icon button" %> <%= f.submit "Reject", class: "ui huge red submit icon button" %><br/><br/>
+        <% elsif @conversation.help_status == "Accept" %>
+          <br/><br/><%= f.submit "Mark as Done", class: "ui huge grey submit icon button" %>  <%= f.submit "Send", class: "ui huge blue submit icon button" %>
+        <% end %>
+      <% else %>
+        <%= f.submit "Send", class: "ui huge blue submit icon button" %>
       <% end %>
     </div>
-
-  <div>
-    <%= f.submit "Add Reply", class: "ui blue labeled submit icon button" %>
-  </div>
-
 <% end %>
-
-
-
-
