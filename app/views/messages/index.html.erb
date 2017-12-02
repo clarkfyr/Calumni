@@ -31,24 +31,29 @@
 </div>
 
 <div class="field", name="history", id="history">
-  <% @messages.each do |message| %>
-  <div class="list">
-    <% if message.body %>
-      <% people = People.find(message.people_id) %>
-        <% if people == current_user %>
-        <div class="item">
-          <div class="right-message"><%= people.username %><%= message.message_time %></div>
-          <div class="from-me"><%= message.body %></div>
-        </div>
+  <div class="commentArea">
+  <% @last_user="" %>
 
-        <% else %>
-        <div class="item">
-          <div class="left-message"><%= people.username %><%= message.message_time %></div>
-          <div class="from-them"><%= message.body %></div>
-        </div>
+    <% @messages.each do |message| %> <br/>
+    <div class="list">
+      <% if message.body %>
+        <% people = People.find(message.people_id) %>
+          <% if people == current_user %>
+            <% if @last_user != people %>
+                <div class="right-message"> <strong><%= people.username %>  <%= message.message_time %></strong></div><br/>
+                <% @last_user = people %>
+            <% end %>
+            <div class="bubbledRight"><%= message.body %></div><br/><br/>
+          <% else %>
+            <% if @last_user != people %>
+              <div class="left-message"><strong><%= people.username %>  <%= message.message_time %></strong></div><br/>
+              <% @last_user = people %>
+            <% end %>
+            <div class="bubbledLeft"><%= message.body %></div><br/><br/>
+          <% end %>
         <% end %>
       <% end %>
-    <% end %>
+  </div>
   </div>
 </div>
 

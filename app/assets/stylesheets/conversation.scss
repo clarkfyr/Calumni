@@ -7,70 +7,59 @@
 	float:left;
 }
 
-.clear {clear: both}
-.from-me {
-	position:relative;
-	padding:10px 20px;
-	color:white;
-	background:#0B93F6;
-	border-radius:25px;
-	float: right;
-
-	&:before {
-		content:"";
-		position:absolute;
-		z-index:-1;
-		bottom:-2px;
-		right:-7px;
-		height:20px;
-		border-right:20px solid #0B93F6;
-		border-bottom-left-radius: 16px 14px;
-		-webkit-transform:translate(0, -2px);
-	}
-
-	&:after {
-		content:"";
-		position:absolute;
-		z-index:1;
-		bottom:-2px;
-		right:-56px;
-		width:26px;
-		height:20px;
-		background:white;
-		border-bottom-left-radius: 10px;
-		-webkit-transform:translate(-30px, -2px);
-	}
+.commentArea {
+	font: 20px Arial;
+	padding: 0 10px;
+	margin-top: 20px;
 }
-.from-them {
-	position:relative;
-	padding:10px 20px;
-	background:#E5E5EA;
-	border-radius:25px;
+
+.bubbledLeft,.bubbledRight {
+	margin-top: 20px;
+	padding: 5px 9px;
+	max-width: 50%;
+	clear: both;
+	position: relative;
+}
+
+.bubbledLeft{
+	float: left;
+	margin-right: auto;
+	-webkit-border-radius: 8px 8px 8px 0px;
+	-moz-border-radius: 8px 8px 8px 0px;
+	-o-border-radius: 8px 8px 8px 0px;
+	-ms-border-radius: 8px 8px 8px 0px;
+	border-radius: 8px 8px 8px 0px;
+	background-color: #84d6ef;
 	color: black;
-  float: left;
+}
 
-	&:before {
-		content:"";
-		position:absolute;
-		z-index:2;
-		bottom:-2px;
-		left:-7px;
-		height:20px;
-		border-left:20px solid #E5E5EA;
-		border-bottom-right-radius: 16px 14px;
-		-webkit-transform:translate(0, -2px);
-	}
+.bubbledLeft:before {
+	border-bottom: 10px solid #84d6ef;
+	border-left: 9px solid rgba(0, 0, 0, 0);
+	position: absolute;
+	bottom: 0;
+	left: -8px;
+	content: "";
+}
 
-	&:after {
-		content:"";
-		position:absolute;
-		z-index:3;
-		bottom:-2px;
-		left:4px;
-		width:26px;
-		height:20px;
-		background:white;
-		border-bottom-right-radius: 10px;
-		-webkit-transform:translate(-30px, -2px);
-	}
+.bubbledRight{
+	float: right;
+	margin-left: auto;
+	text-align: right;
+	-webkit-border-radius: 8px 8px 0px 8px;
+	-moz-border-radius: 8px 8px 0px 8px;
+	-o-border-radius: 8px 8px 0px 8px;
+	-ms-border-radius: 8px 8px 0px 8px;
+	border-radius: 8px 8px 0px 8px;
+	background-color: #7cecc3;
+	color: black;
+}
+
+.bubbledRight:before {
+	border-bottom: 9px solid #7cecc3;
+	border-right: 9px solid rgba(0, 0, 0, 0);
+	position: absolute;
+	bottom: 0;
+	right: -8px;
+	content: "";
 }
