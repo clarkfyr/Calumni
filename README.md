@@ -23,18 +23,21 @@ https://www.pivotaltracker.com/n/projects/2118464
 - Link to Initial Customer Meeting:
 https://www.youtube.com/watch?v=vLoHODcZZHo
 
-
+## Instructions for environment setup
 - Development
+    * It is recommended to deploy this project locally instead of on cloud9, as elasticsearch cost much memory and you may not have access to port 9200 on cloud9.
 	* bundle install --without production
 	* rake db:migrate
 	* rake db:seed
-	* source setenv.sh
+	* export GOOGLE_CLIENT_ID=xxx
+	* export GOOGLE_CLIENT_SECRET=xxx
 - Testing:
 	* rake db:seed RAILS_ENV=test --trace
 - Production:
 	* heroku 
 		* setup environment variable for aws
 		* setup environment for elasticsearch
+
 
 - Search feature
 	* We use gem Searchkick to implement search function, while Searchkick supports the complete Elasticsearch Search API. You have to install elasticsearch before you can use searchkick.
@@ -51,4 +54,20 @@ https://www.youtube.com/watch?v=vLoHODcZZHo
        		* heroku config:set ELASTICSEARCH_URL=`heroku config:get BONSAI_URL`
        * heroku run rake searchkick:reindex CLASS=People
 	   * heroku run rake db:migrate
-    
+
+
+- Image/file upload
+	* We use gem paperclip to support image upload and store them locally in development mode.
+		* run sudo apt-get install imagemagick to install related library.
+	* On heroku, we store images/files on AWS s3.
+	* Setup AWS
+		* create an s3 bucket 
+		* setup environment variable for AWS 
+	
+			```
+			heroku config:set S3_BUCKET_NAME=project_name
+			heroku config:set AWS_ACCESS_KEY_ID=key_id
+			heroku config:set AWS_SECRET_ACCESS_KEY=key
+			heroku config:set AWS_REGION=region
+			```
+
