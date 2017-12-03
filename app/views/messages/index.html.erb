@@ -33,20 +33,26 @@
 <div class="field", name="history", id="history">
   <div class="commentArea">
   <% @last_user="" %>
+  <% @last_message_time=-99999999 %>
+
 
     <% @messages.each do |message| %> <br/>
     <div class="list">
       <% if message.body %>
         <% people = People.find(message.people_id) %>
+        <% if message.message_time.to_i - @last_message_time > 600 %>
+          <div class="center"><%= message.message_time.strftime("%m/%d/%y at %l:%M %p") %></div><br/>
+          <% @last_message_time = message.message_time.to_i %>
+        <% end %>
           <% if people == current_user %>
             <% if @last_user != people %>
-                <div class="right-message"> <strong><%= people.username %>  <%= message.message_time %></strong></div><br/>
+                <div class="right-message"> <strong><%= people.username %></strong></div><br/>
                 <% @last_user = people %>
             <% end %>
             <div class="bubbledRight"><%= message.body %></div><br/><br/>
           <% else %>
             <% if @last_user != people %>
-              <div class="left-message"><strong><%= people.username %>  <%= message.message_time %></strong></div><br/>
+              <div class="left-message"><strong><%= people.username %></strong></div><br/>
               <% @last_user = people %>
             <% end %>
             <div class="bubbledLeft"><%= message.body %></div><br/><br/>
