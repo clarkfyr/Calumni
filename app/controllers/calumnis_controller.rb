@@ -74,13 +74,12 @@ class CalumnisController < ApplicationController
     @search_result=[]
     @num=[]
     People.search_type.each_with_index do |type,index|
-      result=People.search(params[:search], {fields: [type], autocomplete: true, 
-      limit: 20, load: false, misspellings: {below: 4}})
+      result=People.search(params[:search], {fields: [type], autocomplete: true,limit: 20, load: false, misspellings: {below: 4}}) 
       @search_result.push(result)
       @num.push(result.total_count)
       if type==@type
         @type_index=index
-        @search_ret=result.map{|u| {username:u.username, company:u.company,url:u.url}}
+        @search_ret=Kaminari.paginate_array(result.map{|u| {username:u.username, company:u.company,url:u.url}}).page(params[:page]).per(10)
       end
     end
     # if @type == 'username' then @type = 'user' end
