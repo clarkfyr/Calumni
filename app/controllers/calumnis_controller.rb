@@ -87,10 +87,10 @@ class CalumnisController < ApplicationController
   end
 
   def become_mentor
-     @people= People.select{|p| p.email==cookies[:email]}
-     @people.first.update_attribute(:role,'mentor')
+     # @people= People.select{|p| p.email==cookies[:email]}
+     # @people.first.update_attribute(:role,'mentor')
      # byebug
-     redirect_to edit_profile_path
+     redirect_to edit_profile_path(:become_mentor=>1)
   end
 
   def render_404
@@ -196,6 +196,12 @@ class CalumnisController < ApplicationController
       end
     end
     @people= People.select{|p| p.email==cookies[:email]}
+    # if mentee and contain :company
+    if @people.first.company.nil?
+      if not people_params[:company].nil?
+        @people.first.update_attributes(:role=>"mentor")
+      end
+    end
     @people.first.update_attributes(people_params)
     # @people.first.update_attributes(:helpability=>params[:helps])
     redirect_to profile_path and return
