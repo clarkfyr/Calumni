@@ -7,15 +7,15 @@ Feature: search
 Background: users in database
   
   Given the following users exist:
-    |username   |email               | company   |
-    |Test_user1 |test1@berkeley.edu  | Google    |
-    |Test_user2 |test2@berkeley.edu  | Facebook  |
-    |Test_user3 |test3@berkeley.edu  | Amazon    |
-    |Test_user4 |test4@berkeley.edu  | Yahoo     |
-    |Test_user5 |test5@berkeley.edu  | Oracle    |
-    |Test_user6 |test6@berkeley.edu  | Twitter   |
-    |Test_user7 |test7@berkeley.edu  | Apple     |
-    |Test_user8 |test8@berkeley.edu  | Uber      |
+    |username   |email               | company   |role  |
+    |Test_user1 |test1@berkeley.edu  | Google    |mentor|
+    |Test_user2 |test2@berkeley.edu  | Facebook  |mentor|
+    |Test_user3 |test3@berkeley.edu  | Amazon    |mentor|
+    |Test_user4 |test4@berkeley.edu  | Yahoo     |mentor|
+    |Test_user5 |test5@berkeley.edu  | Oracle    |mentor|
+    |Test_user6 |test6@berkeley.edu  | Twitter   |mentor|
+    |Test_user7 |test7@berkeley.edu  | Apple     |mentor|
+    |Test_user8 |test8@berkeley.edu  |           |mentee|
 
 
 Scenario: Successfully search with a company name
@@ -45,6 +45,12 @@ Scenario: Unsuccessfully search with an alumni name #Sad Path
   And I press "Search"
   Then I should see "0 result about "Test_user10""
 
+Scenario: Unsuccessfully search with mentee name #Sad Path
+  Given I am on the home page
+  When I fill in "search" with "Test_user8"
+  And I press "Search"
+  Then I should see "0 result about "Test_user8""
+
 Scenario: Successfully follow company I am interested in
   Given I am on the home page
   When I follow company image link "amazon"
@@ -68,8 +74,8 @@ Scenario: Search not capsensitive
   Given I am on the home page
   When I fill in "search" with "Test"
   And I press "Search"
-  Then I should see "8 results about "Test""
+  Then I should see "7 results about "Test""
   When I fill in "search" with "test"
   And I press "Search"
-  Then I should see "8 results about "test""
+  Then I should see "7 results about "test""
 

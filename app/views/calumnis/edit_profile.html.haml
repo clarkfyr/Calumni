@@ -17,7 +17,7 @@
       = f.date_field :graduation_date
 
       
-      - if params[:become_mentor]
+      - if params[:become_mentor]||@people.first.role=="mentor"
         %hr
         %h4 Mentor information
         %h6 Fill out additional information about yourself and where you work to become a mentor for other UC Berkeley students

@@ -4,8 +4,8 @@ Feature: edit_profile
 
 Background: logined user
   Given the following users exist:
-    |username |     email       |lastname|role|
-    |Test_user|test@berkeley.edu|Test    |mentor|
+    |username |     email       |lastname|role  |company|position|
+    |Test_user|test@berkeley.edu|Test    |mentor|google |position|
   Given I am successfully signin with "test@berkeley.edu"
 
 Scenario: Edit Helpability
