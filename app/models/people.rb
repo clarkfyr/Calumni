@@ -37,6 +37,7 @@ class People < ActiveRecord::Base
     ["Accept", "Reject", "Done"]
   end
   def display_helpability
+    ret_val=""
     if self.helpability.length>0
       # for collection checkbox, the first element is ""
       if self.helpability[0]==""
@@ -44,8 +45,9 @@ class People < ActiveRecord::Base
       else
         start=0
       end
-      self.helpability[start,self.helpability.length].join(" ,")
+      ret_val+=self.helpability[start,self.helpability.length].join(", ")
     end
+    return ret_val
   end
 
 

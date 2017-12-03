@@ -1,49 +1,57 @@
 .container
-  .fb-profile
-    %img.fb-image-lg{:align => "left", :alt => "cover example", :src => "https://s3.us-east-2.amazonaws.com/calumni-cs169/cover/hero.jpg", :width=>"100",:height=>"250"}/
-    %img.fb-image-profile.thumbnail{:align => "left", :alt => "Not set avatar yet", :src => @otheruser.first.avatar}/
-    .fb-profile-text
-      .username #{@otheruser.first.username}
-      .edit 
-        = link_to 'Message Me!', conversations_path(sender_id: current_user, recipient_id: @otheruser.first.id), method: 'post'
+  .row
+    .fb-profile
+      %img.fb-image-lg{:align => "left", :alt => "cover example", :src => "https://s3.us-east-2.amazonaws.com/calumni-cs169/cover/hero.jpg", :width=>"100",:height=>"150"}/
+      %img.fb-image-profile.thumbnail{:align => "left", :alt => "Not set avatar yet", :src => @otheruser.first.avatar}/
+      .fb-profile-text
+        .username #{@otheruser.first.username}
+        .edit 
+          = link_to 'Message Me!', conversations_path(sender_id: current_user, recipient_id: @otheruser.first.id), method: 'post'
 
+%br/
 
+.container
+  .row
+    .col-sm-8
+      .panel.panel-default
+        .panel-heading
+          Description:
+        .panel-body
+          #{@otheruser.first.description}
+      .panel.panel-default
+        .panel-heading
+          General advice:
+        .panel-body
+          - if not @otheruser.first.open_advice.nil?
+            %td #{@otheruser.first.open_advice}
 
-%div{:class=>"container-fluid", :id=>"Company"}
-  %div{:class=>"row"}
-    %div{:class=>"container"}
-      .col-md-9.col-lg-9
-        %table.table.table-user-information
-          %tbody
-            %tr
-              %td Username
-              %td #{@otheruser.first.username}
-            %tr
-              %td Description:
-              %td #{@otheruser.first.description}
-            %tr
-              %td Position:
-              %td #{@otheruser.first.position}
-            %tr
-              %td Start date:
-              %td #{@otheruser.first.start_date}
-            %tr
-              %td Graduation date:
-              %td #{@otheruser.first.graduation_date}
-            %tr
-              %td General advice:
-              - if not @otheruser.first.open_advice.nil?
-                %td #{@otheruser.first.open_advice}
-            %tr
-              %td Company:
-              %td #{@otheruser.first.company}
-            %tr
-              %td Help With:
-              - if not @otheruser.first.helpability.first.nil?
-                %td #{@otheruser.first.display_helpability}
-            %tr
-              %td Help Count:
-              %td #{@otheruser.first.helped_count}
-
-
-
+    .col-sm-4
+      %ul.list-group
+        %li.list-group-item Profile
+        %li.list-group-item.text-right
+          %span.pull-left
+            %strong Company
+          #{@otheruser.first.company}
+        %li.list-group-item.text-right
+          %span.pull-left
+            %strong Position
+          #{@otheruser.first.position}
+        %li.list-group-item.text-right
+          %span.pull-left
+            %strong Help with
+          - if not @otheruser.first.helpability.first.nil?
+            #{@otheruser.first.display_helpability}
+          - else
+            &#8203
+        %li.list-group-item.text-right
+          %span.pull-left
+            %strong Start date
+          #{@otheruser.first.start_date}
+      %ul.list-group
+        %li.list-group-item.text-muted
+          Activity
+          %i.fa.fa-dashboard.fa-1x
+        %li.list-group-item.text-right
+          %span.pull-left
+            %strong Help Count
+          #{@otheruser.first.helped_count}

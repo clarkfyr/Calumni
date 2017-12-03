@@ -63,9 +63,9 @@ Scenario: Successfully follow company I am interested in
   
 Scenario: Successfully follow alumni I am interested in
   Given I am on the home page
-  Then I should see "sam"
+  Then I should see "Sam"
   When I follow user image link "sam"
-  Then I should see "sam"
+  Then I should see "Sam"
   And I should not see "Test_user2"
   And I should see "YC"
   And I should not see "Facebook"
