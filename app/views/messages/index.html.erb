@@ -70,10 +70,7 @@
     </div>
 
     <div class="field",  name="msg_body">
-      <%= f.text_area :body, class: "form-control", placeholder:"Reply to #{People.find_by_id(@other_id).username}"%>
-    </div>
-
-
+      <%= f.text_area :body, class: "form-control", placeholder:"Reply to #{People.find_by_id(@other_id).username}"%> </div>
 
   <div class="field">
     <% if @show_checkbox%>
@@ -105,7 +102,7 @@
 
 
     <% if flash[:notice] %>
-        <div class="notice" id="notice"><%=flash[:notice] %></div>
+        <div class="notice" id="notice"><%=flash[:notice] %> </div>
     <% end %>
 
   </div>
