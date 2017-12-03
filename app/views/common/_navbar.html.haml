@@ -4,7 +4,7 @@
     - if not ishomepage
       .input-group-btn.navbar-form.navbar-left
         = form_tag search_path, :method => 'get', class: 'input-group'   do
-          = text_field_tag :search, params[:search], class: 'form-control', placeholder: 'Name, Company ', id: "nav_search",autocomplete:"off"
+          = text_field_tag :search, params[:search], class: 'form-control', placeholder: 'Name, Company ', id: "nav_search",autocomplete:"off", size:35
           = submit_tag "Search", class: "btn btn-default"
 
     %ul.nav.navbar-nav.navbar-right

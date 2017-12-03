@@ -69,7 +69,16 @@ var nav_search_tmp;
 $("#nav_search").bind('input',function(){
   nav_search_tmp=$("#nav_search").val();
 });
-
+var max_length=45;
+var tol_length=max_length-3;
+function cut_length(a){
+  flag=0
+  if(a.length>tol_length){
+    a.slice(0,tol_length)+"...";
+    flag=1
+  }
+  return [a,flag];
+}
 $("#nav_search").typeahead({
   items: 6,
   source:numbers.ttAdapter(),
@@ -78,14 +87,41 @@ $("#nav_search").typeahead({
       if(data.type=="last"){
         return '<div><strong>'+data.username+'</strong></div>';
       }else {
-        var dis_start='<div><img src='+data.img+' alt=" " width="30" height="30" style="border-radius:50%;margin-left:-0.3cm;">'
+        var dis_start='<div><img src='+data.img+' alt=" " width="30" height="30" style="border-radius:50%;margin-left:-0.3cm;">';
+        // cut length to 30
+        [d1,flag]=cut_length(data.username);
+        if(flag==0){
+          d1=data.username;
+          [d2,flag]=cut_length(data.username+data.position);
+          if(flag==0){
+            d2=data.position;
+            [d3,flag]=cut_length(data.username+data.position+data.company);
+            if(flag==0){
+              d3=data.company;
+            }else{
+              d3=data.company.slice(0,tol_length-(d1+d2).length)+"...";
+            }
+          }else{
+            d2=data.position.slice(0,tol_length-d1.length)+"...";
+            d3="";
+          }
+        }else{
+          d1=data.position.slice(0,tol_length)+"...";
+          d2="";d3="";
+        }
+        // add strong
         if(data.type=="username"){
-          return dis_start+'<strong>'+data.username+'</strong>'+' - '+data.position+' at '+data.company+'</div>';
+          d1='<strong>'+d1+'</strong>';
         }else if(data.type=="company"){
-          return dis_start+data.username+' - '+data.position+' at '+'<strong>'+data.company+'</strong>'+'</div>';
+          d3='<strong>'+d3+'</strong>';
         }else if(data.type=="position"){
-          return dis_start+data.username+' - '+'<strong>'+data.position+'</strong>'+' at '+data.company+'</div>';
+          d2='<strong>'+d2+'</strong>';
         };
+        // has company or not has
+        if(d3!=""){
+          d3=' at '+d3;
+        }
+        return dis_start+d1+' - '+d2+d3+'</div>';
       }
   },
   fitToElement: true,
