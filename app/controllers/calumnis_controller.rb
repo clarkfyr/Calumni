@@ -263,7 +263,6 @@ class CalumnisController < ApplicationController
         limit: 10,
         load: false,
         misspellings: {below: 5},
-        where: {:role=>"mentor"},
       })
       # p "val ",result.map(&fi.to_sym),result
       # p fi

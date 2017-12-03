@@ -1,7 +1,10 @@
 class People < ActiveRecord::Base
   serialize :helpability, Array
-
   searchkick autocomplete: ['username',"company",'position']
+  scope :search_import, ->{where(role:"mentor")}
+  def should_index?
+    role
+  end
   def search_data
     {
       username: username,
