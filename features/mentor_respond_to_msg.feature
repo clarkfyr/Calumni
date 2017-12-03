@@ -53,3 +53,9 @@ Scenario:
   When I follow "clark"
   And I should be on 1's conversation page
   And I should see "Dear Sam, Could you please help me with my resume?"
+
+  Then I fill in "message_body" with "Sure!"
+  And I press "Accept"
+  And I press "Mark as Done"
+  And I should see "Done"
+
