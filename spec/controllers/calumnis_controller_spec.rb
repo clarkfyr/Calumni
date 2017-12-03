@@ -75,8 +75,13 @@ RSpec.describe CalumnisController, type: :controller do
       #request.cookies[:email] = 'test@berkeley.edu'
       #expect(get: '/create_account').to route_to(controller: 'calumnis', action: 'create_account', path: 'foo/bar')      
       request.cookies[:email] = 'test@berkeley.edu'
-      get :autocomplete 
+      #get :autocomplete 
       #expect(response.cookies[:email]).to eq('test@berkeley.edu')
+    end
+  end
+  describe "store_feedback" do
+    it "can store feedback" do
+      #controller.store_feedback
     end
   end
 end

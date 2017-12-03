@@ -35,7 +35,7 @@ def create
     @message = @conversation.messages.new(message_params)
     @selected_help = params[:helps] || {}
     if respond_to_help != false
-        p 1
+
     elsif flash_msg != false
         p 1
     elsif @selected_help != {}
@@ -88,7 +88,8 @@ def respond_to_help
     end
     if @help_respond == "Mark as Done"
         @conversation.update_attribute(:help_status, "Done")
-        @people.first.update_attribute(:helped_count, @people.first.helped_count+1)
+        @people.first.helped_count ||= 0
+        @people.first.update_attribute(:helped_count, @people.first.helped_count + 1)
         return true
     else
         @conversation.update_attribute(:help_status, @help_respond)
