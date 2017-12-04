@@ -4,7 +4,9 @@ rvm:
 services:
 - elasticsearch
 before_script:
+- thin start -R sync.ru -p 9292 -t 1 2>&1 > test.log &
 - sleep 10
+
 script:
 - bundle exec rake db:setup
 - bundle exec cucumber features
@@ -15,5 +17,5 @@ deploy:
   app: calumni-demo
 
 # Set up and start Faye Server before tests are run
-before_script:
-  - thin start -R sync.ru -p 9292 -t 1 2>&1 > test.log &
+
+  
