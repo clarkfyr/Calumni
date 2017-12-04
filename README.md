@@ -54,7 +54,11 @@ https://www.youtube.com/watch?v=vLoHODcZZHo
        		* heroku config:set ELASTICSEARCH_URL=`heroku config:get BONSAI_URL`
        * heroku run rake searchkick:reindex CLASS=People
 	   * heroku run rake db:migrate
-
+	   
+- Realtime Messaging	   
+	* We use gem render_sync to implement the real-time messaging function.
+	* Run Faye alongside your app: rackup sync.ru -E production
+	
 
 - Image/file upload
 	* We use gem paperclip to support image upload and store them locally in development mode.

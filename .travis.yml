@@ -1,14 +1,18 @@
 language: ruby
 rvm:
- - 2.3
-
+- 2.3
 services:
- - elasticsearch
+- elasticsearch
 before_script:
- - sleep 10
+- sleep 10
 script:
- - bundle exec rake db:setup
- - bundle exec cucumber features
+- bundle exec rake db:setup
+- bundle exec cucumber features
+deploy:
+  provider: heroku
+  api_key:
+    secure: cmw2AbjOagTaixjMcEj2fNkiufUyW/TbevwKGVz7zg1IJjphQs27ZZUaPWDynXnpxJrZAvUN1/O7Ch5+nZH8Lj/dOuDiD+blE4ogRCxtmPWJGvwRE+oDSLFaeFF6uv4KHY9QouMMlQdJfkiIrtKknircsxg9BX5MaUOKpE7O6XZUeimd1H5pNsYInXdjEQbe/kwWDwxYi69hEVC3Arctij++Fo6R35HX7UJP26LiDZ+7HdkkLTyw8oAK/LAciFvhpMGaxJVkZ2GKGvxxYRSK0c+CByAoF5O4/wZia8g8yoKsc2V4fCz4RVfHUi705oVoiETrMqPVdf6Rsrulp7OnJA6Uc/Lll0vWIynRkwil9o2+f0pLeG+EAlq4gaPsIGFujaC2ZWrYeZp147qOtU0ZK2HY5SpMPSPrNhBhJ9tptREq31NHrt+EQlLpYLv3Y+e/Jea9qBxr5ZVKdPIn7hnZ0uZNwfC3uI3UguMEHV/s16dkd/4W/fecaMCYHpEddN9PoCCdzdNHUSxVBlT3A4C/eYxN9SY+HR565We5Rjf7ovjFXnL9nWBtWasVLWX6wZKcNeND5f0wL0wyr8K/Q3wureIrO6HDqSZKxyQAmX2l/PKQ+Kg98sdVUmRqOdvTEoHvXWp40UPqrcDx+TCYg1QBPNy2ETfLOgWR+GjGSbSb0dw=
+  app: calumni-demo
 
 # Set up and start Faye Server before tests are run
 before_script:
