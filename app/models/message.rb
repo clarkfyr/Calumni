@@ -7,7 +7,7 @@ class Message < ActiveRecord::Base
 
  	def message_time
   		# created_at.strftime("%m/%d/%y at %l:%M %p")
-			created_at.getlocal
+		created_at.getlocal
  	end
 
 end
