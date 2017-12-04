@@ -74,7 +74,7 @@ class CalumnisController < ApplicationController
     @search_result=[]
     @num=[]
     People.search_type.each_with_index do |type,index|
-      result=People.search(params[:search], {fields: [type], autocomplete: true,limit: 20, load: false, misspellings: {below: 4}}) 
+      result=People.search(params[:search], {fields: [type], autocomplete: true, load: false, misspellings: {below: 4}}) 
       @search_result.push(result)
       @num.push(result.total_count)
       if type==@type

@@ -21,7 +21,7 @@ Given /^(?:|I )am successfully signin with "(.+)"$/ do |email|
   Capybara.current_session.driver.browser.set_cookie(cookie_string)
    # set lastname
   # visit home_path()
-  visit create_account_path()
+  visit create_account_path
 end
 
 When /^(?:|I )follow Mentor$/ do
