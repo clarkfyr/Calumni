@@ -35,17 +35,12 @@ def create
     @message = @conversation.messages.new(message_params)
     @selected_help = params[:helps] || {}
     if respond_to_help != false
-
     elsif flash_msg != false
-        p 1
     elsif @selected_help != {}
         update_help
     elsif !@message.save
         return
     end
-
-    p @conversation
-
     redirect_to conversation_messages_path(@conversation)
 end
 
