@@ -40,16 +40,16 @@ def create
         p 1
     elsif @selected_help != {}
         update_help
-    #elsif @message.save
-    #    sync_new @message, scope: @conversation
-    elsif !@message.save
-         return
+    elsif @message.save
+       sync_new @message, scope: @conversation
+    # elsif !@message.save
+    #      return
     end
 
 
-    if @message.save
-      sync_new @message, scope: @conversation
-    end
+    # if @message.save
+    #   sync_new @message, scope: @conversation
+    # end
 
     p @conversation 
 
