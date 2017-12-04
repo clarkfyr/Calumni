@@ -6,8 +6,25 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag "https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.min.js" %> 
   <%= javascript_include_tag "bootstrap3-typeahead.min.js" %>
- <%= javascript_include_tag "search.js" %>
+  <%= javascript_include_tag "search.js" %>
+  <%= include_sync_config %>
 
+  <script src="https://js.pusher.com/4.1/pusher.min.js"></script>
+  <script>
+
+    // Enable pusher logging - don't include this in production
+    Pusher.logToConsole = true;
+
+    var pusher = new Pusher('f44531a8bf307e396700', {
+      cluster: 'us2',
+      encrypted: true
+    });
+
+    var channel = pusher.subscribe('my-channel');
+    channel.bind('my-event', function(data) {
+      alert(data.message);
+    });
+  </script>
 
   <%= csrf_meta_tags %>
 </head>
