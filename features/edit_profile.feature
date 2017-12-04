@@ -42,3 +42,32 @@ Scenario: Edit Resume
   And I press "Update"
   And I should see the resume
 
+Scenario: Upload Wrong Avatar
+  Given I am on the Profile page
+  When I follow "Edit"
+  And I upload "Avatar" from "app/assets/images/test_for_cucumber.bmp"
+  And I press "Update"
+  Then I should be on the edit_error page
+
+Scenario: Upload Wrong Resume
+  Given I am on the Profile page
+  When I follow "Edit"
+  And I upload "Resume" from "app/assets/images/test_for_cucumber.bmp"
+  And I press "Update"
+  Then I should be on the edit_error page
+
+Scenario: Upload Larger Avatar
+  Given I am on the Profile page
+  When I follow "Edit"
+  And I upload "Avatar" from "app/assets/images/larger_avatar.jpeg"
+  And I press "Update"
+  Then I should be on the edit_error page
+
+Scenario: Upload Larger Resume
+  Given I am on the Profile page
+  When I follow "Edit"
+  And I upload "Resume" from "app/assets/images/larger_resume.pdf"
+  And I press "Update"
+  Then I should be on the edit_error page
+
+

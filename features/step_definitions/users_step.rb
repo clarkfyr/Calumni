@@ -41,9 +41,11 @@ When /^(?:|I )follow "(.*)"$/ do |link|
   # turns the phrase above into concrete actions
    first(:link, link).click
 end
-
-
-
+# modified by Cheng
+When /^I upload "(.*)" from "(.*)"$/ do |field,file|
+    attach_file(field, File.join(Rails.root, file))
+end
+#Warning
 When /^(?:|I )press "(.*)"$/ do |button|
     click_button(button)
 end

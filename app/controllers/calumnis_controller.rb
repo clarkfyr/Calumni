@@ -175,23 +175,24 @@ class CalumnisController < ApplicationController
   def create_mentee
   end
   def edit_error
+    @people= People.select{|p| p.email==cookies[:email]}
   end
   def update_profile
     if people_params[:avatar]
-      if people_params[:avatar].size >100.megabytes
-        redirect_to edit_error_path
+      if people_params[:avatar].size >5.megabytes
+        redirect_to edit_error_path and return
       end
       if !["image/jpg","image/jpeg","image/png","image/gif"].include? people_params[:avatar].content_type
-        redirect_to edit_error_path
+        redirect_to edit_error_path and return
       end
     end
 
     if people_params[:resume]
-      if people_params[:resume].size >100.megabytes
-        redirect_to edit_error_path
+      if people_params[:resume].size >5.megabytes
+        redirect_to edit_error_path and return
       end
       if !["application/pdf"].include? people_params[:resume].content_type
-        redirect_to edit_error_path
+        redirect_to edit_error_path and return
       end
     end
     @people= People.select{|p| p.email==cookies[:email]}
@@ -203,6 +204,7 @@ class CalumnisController < ApplicationController
     end
     @people.first.update_attributes(people_params)
     # @people.first.update_attributes(:helpability=>params[:helps])
+    #redirect_to profile_path and return
     redirect_to profile_path and return
   end
 
