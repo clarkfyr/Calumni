@@ -1,4 +1,4 @@
-port: 9292
-ssl: false
-environment: production
-rackup: sync.ru
+# port: 9292
+# ssl: false
+# environment: production
+# rackup: sync.ru

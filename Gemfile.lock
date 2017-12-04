@@ -172,6 +172,7 @@ GEM
     hashdiff (0.3.7)
     hashie (3.5.6)
     http_parser.rb (0.6.0)
+    httpclient (2.8.3)
     i18n (0.9.1)
       concurrent-ruby (~> 1.0)
     jbuilder (2.7.0)
@@ -230,6 +231,11 @@ GEM
       mimemagic (~> 0.3.0)
     pg (0.21.0)
     public_suffix (3.0.0)
+    pusher (1.3.1)
+      httpclient (~> 2.7)
+      multi_json (~> 1.0)
+      pusher-signature (~> 0.1.8)
+    pusher-signature (0.1.8)
     rack (1.6.8)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -372,6 +378,7 @@ DEPENDENCIES
   omniauth-google-oauth2
   paperclip (~> 5.0.0)
   pg
+  pusher
   rails (= 4.2.5)
   rails_12factor
   render_sync
