@@ -243,11 +243,6 @@ class CalumnisController < ApplicationController
 #     redirect_to game_path unless @game.check_win_or_lose == :lose
 #   end
   def autocomplete
-    # render json: People.search(params[:search], autocomplete: true, limit: 10).map(&:username)
-    # byebug
-
-    p "params ",params
-    # prebuild
     field=[]
     case params[:type]
     when "company_search"
@@ -259,38 +254,18 @@ class CalumnisController < ApplicationController
       field.push("position")
       field.push("company")
     end
-    p "search type",field
-
-    # autocomplete
     ret_val=[]
     field.each do |fi|
-      result=People.search(params[:search], {
-        fields: [fi],
-        autocomplete:true,
-        limit: 6,
-        load: false,
-        misspellings: {below: 5},
-      })
-      # p "val ",result.map(&fi.to_sym),result
-      # p fi
-      p result
+      result=People.search(params[:search], {fields: [fi], autocomplete:true, limit: 6, load: false, misspellings: {below: 5}, }) # p "val ",result.map(&fi.to_sym),result
       hash=result.map{|u| {url:u.url,type:fi,username:u.username,company:u.company,name:u[fi],position:u.position,img:u.avatar,descrip:u.description}}
       ret_val+=hash
     end
-
     if ret_val.length>5
-      lastitem= [{
-        "url":"/search?search="+params[:search],
-        "username":"See all search results",
-        "type":"last",
-      }]  
+      lastitem= [{"url":"/search?search="+params[:search], "username":"See all search results", "type":"last", }] 
       ret_val=ret_val[0..4]
       ret_val+=lastitem
     end
-
-    p "ret_val ",ret_val
     render json:ret_val
-
   end
 
   def store_feedback
