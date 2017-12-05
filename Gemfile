@@ -32,11 +32,7 @@ gem 'aws-sdk', '~> 2.3'
 # add semantic gem for ui
 gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass', branch: 'v1.0beta'
 
-# real time message
-gem 'faye'
-gem 'thin', require: false
-gem 'render_sync'
-gem 'pusher'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
