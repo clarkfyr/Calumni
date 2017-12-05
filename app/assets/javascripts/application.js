@@ -18,4 +18,3 @@
 //= require bootstrap/alert
 //= require bootstrap/modal
 //= require_tree .
-//= require sync
