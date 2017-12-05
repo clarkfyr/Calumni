@@ -114,12 +114,7 @@ class CalumnisController < ApplicationController
       end
     end
   end
-  def add_feedback
-    respond_to do |format|
-      format.html
-      format.js
-    end
-  end
+  def add_feedback() respond_to do |format|;format.html; format.js; end; end
 
   def profile
 
