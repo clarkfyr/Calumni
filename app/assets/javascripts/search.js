@@ -1,41 +1,5 @@
 $(function() {
-// var bestPictures = new Bloodhound({
-//   datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
-//   queryTokenizer: Bloodhound.tokenizers.whitespace,
-//   remote: {
-//   	url: "autocomplete?query=%QUERY",
-//   	wildcard: "%QUERY"
-//   }
-// });
-
-// bestPictures.initialize();
-
-// $('#username_search').typeahead(null, {
-//   name: 'best-pictures',
-//   displayKey: 'username',
-//   source: bestPictures.ttAdapter()
-// });
-// $('#username_search').bind('typeahead:selected', function(event, datum, name) {
-// 	console.log("sdf")
-  
-//   // doSomething(datum.id);
-// });
-
-
-// $('#username_search').typeahead({                              
-//   name: 'example',                                                             
-//   local: [
-//         'Salt Lake City',
-//         'Provo',
-//         'Ogden',
-//         'Bountiful',
-//         'Orem',
-//         'Centerville',
-//         'St. George',
-//         'Cedar City',
-//         'Hurricane',
-//   ]                                                                           
-// }); 
+ 
 var array=["nav_search","company_search","position_search"];
 var state=[$("#"+array[0]).val(),$("#"+array[1]).val(),$("#"+array[2]).val()];
 var numbers = new Bloodhound({
@@ -88,7 +52,6 @@ $("#nav_search").typeahead({
         return '<div><strong>'+data.username+'</strong></div>';
       }else {
         var dis_start='<div><img src='+data.img+' alt=" " width="30" height="30" style="border-radius:50%;margin-left:-0.3cm;">';
-        // cut length to 30
         [d1,flag]=cut_length(data.username);
         if(flag==0){
           d1=data.username;
@@ -96,31 +59,13 @@ $("#nav_search").typeahead({
           if(flag==0){
             d2=data.position;
             [d3,flag]=cut_length(data.username+data.position+data.company);
-            if(flag==0){
-              d3=data.company;
-            }else{
-              d3=data.company.slice(0,tol_length-(d1+d2).length)+"...";
-            }
-          }else{
-            d2=data.position.slice(0,tol_length-d1.length)+"...";
-            d3="";
-          }
-        }else{
-          d1=data.position.slice(0,tol_length)+"...";
-          d2="";d3="";
-        }
-        // add strong
-        if(data.type=="username"){
-          d1='<strong>'+d1+'</strong>';
-        }else if(data.type=="company"){
-          d3='<strong>'+d3+'</strong>';
-        }else if(data.type=="position"){
-          d2='<strong>'+d2+'</strong>';
-        };
-        // has company or not has
-        if(d3!=""){
-          d3=' at '+d3;
-        }
+            if(flag==0){d3=data.company;}else{d3=data.company.slice(0,tol_length-(d1+d2).length)+"...";}
+          }else{d2=data.position.slice(0,tol_length-d1.length)+"...";d3="";}
+        }else{d1=data.position.slice(0,tol_length)+"...";d2="";d3="";}
+        if(data.type=="username"){d1='<strong>'+d1+'</strong>';
+        }else if(data.type=="company"){d3='<strong>'+d3+'</strong>';
+        }else if(data.type=="position"){d2='<strong>'+d2+'</strong>';};
+        if(d3!=""){d3=' at '+d3;}
         return dis_start+d1+' - '+d2+d3+'</div>';
       }
   },
