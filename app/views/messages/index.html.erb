@@ -32,21 +32,40 @@
 
 <div class="field", name="history", id="history">
   <div class="commentArea">
-    <% @last_message_time=-99999999 %>
-    <% @last_user_id=0 %>
-    <% @render_needed=0 %>
+  <% @last_user="" %>
+  <% @last_message_time=-99999999 %>
+
 
     <% @messages.each do |message| %> <br/>
-      <%= sync partial: 'message_row', resource: message, scope: @conversation%>
+    <div class="list">
+      <% if message.body %>
+        <% people = People.find(message.people_id) %>
+        <% if message.message_time.to_i - @last_message_time > 600 %>
+          <div class="center"><%= message.message_time.strftime("%m/%d/%y at %l:%M %p") %></div><br/>
+          <% @last_message_time = message.message_time.to_i %>
+        <% end %>
+          <% if people == current_user %>
+            <% if @last_user != people %>
+                <div class="right-message"> <strong><%= people.username %></strong></div><br/>
+                <% @last_user = people %>
+            <% end %>
+            <div class="bubbledRight"><%= message.body %></div><br/><br/>
+          <% else %>
+            <% if @last_user != people %>
+              <div class="left-message"><strong><%= people.username %></strong></div><br/>
+              <% @last_user = people %>
+            <% end %>
+            <div class="bubbledLeft"><%= message.body %></div><br/><br/>
+          <% end %>
+        <% end %>
       <% end %>
-    <% @render_needed=1 %>
-    <%= sync_new partial: 'message_row', resource: Message.new, scope: @conversation%>
+  </div>
   </div>
 </div>
 
 <br /><br /></br>
 
-<%= form_for [@conversation, @message], html: {class: "ui reply form"}, remote: true do |f| %>
+<%= form_for [@conversation, @message], html: {class: "ui reply form"} do |f| %>
     <div class="field">
       <%= f.text_field :people_id, value: current_user.id, type: "hidden"  %>
       <% if @conversation.recipient_id == current_user.id%>
